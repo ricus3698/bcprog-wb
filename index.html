@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./_core/css/reset.css">
+    <link rel="stylesheet" href="./_assets/css/main.css">    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="skip">
+            <a href="#contents">본문 내용 바로가기</a>
+            <a href="#gnb">주메뉴 바로가기</a>
+        </div>
+        <header>
+            <div class="header-wrap">
+                <div class="inner">
+                    <h1 class="logo"><img src="./_assets/images/logo.png" alt="서부산영상미디어센터 로고"></h1>
+                    <div class="menu_mo">
+                        <button type="button" class="menu_button">메뉴열기</button>
+                    </div>
+                    <nav>
+                        <ul class="gnb" id="gnb">
+                            <li><a href="">센터소개</a></li>
+                            <li><a href="">모두극장</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="">상영시간표</a></li>
+                                        <li><a href="">상영작</a></li>
+                                        <li><a href="">상영예정작</a></li>
+                                        <li><a href="">특별프로그램</a></li>
+                                        <li><a href="">좌석배치도</a></li>
+                                    </ul>
+                                </div></li>
+                            <li><a href="">교육/체험</a></li>
+                            <li><a href="">장비/대관</a></li>
+                            <li><a href="">아카이브</a></li>
+                            <li><a href="">모두알림</a></li>
+                        </ul>
+                    </nav>
+                    <div class="nav-right">
+                        <a href="">로그인</a>
+                        <button>검색</button>
+                        <button>사이트맵</button>
+                    </div>
+                </div>
+            </div>    
+        </header>
+        <div class="quick-menu">
+            <ul class="quick-list">
+                <li>
+                    <a href="">
+                        <div class="img-wrap"><img src="" alt=""></div>
+                        <p>센터안내</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="img-wrap"><img src="" alt=""></div>
+                        <p>오시는 길</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="img-wrap"><img src="" alt=""></div>
+                        <p>상영시간표</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="img-wrap"><img src="" alt=""></div>
+                        <p>대여절차</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="img-wrap"><img src="" alt=""></div>
+                        <p>신청안내</p>
+                    </a>
+                </li>
+            </ul>
+            <button id="topBtn">top ▲</button>            
+        </div>
+        <div id="contents">
+            <section class="main-visual">
+                <div class="inner">
+                    <article class="main-slide-wrap">
+                        <div class="swiper mySwiper mv-swiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide mv-slide" role="group" aria-roledescription="slide" aria-label="1 of 3"><img src="./_assets/images/main-img1.png" alt=""></div>
+                            <div class="swiper-slide mv-slide" role="group" aria-roledescription="slide" aria-label="1 of 3"><img src="./_assets/images/main-img1.png" alt=""></div>
+                            <div class="swiper-slide mv-slide" role="group" aria-roledescription="slide" aria-label="1 of 3"><img src="./_assets/images/main-img1.png" alt=""></div>
+                            <div class="swiper-slide mv-slide" role="group" aria-roledescription="slide" aria-label="1 of 3"><img src="./_assets/images/main-img1.png" alt=""></div>
+                            <div class="swiper-slide mv-slide" role="group" aria-roledescription="slide" aria-label="1 of 3"><img src="./_assets/images/main-img1.png" alt=""></div>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-pagination main-custom-pagination"></div>
+                    </article>
+                </div>
+
+                <script>
+                    const swiper = new Swiper('.mySwiper', {
+                    loop: true,
+                    pagination: {
+                        el: '.main-custom-pagination',
+                        clickable: true,
+                        type: 'custom',
+                        renderCustom: function (swiper, current, total) {
+                        let bulletsHtml = '';
+                        for (let i = 0; i < total; i++) {
+                            const activeClass = i === swiper.realIndex ? 'swiper-pagination-bullet-active' : '';
+                            
+                            bulletsHtml += `<span class="swiper-pagination-bullet ${activeClass}" 
+                                                    tabindex="0" 
+                                                    role="button" 
+                                                    aria-label="Go to slide ${i + 1}"></span>`;
+                        }
+                        return `<div class="swiper-pagination-bullets" role="tablist">
+                                    ${bulletsHtml}
+                                </div>
+                                <div class="swiper-pagination-fraction" role="status" aria-live="polite">
+                                    <span class="swiper-pagination-current">${current}</span> / <span class="swiper-pagination-total">${total}</span>
+                                </div>
+                                
+                                <button class="swiper-button-play-pause" aria-live="polite" aria-label="슬라이드쇼 재생 또는 정지">정지</button>`;
+                        },
+                    },
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    
+                    on: {
+                        init: function () {
+                        this.slides.forEach((slide, index) => {
+                            slide.setAttribute('tabindex', '0');
+                            slide.setAttribute('role', 'group'); 
+                            slide.setAttribute('aria-roledescription', 'slide'); 
+                            slide.setAttribute('aria-label', `${index + 1} of ${this.slides.length}`); // 스크린 리더용 레이블
+                        });
+                        },
+                        
+                        slideChange: function () {
+                        this.slides.forEach((slide, index) => {
+                            const isActive = this.realIndex === index;
+                            
+                            if (isActive) {
+                            slide.setAttribute('aria-current', 'true');
+                            } else {
+                            slide.removeAttribute('aria-current');
+                            }
+                        });
+                        
+                        }
+                    }
+                    });
+
+                   
+                    let isAutoplayPaused = false;
+                    document.querySelector('.main-custom-pagination').addEventListener('click', function(e) {
+                    if (e.target.classList.contains('swiper-button-play-pause')) {
+                        const playPauseButton = e.target;
+                        if (isAutoplayPaused) {
+                        swiper.autoplay.start();
+                        playPauseButton.textContent = '정지';
+                        playPauseButton.setAttribute('aria-label', '슬라이드쇼 정지');
+                        isAutoplayPaused = false;
+                        } else {
+                        swiper.autoplay.stop();
+                        playPauseButton.textContent = '재생';
+                        playPauseButton.setAttribute('aria-label', '슬라이드쇼 재생');
+                        isAutoplayPaused = true;
+                        }
+                    } else if (e.target.classList.contains('swiper-pagination-bullet')) {
+                        
+                        e.target.focus();
+                    }
+                    });
+
+                    // 키보드로 불릿 접근 시 (Enter/Spacebar) 슬라이드 이동
+                    document.querySelector('.main-custom-pagination').addEventListener('keydown', function(e) {
+                    if (e.target.classList.contains('swiper-pagination-bullet') && (e.key === 'Enter' || e.key === ' ')) {
+                        e.preventDefault(); 
+                        e.target.click();
+                    }
+                    });
+
+                    
+                    document.querySelector('.mySwiper').addEventListener('keydown', function(e) {
+                    if (e.target.classList.contains('swiper-slide')) {
+                        if (e.key === 'ArrowRight') {
+                        swiper.slideNext();
+                        e.preventDefault(); 
+                        } else if (e.key === 'ArrowLeft') {
+                        swiper.slidePrev();
+                        e.preventDefault(); 
+                        }
+                        
+                        swiper.slides[swiper.realIndex].focus();
+                    }
+                    });
+                </script>
+            </section>
+
+            <section class="main-movie">
+                <div class="inner">
+                    <div class="title_area">
+                        <div class="tab-list-wrap">
+                            <ul class="tab-list">
+                                <li class="tab-item on"><button class="tab-btn">상영작</button></li>
+                                <li class="tab-item"><button class="tab-btn">상영 시간표</button></li>
+                            </ul>
+                            <a href=""></a>
+                        </div>
+                    </div>
+                    <div class="movie_area">
+                        <article class="movie-slide-wrap">
+                            <div class="swiper mySwiper movie-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide movie-slide">
+                                        <div class="movie-item">
+                                            <div class="poster-wrap">
+                                                <a href="">
+                                                    <img src="./_assets/images/poster1.jpg" alt="로비 포스터">
+                                                </a>
+                                                <div class="overlay_box">
+                                                    <div class="box">
+                                                        <a href="" class="movie_btn">예매하기</a>
+                                                        <a href="" class="movie_btn">상세정보</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <a href="" class="movie-info">
+                                                <div class="age-icon"><img src="./_assets/images/age-15.svg" alt="15세 이상 관람가"></div>
+                                                <p>로비</p>
+                                                <span>2025.03.28 ~ 03.30</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide movie-slide">
+                                        <div class="movie-item">
+                                            <div class="poster-wrap">
+                                                <a href="">
+                                                    <img src="./_assets/images/poster2.jpg" alt="로비 포스터">
+                                                </a>
+                                                <div class="overlay_box">
+                                                    <div class="box">
+                                                        <a href="" class="movie_btn">예매하기</a>
+                                                        <a href="" class="movie_btn">상세정보</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <a href="" class="movie-info">
+                                                <div class="age-icon"><img src="./_assets/images/age-15.svg" alt="15세 이상 관람가"></div>
+                                                <p>로비</p>
+                                                <span>2025.03.28 ~ 03.30</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide movie-slide">
+                                        <div class="movie-item">
+                                            <div class="poster-wrap">
+                                                <a href="">
+                                                    <img src="./_assets/images/poster3.jpg" alt="로비 포스터">
+                                                </a>
+                                                <div class="overlay_box">
+                                                    <div class="box">
+                                                        <a href="" class="movie_btn">예매하기</a>
+                                                        <a href="" class="movie_btn">상세정보</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <a href="" class="movie-info">
+                                                <div class="age-icon"><img src="./_assets/images/age-15.svg" alt="15세 이상 관람가"></div>
+                                                <p>로비</p>
+                                                <span>2025.03.28 ~ 03.30</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide movie-slide">
+                                        <div class="movie-item">
+                                            <div class="poster-wrap">
+                                                <a href="">
+                                                    <img src="./_assets/images/poster1.jpg" alt="로비 포스터">
+                                                </a>
+                                                <div class="overlay_box">
+                                                    <div class="box">
+                                                        <a href="" class="movie_btn">예매하기</a>
+                                                        <a href="" class="movie_btn">상세정보</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <a href="" class="movie-info">
+                                                <div class="age-icon"><img src="./_assets/images/age-15.svg" alt="15세 이상 관람가"></div>
+                                                <p>로비</p>
+                                                <span>2025.03.28 ~ 03.30</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide movie-slide">
+                                        <div class="movie-item">
+                                            <div class="poster-wrap">
+                                                <a href="">
+                                                    <img src="./_assets/images/poster1.jpg" alt="로비 포스터">
+                                                </a>
+                                                <div class="overlay_box">
+                                                    <div class="box">
+                                                        <a href="" class="movie_btn">예매하기</a>
+                                                        <a href="" class="movie_btn">상세정보</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <a href="" class="movie-info">
+                                                <div class="age-icon"><img src="./_assets/images/age-15.svg" alt="15세 이상 관람가"></div>
+                                                <p>로비</p>
+                                                <span>2025.03.28 ~ 03.30</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide movie-slide">
+                                        <div class="movie-item">
+                                            <div class="poster-wrap">
+                                                <a href="">
+                                                    <img src="./_assets/images/poster1.jpg" alt="로비 포스터">
+                                                </a>
+                                                <div class="overlay_box">
+                                                    <div class="box">
+                                                        <a href="" class="movie_btn">예매하기</a>
+                                                        <a href="" class="movie_btn">상세정보</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <a href="" class="movie-info">
+                                                <div class="age-icon"><img src="./_assets/images/age-15.svg" alt="15세 이상 관람가"></div>
+                                                <p>로비</p>
+                                                <span>2025.03.28 ~ 03.30</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide movie-slide">
+                                        <div class="movie-item">
+                                            <div class="poster-wrap">
+                                                <a href="">
+                                                    <img src="./_assets/images/poster1.jpg" alt="로비 포스터">
+                                                </a>
+                                                <div class="overlay_box">
+                                                    <div class="box">
+                                                        <a href="" class="movie_btn">예매하기</a>
+                                                        <a href="" class="movie_btn">상세정보</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <a href="" class="movie-info">
+                                                <div class="age-icon"><img src="./_assets/images/age-15.svg" alt="15세 이상 관람가"></div>
+                                                <p>로비</p>
+                                                <span>2025.03.28 ~ 03.30</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn movie-btn">
+                                    <button class="movie-prev-btn">&lt;</button>
+                                    <button class="movie-next-btn">&gt;</button>
+                                </div>
+                            </div>
+                        </article>
+                        <!--상영시간표-->
+                        <div class="movie_sch_area">
+                            <div class="week_inner">
+                                <div class="week_title">
+                                    <span class="date">2025.06</span>
+                                </div>
+                                <div class="week_list_wrap">
+                                    <div class="week_list">
+                                        <div class="week_item">
+                                            <div class="date_box">
+                                                <p class="date">03</p>
+                                                <span class="day">TUE</span>
+                                            </div>
+                                            <div class="info_box"> 
+                                                <a class="sch-movie">
+                                                    <div class="movie-tit">
+                                                        <div class="age-icon"><img src="./_assets/images/age-15.svg" alt="15세 이상 관람가"></div><p>로비</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="time">14:40 ~ 17:25</p>
+                                                        <p>액션 | 127분</p>
+                                                        <p><span>31</span>/ 50</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="week_item">
+                                            <div class="date_box">
+                                                <p class="date">03</p>
+                                                <span class="day">TUE</span>
+                                            </div>
+                                            <div class="info_box"> 
+                                                <a class="sch-movie">
+                                                    <div class="movie-tit">
+                                                        <div class="age-icon"><img src="./_assets/images/age-15.svg" alt="15세 이상 관람가"></div><p>로비</p>
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="time">14:40 ~ 17:25</p>
+                                                        <p>액션 | 127분</p>
+                                                        <p><span>31</span>/ 50</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    const movieSlide = new Swiper(".movie-slide-wrap .swiper", {
+                    slidesPerView: 1.9,
+                    spaceBetween: 0,
+
+                    loop: true,
+
+                    navigation: {
+                        prevEl: ".movie-slide-wrap .movie-prev-btn",
+                        nextEl: ".movie-slide-wrap .movie-next-btn",
+                    },
+
+                    pagination: {
+                        el: ".movie-slide-wrap .movie-btn",
+                        clickable: true,
+                    },
+                    });
+
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                    const tabButtons = document.querySelectorAll('.tab-btn');
+                    const movieSlideWrap = document.querySelector('.movie-slide-wrap');
+                    const movieSchArea = document.querySelector('.movie_sch_area');
+                    const tabItems = document.querySelectorAll('.tab-item');
+
+                    tabButtons.forEach((btn, index) => {
+                        btn.addEventListener('click', () => {
+                        // 탭 활성화 표시
+                        tabItems.forEach(item => item.classList.remove('on'));
+                        tabItems[index].classList.add('on');
+
+                        // 콘텐츠 표시 전환
+                        if (index === 0) {
+                            movieSlideWrap.style.display = 'block';
+                            movieSchArea.style.display = 'none';
+                        } else {
+                            movieSlideWrap.style.display = 'none';
+                            movieSchArea.style.display = 'block';
+                        }
+                        });
+                    });
+
+                    // 초기 상태 설정
+                    movieSlideWrap.style.display = 'block';
+                    movieSchArea.style.display = 'none';
+                    });
+
+                    
+                </script>
+            </section>
+            <section class="main-lecture">
+                <div class="title_area">교육/체험 프로그램<a href=""></a></div>
+                <div class="tab-list">
+                    <ul>
+                        <li><a href="" data-tab="all">전체</a></li>
+                        <li><a href="" data-tab="open">접수중</a></li>
+                        <li><a href="" data-tab="wait">대기접수</a></li>
+                        <li><a href="" data-tab="progress">교육중</a></li>
+                    </ul>
+                </div>
+                <div class="slide_area">
+                    <article class="lec-slide-wrap">
+                        <div class="swiper mySwiper lec-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide lec-slide status-open">
+                                    <a href="">
+                                        <span class="label open">접수중</span>
+                                        <div class="lec-thumb"><img src="./img/program1.png" alt=""></div>
+                                        <div class="lec-txt">
+                                            <h2>[체험] 다큐 감독과 함께하는 '시민 다큐멘터리 제작학교'</h2>
+                                            <div class="lec-date">
+                                                <p>모집기간</p><span>2025-06-05 17:00 ~ 2025-07-04 18:00</span>
+                                            </div>
+                                            <div class="lec-date">
+                                                <p>교육기간</p><span>2025-06-05 ~ 2025-07-04</span>
+                                            </div>
+                                            <div class="lec-detail">
+                                                <ul>
+                                                    <li><img src="./img/user_circle_icon.svg" alt=""> 15명</li>
+                                                    <li><img src="./img/money_icon.svg" alt="">25,000원</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide lec-slide status-wait">
+                                    <a href="">
+                                        <span class="label wait">대기접수</span>
+                                        <div class="lec-thumb"><img src="./img/program1.png" alt=""></div>
+                                        <div class="lec-txt">
+                                            <h2>[체험] 다큐 감독과 함께하는 '시민 다큐멘터리 제작학교'</h2>
+                                            <div class="lec-date">
+                                                <p>모집기간</p><span>2025-06-05 17:00 ~ 2025-07-04 18:00</span>
+                                            </div>
+                                            <div class="lec-date">
+                                                <p>교육기간</p><span>2025-06-05 ~ 2025-07-04</span>
+                                            </div>
+                                            <div class="lec-detail">
+                                                <ul>
+                                                    <li><img src="./img/user_circle_icon.svg" alt=""> 15명</li>
+                                                    <li><img src="./img/money_icon.svg" alt="">25,000원</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide lec-slide status-progress">
+                                    <a href="">
+                                        <span class="label progress">교육중</span>
+                                        <div class="lec-thumb"><img src="./img/program1.png" alt=""></div>
+                                        <div class="lec-txt">
+                                            <h2>[체험] 다큐 감독과 함께하는 '시민 다큐멘터리 제작학교'</h2>
+                                            <div class="lec-date">
+                                                <p>모집기간</p><span>2025-06-05 17:00 ~ 2025-07-04 18:00</span>
+                                            </div>
+                                            <div class="lec-date">
+                                                <p>교육기간</p><span>2025-06-05 ~ 2025-07-04</span>
+                                            </div>
+                                            <div class="lec-detail">
+                                                <ul>
+                                                    <li><img src="./img/user_circle_icon.svg" alt=""> 15명</li>
+                                                    <li><img src="./img/money_icon.svg" alt="">25,000원</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide lec-slide status-progress">
+                                    <a href="">
+                                        <span class="label progress">교육중</span>
+                                        <div class="lec-thumb"><img src="./img/program1.png" alt=""></div>
+                                        <div class="lec-txt">
+                                            <h2>[체험] 다큐 감독과 함께하는 '시민 다큐멘터리 제작학교'</h2>
+                                            <div class="lec-date">
+                                                <p>모집기간</p><span>2025-06-05 17:00 ~ 2025-07-04 18:00</span>
+                                            </div>
+                                            <div class="lec-date">
+                                                <p>교육기간</p><span>2025-06-05 ~ 2025-07-04</span>
+                                            </div>
+                                            <div class="lec-detail">
+                                                <ul>
+                                                    <li><img src="./img/user_circle_icon.svg" alt=""> 15명</li>
+                                                    <li><img src="./img/money_icon.svg" alt="">25,000원</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide lec-slide status-wait">
+                                    <a href="">
+                                        <span class="label wait">대기접수</span>
+                                        <div class="lec-thumb"><img src="./img/program1.png" alt=""></div>
+                                        <div class="lec-txt">
+                                            <h2>[체험] 다큐 감독과 함께하는 '시민 다큐멘터리 제작학교'</h2>
+                                            <div class="lec-date">
+                                                <p>모집기간</p><span>2025-06-05 17:00 ~ 2025-07-04 18:00</span>
+                                            </div>
+                                            <div class="lec-date">
+                                                <p>교육기간</p><span>2025-06-05 ~ 2025-07-04</span>
+                                            </div>
+                                            <div class="lec-detail">
+                                                <ul>
+                                                    <li><img src="./img/user_circle_icon.svg" alt=""> 15명</li>
+                                                    <li><img src="./img/money_icon.svg" alt="">25,000원</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="btn lec-btn">
+                                <button class="lec-prev-btn"><</button>
+                                <button class="lec-next-btn">></button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <script>
+                const lecSlideSwiper = new Swiper(".lec-swiper", { // lec-slide-wrap .swiper 대신 .lec-swiper로 변경했습니다.
+                    slidesPerView: 1.1,
+                    spaceBetween: 0,
+                    loop: false,
+                    navigation: {
+                        prevEl: ".lec-slide-wrap .lec-prev-btn", 
+                        nextEl: ".lec-slide-wrap .lec-next-btn", 
+                    },
+                });
+
+                const tabLinks = document.querySelectorAll('.main-lecture .tab-list a');
+                const lecSlides = document.querySelectorAll('.lec-swiper .lec-slide');
+
+                function hideAllSlides() {
+                    lecSlides.forEach(slide => {
+                        slide.style.display = 'none';
+                    });
+                }
+
+                // 특정 상태의 슬라이드를 보여주는 함수
+                function showSlidesByStatus(status) {
+                    hideAllSlides(); 
+                    if (status === 'all') {
+                        lecSlides.forEach(slide => {
+                            slide.style.display = 'block';
+                        });
+                    } else {
+                        const targetSlides = document.querySelectorAll(`.lec-swiper .lec-slide.status-${status}`);
+                        targetSlides.forEach(slide => {
+                            slide.style.display = 'block';
+                        });
+                    }
+                    lecSlideSwiper.update();
+                    lecSlideSwiper.slideTo(0);
+                }
+
+                // 탭 클릭 이벤트 리스너 추가
+                tabLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+
+                        tabLinks.forEach(l => l.parentElement.classList.remove('active'));
+                        this.parentElement.classList.add('active');
+
+                        const tabStatus = this.dataset.tab; // 클릭한 탭의 data-tab 값 가져오기
+                        showSlidesByStatus(tabStatus); // 해당 상태의 슬라이드 보여주기
+                    });
+                });
+
+                // 페이지 로드 시 '전체' 탭이 기본으로 선택되고 모든 슬라이드가 보이도록 설정
+                document.addEventListener('DOMContentLoaded', () => {
+                    const allTab = document.querySelector('.main-lecture .tab-list a[data-tab="all"]');
+                    if (allTab) {
+                        allTab.parentElement.classList.add('active');
+                    }
+                    showSlidesByStatus('all');
+                });
+            </script>
+
+            </section>
+            <section class="main-weekly">
+                <div class="title_area">센터 주간 일정<a href=""></a></div>
+                <div class="week_inner">
+                    <div class="week_title">
+                        <span class="date">2025.06</span>
+                    </div>
+                    <div class="week_list_wrap">
+                        <div class="week_list">
+                            <div class="week_item">
+                                <div class="date_box">
+                                    <p class="date">03</p>
+                                    <span class="day">TUE</span>
+                                </div>
+                                <div class="info_box"> 
+                                    <a class="sch-movie">
+                                        <div class="info">
+                                            <p class="tit">[대관] 편집실 5~6번(MAC)</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="week_item">
+                                <div class="date_box">
+                                    <p class="date">03</p>
+                                    <span class="day">TUE</span>
+                                </div>
+                                <div class="info_box"> 
+                                    <a class="sch-movie">
+                                        <div class="info">
+                                            <p class="tit">[행사] 라디오체험_웰컴투라디오</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="main-info">
+                <div class="inner">
+                    <div class="main-notice">
+                        <div class="title_area">모두알림<a href=""></a></div>
+                        <div class="notice_list">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <a href=""><p>[모집] 2025년 미디어 리터러시 교육 연구모임 참여 강사 모집</p><span class="date">2025.04.03</span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href=""><p>[모집] 2025년 미디어 리터러시 교육 연구모임 참여 강사 모집</p><span class="date">2025.04.03</span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href=""><p>[모집] 2025년 미디어 리터러시 교육 연구모임 참여 강사 모집</p><span class="date">2025.04.03</span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main-rental">
+                        <div class="title_area">장비·대관<a href=""></a></div>
+                        <div class="rental_list">
+                            <ul>
+                                <li><a href=""><div><img src="./img/tool_icon-1.png" alt=""></div><span>촬영장비</span></a></li>
+                                <li><a href=""><div><img src="./img/tool_icon-2.png" alt=""></div><span>음향장비</span></a></li>
+                                <li><a href=""><div><img src="./img/tool_icon-3.png" alt=""></div><span>조명장비</span></a></li>
+                                <li><a href=""><div><img src="./img/tool_icon-4.png" alt=""></div><span>기타장비</span></a></li>
+                                <li><a href=""><div><img src="./img/tool_icon-5.png" alt=""></div><span>후반작업실</span></a></li>
+                                <li><a href=""><div><img src="./img/tool_icon-6.png" alt=""></div><span>시설대관</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+        <div id="mobile-slider">
+           <div class="close_menu" id="mobile_menu_close">
+                <span class="close-line1"></span>
+                <span class="close-line2"></span>
+            </div>   
+			<h3><img src="./img/logo.png" alt="서부산영상미디어센터 로고"></h3>
+			<div class="m_barogagi">
+			 			 <a href="">로그인</a>
+			 			 <a href="">마이페이지</a>
+			</div>
+            <div class="mobile_menu">
+                <ul>
+                    <li class="mobile-list">
+                    <a class="gnb_1mda">센터 소개</a>
+                    
+                    <ul class="mb-sub-ul">
+                        <li><a href="/bbs/content.php?co_id=about" target="_self">센터소개</a></li>
+                        <li><a href="/bbs/content.php?co_id=business" target="_self">주요사업</a></li>
+                        <li><a href="/bbs/content.php?co_id=floor01" target="_self">시설안내</a></li>
+                        <li><a href="/bbs/content.php?co_id=membership" target="_self">이용 및 회원안내</a></li>
+                        <li><a href="/bbs/content.php?co_id=organ" target="_self">조직구성</a></li>
+                        <li><a href="/bbs/content.php?co_id=location" target="_self">오시는길</a></li>
+                    </ul>
+                    </li>
+                    <li class="mobile-list">
+                        <a class="gnb_1mda">모두극장</a>
+                        
+                        <ul class="mb-sub-ul">
+                            <li><a href="/bbs/content.php?co_id=media" target="_self">신청안내</a></li>
+                            <li><a href="/education/programList.php?list=list&amp;type=0" target="_self">특별교육</a></li>
+                            <li><a href="/education/programList.php?list=list&amp;type=1" target="_self">정규교육</a></li>
+                            <li><a href="/reserv/reservation_counsel_step1.php" target="_self">상담예약</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-list">
+                        <a class="gnb_1mda">교육·체험</a>
+                        
+                        <ul class="mb-sub-ul">
+                            <li><a href="/bbs/content.php?co_id=rental" target="_self">대관안내</a></li>
+                            <li><a href="/reserv/room_list.php" target="_self">시설대관</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-list">
+                        <a class="gnb_1mda">장비·대관</a>
+                        
+                        <ul class="mb-sub-ul">
+                            <li><a href="/bbs/board.php?bo_table=yongmi_gallery" target="_self">보도 자료</a></li>
+                            <li><a href="/bbs/board.php?bo_table=y_video" target="_self">영상갤러리</a></li>
+                            <li><a href="/bbs/board.php?bo_table=y_news" target="_self">홍보 콘텐츠</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-list">
+                        <a class="gnb_1mda">아카이브</a>
+                        
+                        <ul class="mb-sub-ul">
+                            <li><a href="/bbs/board.php?bo_table=y_notice" target="_self">공지사항</a></li>
+                            <li><a href="/bbs/faq.php" target="_self">FAQ</a></li>
+                            <li><a href="/bbs/board.php?bo_table=y_reference" target="_self">서식자료</a></li>
+                            <li><a href="/bbs/qalist.php" target="_self">1:1문의</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-list">
+                        <a class="gnb_1mda">모두알림</a>
+                        
+                        <ul class="mb-sub-ul">
+                            <li><a href="/bbs/board.php?bo_table=y_notice" target="_self">공지사항</a></li>
+                            <li><a href="/bbs/faq.php" target="_self">FAQ</a></li>
+                            <li><a href="/bbs/board.php?bo_table=y_reference" target="_self">서식자료</a></li>
+                            <li><a href="/bbs/qalist.php" target="_self">1:1문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+        <footer>
+            <div class="inner">
+                <div class="f-logo"><img src="./img/logo-f.png" alt="서부산미디어영상센터 로고"></div>
+                <div class="ft-wrap">
+                    <div class="ft-l">
+                        <ul>
+                            <li><a href="">이용약관</a></li>
+                            <li><a href="">개인정보 처리방침</a></li>
+                            <li><a href="">이메일무단수집거부</a></li>
+                        </ul>
+                        <div class="addr">
+                            <div class="text">
+                                <p>
+                                    <span>부산광역시 대저로 269 농업기반공사<br class="mob"></span>
+                                    <span>전화 : 051-000-0000</span>
+                                    <span>팩스  : 051-000-0001</span>
+                                    <!--<span class="last">운영시간 : 화요일 - 금요일  09:00 ~ 22:00 / <br class="mob">토요일  09:00 ~ 18:00  (일, 월, 공휴일 휴관) </span>-->
+                                </p>
+                            </div>
+                            <div class="copy">Copyright (c) Busan media center All Rights Reserved</div>
+                        </div>
+                    </div>
+                    <div class="ft-r">
+                        <div class="ft-site-box">
+                            <a href="#" class="ft-site-btn">관련 사이트<i>▲</i></a>
+                            <div class="ft-site-list">
+                                <ul>
+                                    <li><a href="https://www.dureraum.org/" class="site_link" target="_blank" title="새창열림">영화의 전당</a></li>
+                                    <li><a href="https://www.unescobusan.org/" class="site_link" target="_blank" title="새창열림">영화창의도시</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function() {
+                $('.ft-site-btn').on('click', function(e) {
+                    e.preventDefault();
+                    $(this).next('.ft-site-list').slideToggle();
+                    $(this).toggleClass('active');
+                });
+            });
+                
+            </script>
+        </footer>
+    </div>
+
+
+    <!-- Swiper JS -->
+    
+
+    
+</body>
+</html>
