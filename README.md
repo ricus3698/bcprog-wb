@@ -32,17 +32,26 @@ _core/
 │   └── utility.css         → .d-flex, .text-center 등 유틸리티 클래스
 │
 ├── js/
-│   ├── common.js           → 공통 UI 기능: 탭, 아코디언, 드롭다운 등
-│   └── accessibility.js    → 접근성 보조: 포커스 트랩, 키보드 내비게이션
+│   ├── jquery.min.js       → jQuery 라이브러리 (v3.7.x)
+│   ├── common.js           → 공통 UI 기능 (tab, toggle, menu, scroll 등)
+│   ├── include.js          → HTML 요소 가상 include (정적 환경에서 가능)
+│   └── accessibility.js    → 해당성 향상 자료 (키보드, focus trap 등)
 │
 ├── fonts/
 │   └── pretendard/         → 공통 웹폰트 (woff2 포함)
 │
-└── components/
-    ├── header.html         → 공통 헤더 UI
-    ├── footer.html         → 공통 푸터 UI
-    ├── button.html         → 버튼 템플릿 모음
-    └── modal.html          → 모달 UI 구조
+├── components/
+│   ├── header.html         → 공통 헤더
+│   ├── footer.html         → 공통 푸터
+│   ├── button.html         → 버튼 보험 (active, disabled, icon)
+│   └── modal.html          → 모델 UI 구성
+│
+└── vendor/
+    ├── swiper/
+    │   ├── swiper.min.css  → Swiper CSS
+    │   └── swiper.min.js   → Swiper JS
+    
+    (보통 swiper, AOS, fancybox, gsap 등을 필요에 따라 추가)
 ```
 
 ---
