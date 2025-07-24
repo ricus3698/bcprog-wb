@@ -108,6 +108,8 @@ document.addEventListener('DOMContentLoaded', function () {
             el: ".movie-slide-wrap .movie-btn",
             clickable: true,
         },
+        touchStartPreventDefault: false, // ← 추가
+        touchReleaseOnEdges: true,       // ← 추가
     });
 
     // ---
