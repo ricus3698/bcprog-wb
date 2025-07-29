@@ -39,22 +39,53 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .tar{text-align: right;}
 .df{display: flex; gap: 10px; align-items: center;}
 
-  @media (min-width: 576px) {
 
-  }
+.header{height:70px;}
+.header-wrap .inner{position:relative;width:100%;height: 100%;}
+.header-wrap .inner::after{content:"";display:block;clear:both;}
+.header-wrap .logo{display: inline-block; position: absolute;margin-top:10px;}
+.header-wrap .logo img{width:200px;}
+.site-mgnb{position:relative;float:right;}
+.site-mgnb .sm-btn{position:relative;display:block;width:40px;height:40px;margin-top:5px;}
+.site-mgnb .sm-btn .bar {position: absolute; top: 15px; left: 12px; display: inline-block; width: 22px; height: 2px; background-color: #363636; transition: .3s;}
+.site-mgnb .sm-btn .mid {top: 22px; width: 18px;}
+.site-mgnb .sm-btn .bot {top: 28px;}
+#gnb{display: flex;}
 
+
+footer{background-color: #303030;}
+.ft-site-box{position: relative;}
+.ft-site-btn{position: relative; display: flex ; align-items: center; padding: 0 25px; font-size: 13px; color: #fff; border-bottom: 1px solid #767676; height: 36px;}
+.ft-site-list{display: none; position: absolute; left: 0; bottom: 36px; width: 100%; z-index: 9; }
+.ft_site_list ul li a{display: block; background: #000; border: 1px solid #767676; border-bottom: none; width: 100%; font-size: 13px; color: #FFF; padding: 5px 25px; }
+
+
+/* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
 
   }
-
-  @media (min-width: 992px) {
-
-  }
-
-  @media (min-width: 1200px) {
+/* ========== 데스크탑 (min-width: 1024px) ========== */
+  @media (min-width: 1024px) {
 
   }
+/* ========== 일반 데스크탑 시작 (min-width: 1280px) ========== */
+  @media (min-width: 1280px) {
 
+  }
+/* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
   @media (min-width: 1400px) {
 
   }
+/* ========== 와이드 데스크탑 (min-width: 1600px) ========== */
+  @media (min-width: 1600px) {
+
+ }
+
+ /* ========== PC전용요소 (max-width: 1279px) ========== */
+  @media (max-width: 1279px) {
+    
+    .header-wrap .inner nav{display:none;}
+    .total-group{display:none}
+    .site-mgnb .site-modal{display:none;}
+    .quick-menu{display: none;}
+ }
