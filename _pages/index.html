@@ -68,18 +68,49 @@
                             <li><a href="">모두극장</a>
                                 <div class="depth-area">
                                     <ul class="depth2">
-                                        <li><a href="">상영시간표</a></li>
-                                        <li><a href="">상영작</a></li>
-                                        <li><a href="">상영예정작</a></li>
-                                        <li><a href="">특별프로그램</a></li>
-                                        <li><a href="">좌석배치도</a></li>
+                                        <li><a href="#">극장안내</a></li>
+                                        <li><a href="#">상영시간표</a></li>
+                                        <li><a href="#">상영작</a></li>
+                                        <li><a href="#">기획전/특별전</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="">교육/체험</a></li>
-                            <li><a href="">장비/대관</a></li>
-                            <li><a href="">아카이브</a></li>
-                            <li><a href="">모두알림</a></li>
+                            <li><a href="">교육/체험</a>
+                                <div class="depth-area">
+                                    <ul class="depth2">
+                                        <li><a href="#">교육안내</a></li>
+                                        <li><a href="#">영화·미디어교육</a></li>
+                                        <li><a href="#">상설체험</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="">장비/대관</a>
+                                <div class="depth-area">
+                                    <ul class="depth2">
+                                        <li><a href="#">공간대관</a></li>
+                                        <li><a href="#">장비대여</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="">아카이브</a>
+                                <div class="depth-area">
+                                    <ul class="depth2">
+                                        <li><a href="#">영화·교육</a></li>
+                                        <li><a href="#">발간물</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="">모두알림</a>
+                                <div class="depth-area">
+                                    <ul class="depth2">
+                                        <li><a href="#">공지사항</a></li>
+                                        <li><a href="#">홍보콘텐츠</a></li>
+                                        <li><a href="#">보도자료</a></li>
+                                        <li><a href="#">자료실</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </nav>
                     
@@ -87,25 +118,26 @@
                         <div class="login-area">
                             <ul class="login-list">
                                 <li class="login">
-                                    <a href="#">로그인</a>
+                                    <a href="#" class="login-btn">
+                                        <span class="blind">로그인</span>
+                                    </a>
                                 </li>
-                                <li class="join">
+                                <!-- <li class="join">
                                     <a href="#">회원가입</a>
-                                </li>
+                                </li> -->
                             </ul>
-                            <ul class="logout-list">
+                            <!-- <ul class="logout-list">
                                 <li class="logout">
                                     <a href="#">로그아웃</a>
                                 </li>
                                 <li class="mypage">
                                     <a href="#">마이페이지</a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                         
                         <div class="total-area">
-                            <button type="button" class="search-btn">
-                                
+                            <button type="button" class="search-btn" onclick="searchOpen()">
                                 <span class="blind">검색 열기</span>
                             </button>
                             <div class="search-wrap">
@@ -116,183 +148,207 @@
                                             <fieldset>
                                                 <div class="search-hd-form">
                                                     <input type="text" class="search-inp" name="" placeholder="검색어를 입력해주세요." title="검색어를 입력해주세요.">
+                                                    <button type="submit" class="total-search"><span class="blind">검색</span></button>
                                                 </div>
                                             </fieldset>
                                         </form>
-                                        <p>통합검색 관련 안내 문구</p>
+                                        <p class="search-info">통합검색 관련 안내 문구</p>
                                     </div>
-                                    <button type="button" class="close-search-hd"><span class="blind">검색창 닫기</span></button>
+                                    <button type="button" class="close-search-hd" onclick="searchClose()"><span class="blind">검색창 닫기</span></button>
                                 </div>
                             </div>
                         </div>
                         <!-- total-area END -->
 
-                    </div>
-                    <!-- total-group END -->
+                    
 
-                    <div class="site-mgnb">
-                        <button type="button" class="sm-btn">
-                            <span class="bar top"></span>
-                            <span class="bar mid"></span>
-                            <span class="bar bot"></span>
-                            <span class="blind">전체메뉴열기</span>
-                        </button>
-                        <div class="site-modal">
-                            <div class="modal-inner">
-                                <p class="map-title">전체메뉴</p>
-                                
-                                <div class="menu-wrap">
-                                    <ul class="menu-list">
-                                        <li>
-                                            <a href="#">센터 소개</a>
-                                            <ul class="depth2">
-                                                <li><a href="#">센터안내</a></li>
-                                                <li><a href="#">이용안내</a></li>
-                                                <li><a href="#">층별안내</a></li>
-                                                <li><a href="#">오시는길</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">모두극장</a>
-                                            <ul class="depth2">
-                                                <li><a href="#">극장안내</a></li>
-                                                <li><a href="#">상영시간표</a></li>
-                                                <li><a href="#">상영작</a></li>
-                                                <li><a href="#">기획전/특별전</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">교육강좌</a>
-                                            <ul class="depth2">
-                                                <li><a href="#">교육안내</a></li>
-                                                <li><a href="#">영화·미디어 교육</a></li>
-                                                <li><a href="#">상설체험</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">장비/대관</a>
-                                            <ul class="depth2">
-                                                <li><a href="#">공관대관</a></li>
-                                                <li><a href="#">장비대여</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">아카이브</a>
-                                            <ul class="depth2">
-                                                <li><a href="#">영화·교육</a></li>
-                                                <li><a href="#">발간물</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">모두알림</a>
-                                            <ul class="depth2">
-                                                <li><a href="#">공지사항</a></li>
-                                                <li><a href="#">홍보콘텐츠</a></li>
-                                                <li><a href="#">보도자료</a></li>
-                                                <li><a href="#">자료실</a></li>
-                                                <li><a href="#">FAQ</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- menu-wrap END -->
-                                
-                                <button type="button" class="modal-close" onclick="siteMapClose()">전체메뉴닫기</button>
-
-                            </div>
-                            <!-- modal-inner END -->
-                        </div>
-                        <!-- site-modal END -->
-
-                        <div class="mobile-menu">
-
-                            <div class="mobile-global">
-                                
-                                <div class="mobile-tnb">
+                        <div class="site-mgnb">
+                            <button type="button" class="sm-btn" onclick="siteMgnbOpen()">
+                                <span class="bar top"></span>
+                                <span class="bar mid"></span>
+                                <span class="bar bot"></span>
+                                <span class="blind">전체메뉴열기</span>
+                            </button>
+                            <div class="site-modal">
+                                <div class="modal-inner">
+                                    <p class="map-title">전체메뉴</p>
                                     
-                                    <div class="mobile-logo">
-                                        <p><img src="../_assets/images/logo.png" alt="서부산영상미디어센터 로고"></p>
-                                    </div>
-
-                                    <div class="mobile-user">
-                                        <div class="user-info">
-                                            <div class="user-name">
-                                                <p class="user-non-login">서부산미디어영상센터에 오신것을 환영합니다</p>
-                                                <p class="user-login"><span class="user-name">블루컴님</span> 환영합니다</p>
-                                            </div>
-                                        </div>
-                                        <div class="mobile-util">
-                                            <ul class="login-list">
-                                                <li class="login">
-                                                    <a href="#">로그인</a>
-                                                </li>
-                                                <li class="join">
-                                                    <a href="#">회원가입</a>
-                                                </li>
-                                            </ul>
-                                            <ul class="logout-list">
-                                                <li class="logout">
-                                                    <a href="#">로그아웃</a>
-                                                </li>
-                                                <li class="mypage">
-                                                    <a href="#">마이페이지</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- mobile-user END -->
-
-                                </div>
-                                <!-- mobile-tnb END -->
-
-
-                                <div class="mobile-gnb">
-                                    <ul class="mobile-nav">
-                                        <li><a href="">센터소개</a>
-                                            <div class="depth-area">
+                                    <div class="menu-wrap">
+                                        <ul class="menu-list">
+                                            <li>
+                                                <a href="#">센터 소개</a>
                                                 <ul class="depth2">
-                                                    <li><a href="#">센터안내</a></li>
-                                                    <li><a href="#">이용안내</a></li>
+                                                    <li><a href="#">센터안내</a>
+                                                        <ul class="depth3">
+                                                            <li><a href="#">비전</a></li>
+                                                            <li><a href="#">주요사업</a></li>
+                                                            <li><a href="#">연혁</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">이용안내</a>
+                                                        <ul class="depth3">
+                                                            <li><a href="#">운영안내</a></li>
+                                                            <li><a href="#">회원구분</a></li>
+                                                        </ul>
+                                                    </li>
                                                     <li><a href="#">층별안내</a></li>
                                                     <li><a href="#">오시는길</a></li>
                                                 </ul>
-                                            </div>
-                                        </li>
-                                        <li><a href="">모두극장</a>
-                                            <div class="depth-area">
+                                            </li>
+                                            <li>
+                                                <a href="#">모두극장</a>
                                                 <ul class="depth2">
-                                                    <li><a href="">상영시간표</a></li>
-                                                    <li><a href="">상영작</a></li>
-                                                    <li><a href="">상영예정작</a></li>
-                                                    <li><a href="">특별프로그램</a></li>
-                                                    <li><a href="">좌석배치도</a></li>
+                                                    <li><a href="#">극장안내</a></li>
+                                                    <li><a href="#">상영시간표</a></li>
+                                                    <li><a href="#">상영작</a></li>
+                                                    <li><a href="#">기획전/특별전</a></li>
                                                 </ul>
-                                            </div>
-                                        </li>
-                                        <li><a href="">교육/체험</a></li>
-                                        <li><a href="">장비/대관</a></li>
-                                        <li><a href="">아카이브</a></li>
-                                        <li><a href="">모두알림</a></li>                                        
-                                    </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">교육강좌</a>
+                                                <ul class="depth2">
+                                                    <li><a href="#">교육안내</a></li>
+                                                    <li><a href="#">영화·미디어 교육</a></li>
+                                                    <li><a href="#">상설체험</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">장비/대관</a>
+                                                <ul class="depth2">
+                                                    <li><a href="#">공관대관</a></li>
+                                                    <li><a href="#">장비대여</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">아카이브</a>
+                                                <ul class="depth2">
+                                                    <li><a href="#">영화·교육</a></li>
+                                                    <li><a href="#">발간물</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">모두알림</a>
+                                                <ul class="depth2">
+                                                    <li><a href="#">공지사항</a></li>
+                                                    <li><a href="#">홍보콘텐츠</a></li>
+                                                    <li><a href="#">보도자료</a></li>
+                                                    <li><a href="#">자료실</a></li>
+                                                    <li><a href="#">FAQ</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- menu-wrap END -->
+                                    
+                                    <button type="button" class="modal-close" onclick="siteMgnbClose()">
+                                        <span class="blind">전체메뉴닫기</span>    
+                                    </button>
 
                                 </div>
-                                <button type="button" class="moblie-gnb-close" onclick="siteMapClose()">
-									<span class="blind">모바일메뉴 닫기</span>
-								</button>
+                                <!-- modal-inner END -->
+                            </div>
+                            <!-- site-modal END -->
 
+                            <div class="mobile-menu">
+
+                                <div class="mobile-global">
+                                    
+                                    <div class="mobile-tnb">
+                                        
+                                        <div class="mobile-logo">
+                                            <p>
+                                                <a href="/">
+                                                    <img src="../_assets/images/logo.png" alt="서부산영상미디어센터 로고">
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                        <div class="mobile-user">
+                                            <div class="user-info">
+                                                <div class="user-name">
+                                                    <p class="user-non-login">서부산미디어영상센터에 오신것을 환영합니다</p>
+                                                    <!-- <p class="user-login"><span class="user-name">블루컴님</span> 환영합니다</p> -->
+                                                </div>
+                                            </div>
+                                            <div class="mobile-util">
+                                                <ul class="login-list">
+                                                    <!-- login -->
+                                                    <li class="login">
+                                                        <a href="#">로그인</a>
+                                                    </li>
+                                                    <li class="join">
+                                                        <a href="#">회원가입</a>
+                                                    </li>
+                                                    <!-- login -->
+                                                    <!-- logout -->
+                                                    <!-- <li class="logout">
+                                                        <a href="#">로그아웃</a>
+                                                    </li>
+                                                    <li class="mypage">
+                                                        <a href="#">마이페이지</a>
+                                                    </li> -->
+                                                    <!-- logout -->
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+                                        <!-- mobile-user END -->
+
+                                    </div>
+                                    <!-- mobile-tnb END -->
+
+
+                                    <div class="mobile-gnb">
+                                        <ul class="mobile-nav">
+                                            <li><a href="">센터소개</a>
+                                                <div class="depth-area">
+                                                    <ul class="depth2">
+                                                        <li><a href="#">센터안내</a></li>
+                                                        <li><a href="#">이용안내</a></li>
+                                                        <li><a href="#">층별안내</a></li>
+                                                        <li><a href="#">오시는길</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="">모두극장</a>
+                                                <div class="depth-area">
+                                                    <ul class="depth2">
+                                                        <li><a href="">상영시간표</a></li>
+                                                        <li><a href="">상영작</a></li>
+                                                        <li><a href="">상영예정작</a></li>
+                                                        <li><a href="">특별프로그램</a></li>
+                                                        <li><a href="">좌석배치도</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="">교육/체험</a></li>
+                                            <li><a href="">장비/대관</a></li>
+                                            <li><a href="">아카이브</a></li>
+                                            <li><a href="">모두알림</a></li>                                        
+                                        </ul>
+
+                                    </div>
+                                    <button type="button" class="moblie-gnb-close" onclick="siteMgnbClose()">
+                                        <span class="blind">모바일메뉴 닫기</span>
+                                    </button>
+
+
+                                </div>
+                                <!-- mobile-gnb END -->
 
                             </div>
-                            <!-- mobile-gnb END -->
+                            <!-- mobile-menu END -->
 
                         </div>
-                        <!-- mobile-menu END -->
-
-                    </div>
-                    <!-- site-mgnb END -->
+                        <!-- site-mgnb END -->
                     
+                    </div>
+                    <!-- total-group END -->
 
                 </div>
-
+                <div class="gnb-bg">
+		            <div class="bg-inner"></div>
+		        </div>
 
             </div>    
         </header>
@@ -758,31 +814,34 @@
             </div>
         </main>
         
-        <footer>
+        <footer class="footer">
             <div class="inner">
-                <div class="f-logo"><img src="../_assets/images/logo-f.png" alt="서부산미디어영상센터"></div>
+                
                 <div class="ft-wrap">
-                    <div class="ft-l">
-                        <ul>
-                            <li><a href="">이용약관</a></li>
-                            <li><a href="">개인정보 처리방침</a></li>
-                            <li><a href="">이메일무단수집거부</a></li>
-                        </ul>
+                    <div class="footer-top">
+                        <div class="f-logo"><img src="../_assets/images/logo-f.png" alt="서부산미디어영상센터"></div>
+                        <div class="footer-util">
+                            <ul>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#" class="f-util-actv">개인정보 처리방침</a></li>
+                                <li><a href="#">이메일무단수집거부</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
                         <div class="addr">
                             <div class="text">
                                 <p>
-                                    <span>부산광역시 대저로 269 농업기반공사<br class="mob"></span>
+                                    <span>부산광역시 대저로 269 농업기반공사</span>
                                     <span>전화 : 051-000-0000</span>
                                     <span>팩스  : 051-000-0001</span>
-                                    <!--<span class="last">운영시간 : 화요일 - 금요일  09:00 ~ 22:00 / <br class="mob">토요일  09:00 ~ 18:00  (일, 월, 공휴일 휴관) </span>-->
+                                    <span class="last">운영시간 : 09:00 - 18:00 (주말 및 공휴일 휴무)</span>
                                 </p>
                             </div>
-                            <div class="copy">Copyright (c) Busan media center All Rights Reserved</div>
+                            <div class="copy">Copyright © 2025 Busan media center All Rights Reserved.</div>
                         </div>
-                    </div>
-                    <div class="ft-r">
                         <div class="ft-site-box">
-                            <a href="#" class="ft-site-btn">관련 사이트<i>▲</i></a>
+                            <a href="#" class="ft-site-btn">패밀리 사이트 <i class="site-list-icon"><img src="/_assets/images/plus.svg" alt=""></i></a>
                             <div class="ft-site-list">
                                 <ul>
                                     <li><a href="https://www.dureraum.org/" class="site_link" target="_blank" title="새창열림">영화의 전당</a></li>
@@ -791,6 +850,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </footer>
@@ -830,7 +890,7 @@
             </ul>
             <button id="topBtn">top ▲</button>            
         </div>
-
+        <div class="overlay"></div>
     </div>
 
     <script src="../_assets/js/main2.js"></script>

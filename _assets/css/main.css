@@ -12,7 +12,7 @@
 
 
 .main-slide-wrap{position: relative;}
-.main-custom-pagination{bottom: -60px; width: auto; left: calc(50% - 75px); height: 35px; padding: 0 10px; font-size: 14px; position: absolute; z-index: 99; display: flex ; align-items: center; justify-content: left; background: #457FFF; color: #FFF; border-radius: 50px;}
+.main-custom-pagination{bottom: -60px; width: auto; left: calc(50% - 75px); height: 35px; padding: 0 10px; font-size: 14px; position: absolute; z-index: 5; display: flex ; align-items: center; justify-content: left; background: #457FFF; color: #FFF; border-radius: 50px;}
 .swiper-pagination-fraction{width: 50px;}
 .swiper-pagination-bullet{background: transparent; border: 1px solid #fff; opacity: 1; margin: 0 3px; cursor: pointer;}
 .swiper-pagination-bullet-active{background: #fff;}
