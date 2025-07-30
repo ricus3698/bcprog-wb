@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 1. 첫 번째 Swiper (.mv-swiper) 초기화
     const swiper = new Swiper('.mv-swiper', {
-        loop: true,
+        loop: false,
         pagination: {
             el: '.main-custom-pagination',
             clickable: true,
@@ -11,18 +11,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 let bulletsHtml = '';
                 for (let i = 0; i < total; i++) {
                     const activeClass = i === swiper.realIndex ? 'swiper-pagination-bullet-active' : '';
-                    bulletsHtml += `<span class="swiper-pagination-bullet ${activeClass}" 
+                    bulletsHtml += `<button class="swiper-pagination-bullet ${activeClass}" 
                                           tabindex="0" 
                                           role="button" 
-                                          aria-label="Go to slide ${i + 1}"></span>`;
+                                          aria-label="Go to slide ${i + 1}"></button>`;
                 }
                 return `<div class="swiper-pagination-bullets" role="tablist">
                             ${bulletsHtml}
                         </div>
-                        <div class="swiper-pagination-fraction" role="status" aria-live="polite">
-                            <span class="swiper-pagination-current">${current}</span> / <span class="swiper-pagination-total">${total}</span>
-                        </div>
-                        <button class="swiper-button-play-pause" aria-live="polite" aria-label="슬라이드쇼 재생 또는 정지">정지</button>`;
+                        <button class="swiper-button-play-pause" aria-live="polite" aria-label="슬라이드쇼 재생 또는 정지"><i class="xi-pause"></i></button>`;
             },
         },
         autoplay: {
@@ -54,16 +51,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // 1-1. 첫 번째 Swiper 재생/정지 및 접근성 관련 이벤트 핸들러
     let isAutoplayPaused = false;
     document.querySelector('.main-custom-pagination').addEventListener('click', function(e) {
-        if (e.target.classList.contains('swiper-button-play-pause')) {
-            const playPauseButton = e.target;
+        const playPauseButton = e.target.closest('.swiper-button-play-pause'); // 부모 중에 버튼이 있는지 확인
+        if (playPauseButton) {
             if (isAutoplayPaused) {
                 swiper.autoplay.start();
-                playPauseButton.textContent = '정지';
+                playPauseButton.innerHTML = '<i class="xi-pause"></i>';
                 playPauseButton.setAttribute('aria-label', '슬라이드쇼 정지');
                 isAutoplayPaused = false;
             } else {
                 swiper.autoplay.stop();
-                playPauseButton.textContent = '재생';
+                playPauseButton.innerHTML = '<i class="xi-play"></i>';
                 playPauseButton.setAttribute('aria-label', '슬라이드쇼 재생');
                 isAutoplayPaused = true;
             }
@@ -96,20 +93,52 @@ document.addEventListener('DOMContentLoaded', function () {
     // ---
 
     // 2. 두 번째 Swiper (.movie-slide-wrap) 초기화
+    /*
     const movieSlide = new Swiper(".movie-slide-wrap .swiper", {
-        slidesPerView: 1.9,
+        slidesPerView: 5,
         spaceBetween: 0,
-        loop: true,
+        loop: false,
+        centeredSlides:true,
         navigation: {
             prevEl: ".movie-slide-wrap .movie-prev-btn",
             nextEl: ".movie-slide-wrap .movie-next-btn",
         },
-        pagination: {
-            el: ".movie-slide-wrap .movie-btn",
-            clickable: true,
-        },
         touchStartPreventDefault: false, // ← 추가
         touchReleaseOnEdges: true,       // ← 추가
+    });
+    */
+    const movieSlide = new Swiper(".movie-slide-wrap .swiper", {
+        loop: false,
+        initialSlide: 0,
+        spaceBetween: 20,
+        navigation: {
+            prevEl: ".movie-slide-wrap .movie-prev-btn",
+            nextEl: ".movie-slide-wrap .movie-next-btn",
+        },
+        touchStartPreventDefault: false,
+        touchReleaseOnEdges: true,
+        breakpoints: {
+            0: {
+                slidesPerView: 1.4,
+                centeredSlides: true,
+            },
+            769: {
+                slidesPerView: 3,
+                centeredSlides: false,
+            },
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
+            1280: {
+                slidesPerView: 6,
+            }
+        },
+        on: {
+            resize: function () {
+                this.slideTo(0, 0); // 리사이즈 시 항상 첫 슬라이드로 초기화
+            }
+        }
     });
 
     // ---
