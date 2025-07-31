@@ -122,9 +122,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 slidesPerView: 1.4,
                 centeredSlides: true,
             },
+            560: {
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
             769: {
                 slidesPerView: 3,
-                centeredSlides: false,
             },
             1024: {
                 slidesPerView: 5,
