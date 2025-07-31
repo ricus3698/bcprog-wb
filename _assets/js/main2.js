@@ -232,4 +232,51 @@ document.addEventListener('DOMContentLoaded', function () {
         showSlidesByStatus('all');
     });
 
+    // 1. 필요한 DOM 요소들을 선택합니다.
+    const dateList = document.querySelector('.date-selector'); // 탭 버튼들을 감싸는 ul
+    const dateButtons = document.querySelectorAll('.date-selector button[role="tab"]');
+    const datePanels = document.querySelectorAll('.showtime-content div[role="tabpanel"]');
+
+    /**
+     * @param {HTMLElement} targetTab - 활성화할 탭 버튼 요소
+     */
+    const switchTab = (targetTab) => {
+        // 현재 활성화된 탭을 찾아 인덱스 저장
+        const currentActiveTab = document.querySelector('.date-selector button.active');
+        if (currentActiveTab === targetTab) return; // 이미 활성화된 탭이면 아무것도 안 함
+
+        // 모든 탭 버튼과 패널을 비활성화 상태로 초기화
+        dateButtons.forEach(button => {
+            button.classList.remove('active');
+            button.setAttribute('aria-selected', 'false');
+        });
+        datePanels.forEach(panel => {
+            panel.classList.remove('active');
+        });
+
+        // 클릭/포커스된 탭 버튼을 활성화
+        targetTab.classList.add('active');
+        targetTab.setAttribute('aria-selected', 'true');
+
+        // 해당 탭과 연결된 패널을 찾아 활성화
+        const targetPanelId = targetTab.getAttribute('aria-controls');
+        const targetPanel = document.getElementById(targetPanelId);
+        if (targetPanel) {
+            targetPanel.classList.add('active');
+        }
+    };
+
+    // 2. 각 탭 버튼에 이벤트 리스너를 추가합니다.
+    dateButtons.forEach(button => {
+        // 마우스 클릭 시 탭 전환
+        button.addEventListener('click', (e) => {
+            switchTab(e.currentTarget);
+        });
+
+        // 키보드 포커스 이동 시 탭 전환
+        button.addEventListener('focus', (e) => {
+            switchTab(e.currentTarget);
+        });
+    });
+
 });

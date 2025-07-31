@@ -192,7 +192,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
     .header-wrap .total-group .login-btn {background-image: url("../images/login_icon.svg"); background-size: 46%; background-position: center; background-repeat: no-repeat;}
     .header-wrap .total-area {margin:0 10px;}
-    .header-wrap .total-area .search-btn {background-image: url("../images/search.svg"); background-size: 46%; background-position: center; background-repeat: no-repeat;}
+    .header-wrap .total-area .search-btn {background-image: url("../images/glass_icon.svg"); background-size: 46%; background-position: center; background-repeat: no-repeat;}
     .header-wrap .total-area .search-area {position: absolute; left: 0; top: 94px; width: 100%; padding: 50px 0; background-color: #fff; text-align: center; z-index: 99;}
     .header-wrap .search-wrap {display: none; position: absolute; left: 0; top:95px; width: 100%; z-index: 11;}
     .header-wrap .search-inner {position: relative; width: 100%; padding: 50px 20px 70px; background-color: #fff; }

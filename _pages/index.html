@@ -566,51 +566,138 @@
                             <!--상영시간표-->
                             <div class="movie_sch_area">
                                 <h2 class="blind">상영시간표</h2>
-                                <div class="week_inner">
-                                    <div class="week_title">
-                                        <span class="date">2025.06</span>
+                                <div class="schedule-container-wrap">
+                                    <div class="current-wrap">
+                                        <h2 class="current-month">2025.06</h2>
+                                        <a class="current-more" href="">전체일정보기 ></a>
                                     </div>
-                                    <div class="week_list_wrap">
-                                        <div class="week_list">
-                                            <div class="week_item">
-                                                <div class="date_box">
-                                                    <p class="date">03</p>
-                                                    <span class="day">TUE</span>
-                                                </div>
-                                                <div class="info_box"> 
-                                                    <a class="sch-movie">
-                                                        <div class="movie-tit">
-                                                            <div class="age-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></div><p>로비</p>
-                                                        </div>
-                                                        <div class="info">
-                                                            <p class="time">14:40 ~ 17:25</p>
-                                                            <p>액션 | 127분</p>
-                                                            <p><span>31</span>/ 50</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
+                                    <div class="schedule-container">
+                                        <div class="schedule-date-wrap">
+                                            <div class="schedule-date">
+                                                <ul class="date-selector" role="tablist" aria-label="상영 날짜">
+                                                    <li role="presentation">
+                                                        <button id="tab-22" type="button" role="tab" aria-selected="false" aria-controls="panel-22">
+                                                            <span class="day-number">22</span>
+                                                            <span class="day-of-week">SUN</span>
+                                                        </button>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <button id="tab-23" type="button" role="tab" aria-selected="false" aria-controls="panel-23">
+                                                            <span class="day-number">23</span>
+                                                            <span class="day-of-week">MON</span>
+                                                        </button>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <button id="tab-24" type="button" role="tab" aria-selected="false" aria-controls="panel-24">
+                                                            <span class="day-number">24</span>
+                                                            <span class="day-of-week">TUE</span>
+                                                        </button>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <button id="tab-25" type="button" role="tab" aria-selected="false" aria-controls="panel-25">
+                                                            <span class="day-number">25</span>
+                                                            <span class="day-of-week">WED</span>
+                                                        </button>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <button id="tab-26" type="button" role="tab" aria-selected="false" aria-controls="panel-26" class="active"> 
+                                                            <span class="day-number">26</span>
+                                                            <span class="day-of-week">THU</span>
+                                                        </button>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <button id="tab-27" type="button" role="tab" aria-selected="false" aria-controls="panel-27">
+                                                            <span class="day-number">27</span>
+                                                            <span class="day-of-week">FRI</span>
+                                                        </button>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <button id="tab-28" type="button" role="tab" aria-selected="false" aria-controls="panel-28">
+                                                            <span class="day-number">28</span>
+                                                            <span class="day-of-week">SAT</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <div class="week_item">
-                                                <div class="date_box">
-                                                    <p class="date">03</p>
-                                                    <span class="day">TUE</span>
-                                                </div>
-                                                <div class="info_box"> 
-                                                    <a class="sch-movie">
-                                                        <div class="movie-tit">
-                                                            <div class="age-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></div><p>로비</p>
-                                                        </div>
-                                                        <div class="info">
-                                                            <p class="time">14:40 ~ 17:25</p>
-                                                            <p>액션 | 127분</p>
-                                                            <p><span>31</span>/ 50</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
+                                        </div>
+
+                                        <div class="showtime-content">
+                                            <div id="panel-26" role="tabpanel" aria-labelledby="tab-26" class="showtime-list active">
+                                                <a href="">
+                                                    <div class="movie-card">
+                                                        <p>
+                                                            <span class="age-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                            <span class="title">전지적 독자 시점(한글자막)</span>
+                                                        </p>
+                                                        <p class="time">14:40 ~ 17:25</p>
+                                                        <p class="info">액션 | 127분</p>
+                                                       
+                                                    </div>
+                                                </a>
+                                                <a href="">
+                                                    <div class="movie-card">
+                                                        <p>
+                                                            <span class="age-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                            <span class="title">전지적 독자 시점(한글자막)전지적 독자 시점(한글자막)</span>
+                                                        </p>
+                                                        <p class="time">14:40 ~ 17:25</p>
+                                                        <p class="info">액션 | 127분</p>
+                                                        
+                                                    </div>
+                                                </a>
+                                                <a href="">
+                                                    <div class="movie-card">
+                                                        <p>
+                                                            <span class="age-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                            <span class="title">전지적 독자 시점(한글자막)</span>
+                                                        </p>
+                                                        <p class="time">14:40 ~ 17:25</p>
+                                                        <p class="info">액션 | 127분</p>
+                                                        
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div id="panel-27" role="tabpanel" aria-labelledby="tab-27" class="showtime-list">
+                                                <a href="">
+                                                    <div class="movie-card">
+                                                        <p>
+                                                            <span class="age-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                            <span class="title">로비</span>
+                                                        </p>
+                                                        <p class="time">14:40 ~ 17:25</p>
+                                                        <p class="info">액션 | 127분</p>
+                                                  
+                                                    </div>
+                                                </a>
+                                                <a href="">
+                                                    <div class="movie-card">
+                                                        <p>
+                                                            <span class="age-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                            <span class="title">로비</span>
+                                                        </p>
+                                                        <p class="time">14:40 ~ 17:25</p>
+                                                        <p class="info">액션 | 127분</p>
+                                                      
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            
+                                            <div id="panel-28" role="tabpanel" aria-labelledby="tab-28" class="showtime-list">
+                                                <a href="">
+                                                    <div class="movie-card">
+                                                        <p>
+                                                            <span class="age-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                            <span class="title">로비</span>
+                                                        </p>
+                                                        <p class="time">14:40 ~ 17:25</p>
+                                                        <p class="info">액션 | 127분</p>
+                                                   
+                                                    </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-                                    
                                 </div>
                             </div>
 
@@ -815,12 +902,12 @@
                             <div class="title_area"><h2>장비·대관</h2><a href=""></a></div>
                             <div class="rental_list">
                                 <ul>
-                                    <li><a href=""><div><img src="../_assets/images/tool_icon-1.png" alt=""></div><span>촬영장비</span></a></li>
-                                    <li><a href=""><div><img src="../_assets/images/tool_icon-2.png" alt=""></div><span>음향장비</span></a></li>
-                                    <li><a href=""><div><img src="../_assets/images/tool_icon-3.png" alt=""></div><span>조명장비</span></a></li>
-                                    <li><a href=""><div><img src="../_assets/images/tool_icon-4.png" alt=""></div><span>기타장비</span></a></li>
-                                    <li><a href=""><div><img src="../_assets/images/tool_icon-5.png" alt=""></div><span>후반작업실</span></a></li>
-                                    <li><a href=""><div><img src="../_assets/images/tool_icon-6.png" alt=""></div><span>시설대관</span></a></li>
+                                    <li><a href=""><div><img src="../_assets/images/tool-1.png" alt=""></div><span>촬영장비</span></a></li>
+                                    <li><a href=""><div><img src="../_assets/images/tool-2.png" alt=""></div><span>조명장비</span></a></li>
+                                    <li><a href=""><div><img src="../_assets/images/tool-3.png" alt=""></div><span>녹음장비</span></a></li>
+                                    <li><a href=""><div><img src="../_assets/images/tool-4.png" alt=""></div><span>스튜디오</span></a></li>
+                                    <li><a href=""><div><img src="../_assets/images/tool-5.png" alt=""></div><span>강의실</span></a></li>
+                                    <li><a href=""><div><img src="../_assets/images/tool-6.png" alt=""></div><span>전문편집실</span></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -875,32 +962,38 @@
             <ul class="quick-list">
                 <li>
                     <a href="">
-                        <div class="img-wrap"><img src="../_assets/images/x.png" alt=""></div>
-                        <p>센터안내</p>
+                        <div class="img-wrap"><img src="../_assets/images/instagram_icon.svg" alt=""></div>
+                        <p class="blind">인스타그램</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <div class="img-wrap"><img src="../_assets/images/x.png" alt=""></div>
-                        <p>오시는 길</p>
+                        <div class="img-wrap"><img src="../_assets/images/kakaoch-icon.svg" alt=""></div>
+                        <p class="blind">카카오톡 채널</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <div class="img-wrap"><img src="../_assets/images/x.png" alt=""></div>
-                        <p>상영시간표</p>
+                        <div class="img-wrap"><img src="../_assets/images/facebook_icon.svg" alt=""></div>
+                        <p class="blind">페이스북</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <div class="img-wrap"><img src="../_assets/images/x.png" alt=""></div>
-                        <p>대여절차</p>
+                        <div class="img-wrap"><img src="../_assets/images/daangn-icon.svg" alt=""></div>
+                        <p class="blind">당근마켓</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <div class="img-wrap"><img src="../_assets/images/x.png" alt=""></div>
-                        <p>신청안내</p>
+                        <div class="img-wrap"><img src="../_assets/images/youtube_icon.svg" alt=""></div>
+                        <p class="blind">유튜브</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="img-wrap"><img src="../_assets/images/my-icon.svg" alt=""></div>
+                        <p class="blind">마이페이지</p>
                     </a>
                 </li>
             </ul>
