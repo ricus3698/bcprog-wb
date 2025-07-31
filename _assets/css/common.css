@@ -45,6 +45,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .header-wrap .inner{position:relative;width:100%;height: 100%;}
 
 .header-wrap .logo{display: inline-block; position: absolute;margin-top:10px;}
+.header-wrap .logo a{display:block;}
 .header-wrap .logo img{width:200px;}
 
 .site-mgnb{position:relative;float:right;}
@@ -160,7 +161,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     
     .header-wrap nav{width:100%;height:100%;max-width:900px;}
     .header-wrap .gnb {height: 100%; display: flex; align-items: center;}
-    .header-wrap .gnb > li {position: relative; width: calc(100% / 5); height: 100%;}
+    .header-wrap .gnb > li {position: relative; width: calc(100% / 6); height: 100%;}
     .header-wrap .gnb > li::before {position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 32px; border: 1px dashed #fff; opacity: 0.5; content: '';}
     .header-wrap .gnb > li:last-child::after {position: absolute; right: 0; top: 50%; transform: translateY(-50%); height: 32px; border: 1px dashed #fff; opacity: 0.5; content: '';}
     .header-wrap .gnb > li > a {display: inline-flex; width: 100%; height: 100%; font-size: 1.2rem; font-weight: 500; align-items: center; justify-content: center; color: #333; text-decoration: none;}
