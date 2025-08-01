@@ -916,9 +916,7 @@
                     <div class="inner">
                         <div class="title_area">
                             <h2>주간행사·교육일정</h2>
-                            <a href="#" class="more-link" aria-label="주간행사·교육일정 더보기">
-                                <i class="xi-arrow-right" aria-hidden="true"></i>
-                            </a>
+                            <a href="#" class="movie-more-link"><i class="xi-arrow-right"></i></a>
                         </div>
 
                         <div class="calendar-container">
@@ -936,15 +934,24 @@
 
                             <table class="weekly-calendar">
                                 <caption class="blind">2025년 6월 넷째 주 주간행사·교육일정</caption>
+                                <colgroup>
+                                    <col class="col-date">
+                                    <col class="col-date">
+                                    <col class="col-date">
+                                    <col class="col-date">
+                                    <col class="col-date">
+                                    <col class="col-date">
+                                    <col class="col-date">
+                                </colgroup>
                                 <thead>
                                     <tr>
-                                        <th scope="col" class="is-sun"><span class="day-num">22</span> SUN</th>
-                                        <th scope="col"><span class="day-num">23</span> MON</th>
-                                        <th scope="col"><span class="day-num">24</span> TUE</th>
-                                        <th scope="col"><span class="day-num">25</span> WED</th>
-                                        <th scope="col" class="is-today"><span class="day-num">26</span> THU</th>
-                                        <th scope="col"><span class="day-num">27</span> FRI</th>
-                                        <th scope="col" class="is-sat"><span class="day-num">28</span> SAT</th>
+                                        <th scope="col" class="is-sun" id="sun-22"><span class="day-num">22</span> SUN</th>
+                                        <th scope="col" id="mon-23"><span class="day-num">23</span> MON</th>
+                                        <th scope="col" id="tue-24"><span class="day-num">24</span> TUE</th>
+                                        <th scope="col" id="wed-25"><span class="day-num">25</span> WED</th>
+                                        <th scope="col" id="thu-26" class="is-today"><span class="day-num">26</span> THU</th>
+                                        <th scope="col" id="fri-27"><span class="day-num">27</span> FRI</th>
+                                        <th scope="col" id="sat-28" class="is-sat"><span class="day-num">28</span> SAT</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -960,10 +967,12 @@
                                         <td headers="tue-24"></td>
                                         <td headers="wed-25">
                                             <ul class="event-list">
-                                                <li><a href="#" class="event-item legend-rental">1인미디어 방송, OBS&스튜디오 하나로...</a></li>
+                                                <li><a href="#" class="event-item legend-rental">1인미디어 방송, OBS&스튜디오 하나로 1인미디어 방송, OBS&스튜디오 하나로</a></li>
+                                                <li><a href="#" class="event-item legend-edu">디지털드로잉으로 움직이는 이모티콘 만들기 디지털드로잉으로 움직이는 이모티콘 만들기</a></li>
+                                                <li><a href="#" class="event-item legend-edu">디지털드로잉으로 움직이는 이모티콘 만들기 디지털드로잉으로 움직이는 이모티콘 만들기</a></li>
                                             </ul>
                                         </td>
-                                        <td headers="thu-26">
+                                        <td headers="thu-26" class="is-today">
                                             <ul class="event-list">
                                                 <li><a href="#" class="event-item legend-edu">디지털드로잉으로 움직이는 이모티콘 만들기</a></li>
                                             </ul>
@@ -980,7 +989,7 @@
                 <section class="main-info">
                     <div class="inner">
                         <div class="main-notice">
-                            <div class="title_area"><h2>모두알림</h2><a href=""></a></div>
+                            <div class="title_area"><h2>모두알림</h2><a href="#" class="movie-more-link"><i class="xi-arrow-right"></i></a></div>
                             <div class="notice_list">
                                 <ul>
                                     <li>
@@ -1002,7 +1011,7 @@
                             </div>
                         </div>
                         <div class="main-rental">
-                            <div class="title_area"><h2>장비·대관</h2><a href=""></a></div>
+                            <div class="title_area"><h2>장비·대관</h2><a href="#" class="movie-more-link"><i class="xi-arrow-right"></i></a></div>
                             <div class="rental_list">
                                 <ul>
                                     <li><a href=""><div><img src="../_assets/images/tool-1.png" alt=""></div><span>촬영장비</span></a></li>

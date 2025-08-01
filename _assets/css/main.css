@@ -10,9 +10,9 @@
 .main-slide-wrap .main-custom-pagination .swiper-button-play-pause{line-height:14px;}
 .main-slide-wrap .main-custom-pagination .swiper-button-play-pause i{font-size:24px;text-shadow:1px 0px 5px rgba(0,0,0,0.9);color:#fff;line-height:14px;position:relative;top:3px;}
 
-.title_area{padding-left: 50px; position: relative;}
+.title_area{padding-left: 60px; position: relative;}
 .title_area h2{display: inline-block;}
-.title_area:after{content: ''; display: block; width: 33px; height: 27px; background: url(../images/film-icon.svg) no-repeat; background-size: contain; overflow: hidden; position: absolute; top: 10px; left: 10px;}
+.title_area:after{content: ''; display: block; width: 33px; height: 27px; background: url(../images/film-icon.svg) no-repeat; background-size: contain; overflow: hidden; position: absolute; top: 10px; left: 10px; filter: drop-shadow(2px 4px 6px rgba(83, 137, 197, 0.4));}
 .movie-more-link{display:inline-block;background-color:#fff;color:#B3B3B3;border: 1px solid #B3B3B3; width:33px;height:33px;border-radius:50%;text-align:center;line-height:35px;position: relative; top: -5px;transition: background-color 300ms ease-in-out;margin-left: 20px;}
 .movie-more-link:hover{background-color:var(--color-primary);color:#fff;border: 1px solid var(--color-primary);}
 
@@ -162,7 +162,8 @@
 .lec-date span {word-break: auto-phrase; line-height: normal;}
 .lec-detail ul { display: flex; align-items: center; gap: 16px; margin: 0; padding: 0; list-style: none; }
 .lec-detail li { display: flex; align-items: center; font-size: 14px; color: #666666; }
-.lec-detail li img { width: 16px; height: 16px; margin-right: 6px; filter: invert(50%) sepia(0%) saturate(1463%) hue-rotate(187deg) brightness(97%) contrast(85%); }
+.lec-detail li img { width: 17px; height: auto; margin-right: 6px; }
+.lec-detail li img:last-child{width: 20px;}
 
 
 /* 기본 레이아웃 */
@@ -185,22 +186,30 @@
 .calendar-legend .legend-edu::before { background-color: #CA79FF; }
 
 /* 달력 테이블 */
-.weekly-calendar { width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: 10px 0; background-color: rgba(255, 255, 255, 0.8); border-radius: 20px; box-shadow: 16px 26px 80px rgba(32, 65, 89, 0.1);}
-.weekly-calendar tr{border-bottom: 1px solid #E2E2E2;}
-.weekly-calendar th {padding: 16px 8px;  text-align: center; font-weight: 500; color: #555; white-space: nowrap;}
-.weekly-calendar th .day-num { font-size: 20px; font-weight: 600; margin-bottom: 4px;}
-.weekly-calendar .is-sun .day-num, .weekly-calendar .is-sun { color: #d9534f; }
-.weekly-calendar .is-sat .day-num, .weekly-calendar .is-sat { color: #337ab7; }
-.weekly-calendar .is-today {background-color: var(--color-primary); color: #fff; font-weight: 500;}
-.weekly-calendar .is-today .day-num { color: #fff; }
+.weekly-calendar { width: 100%; border-spacing: 20px; table-layout: fixed; border-collapse: separate; background-color: rgba(255, 255, 255, 0.8); border-radius: 20px; box-shadow: 16px 26px 80px rgba(32, 65, 89, 0.1);}
+.weekly-calendar thead tr{position: relative;}
+.weekly-calendar thead tr:after{display: block; width: 100%; height: 1px; background-color:#E2E2E2; position: absolute; content: ''; left: 0; bottom: -20px;}
+.col-date{width: calc(100% / 7);}
+.weekly-calendar th {padding: 0px 18px;  text-align: left; font-weight: 500; color: #717A80; white-space: nowrap; border-radius: 40px;}
+.weekly-calendar th .day-num { font-size: 34px; font-weight: 600; margin-bottom: 4px; color: #000;}
+.weekly-calendar .is-sun .day-num { color: #fa5252; }
+.weekly-calendar .is-sat .day-num { color: #4c6ef5; }
+.weekly-calendar th.is-today {background-color: #00A5B2; color: rgba(255, 255, 255, 0.8); font-weight: 500;}
+.weekly-calendar th.is-today .day-num { color: #fff; }
+.weekly-calendar td.is-today li a{text-decoration: underline;  text-decoration-thickness: 7px; text-underline-offset: 2px;}
+.weekly-calendar td.is-today li .legend-event{text-decoration-color: rgba(255, 181, 92, 0.2);}
+.weekly-calendar td.is-today li .legend-rental{text-decoration-color: rgba(0, 211, 88, 0.2);}
+.weekly-calendar td.is-today li .legend-edu{text-decoration-color: rgba(202, 121, 255, 0.2);}
 
-.weekly-calendar td {  height: 150px; border-radius: 12px; padding: 12px; vertical-align: top; }
+.weekly-calendar td {min-height: 162px; height: 162px; border-radius: 12px; vertical-align: top; position: relative;}
+.weekly-calendar td::after{position: absolute;display: block; width: 1px; height: 100%; background-color:#E2E2E2; position: absolute; content: ''; right: -10px; bottom: 0;}
+
 
 /* 이벤트 목록 */
 .event-list { list-style: none; margin: 0; padding: 0; }
 .event-list li { margin-bottom: 8px; }
-.event-item { display: block; padding: 8px 10px; border-radius: 8px; font-size: 14px; color: #333; text-decoration: none; border-left: 3px solid transparent;}
-.event-item:after {content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%;}
+.event-item {display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; padding: 8px 8px 0px 20px; border-radius: 8px; font-size: 16px; font-weight: bold; color: #333; text-decoration: none; border-left: 3px solid transparent; position: relative; line-height: normal;}
+.event-item:after {content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; position: absolute; left: 0; top: 14px;}
 .event-item.legend-event:after { background-color: #FFA538; }
 .event-item.legend-rental:after { background-color: #00D358; }
 .event-item.legend-edu:after { background-color: #CA79FF; }
