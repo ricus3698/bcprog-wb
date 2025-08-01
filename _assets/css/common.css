@@ -109,7 +109,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 
 /*퀵메뉴*/
-.quick-menu {position: fixed; top: 35%; right: 30px; max-width: 100px; border-radius: 18px 18px 20px 20px; z-index: 9;}
+.quick-menu {position: fixed; top: 25%; right: 30px; max-width: 100px; border-radius: 18px 18px 20px 20px; z-index: 9;}
 .quick-menu .menu-list {position: relative; padding: 35px 0 20px; border-radius: 50px; background-color: #fff; z-index: 9; box-shadow: 8px 0px 28px rgba(57, 89, 159, 0.1);} 
 .quick-menu .menu-list > li{text-align: center;}
 .quick-menu .menu-list > li + li {margin-top: 10px;}

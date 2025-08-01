@@ -174,43 +174,50 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    const lecSlideSwiper = new Swiper(".lec-swiper", { // lec-slide-wrap .swiper 대신 .lec-swiper로 변경했습니다.
-        slidesPerView: 1.1,
-        spaceBetween: 0,
-        loop: false,
-        navigation: {
-            prevEl: ".lec-slide-wrap .lec-prev-btn", 
-            nextEl: ".lec-slide-wrap .lec-next-btn", 
-        },
-    });
+     const tabLinks = document.querySelectorAll('.tab-list a');
+    const swiperWrapper = document.querySelector('.lec-swiper .swiper-wrapper');
+    const allSlidesHTML = swiperWrapper.innerHTML; // 1. 초기 모든 슬라이드 HTML 저장
+    let lecSlideSwiper = null; // Swiper 인스턴스를 담을 변수
 
-    const tabLinks = document.querySelectorAll('.main-lecture .tab-list a');
-    const lecSlides = document.querySelectorAll('.lec-swiper .lec-slide');
-
-    function hideAllSlides() {
-        lecSlides.forEach(slide => {
-            slide.style.display = 'none';
+    // Swiper를 초기화하는 함수
+    function initSwiper() {
+        lecSlideSwiper = new Swiper(".lec-swiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: false,
+            navigation: {
+                prevEl: ".lec-slide-wrap .lec-prev-btn",
+                nextEl: ".lec-slide-wrap .lec-next-btn",
+            },
+            // 슬라이드가 없을 때 네비게이션 버튼 비활성화
+            watchOverflow: true, 
         });
     }
 
-    // 특정 상태의 슬라이드를 보여주는 함수
+    // 특정 상태의 슬라이드를 필터링하여 보여주는 함수
     function showSlidesByStatus(status) {
-        hideAllSlides(); 
-        if (status === 'all') {
-            lecSlides.forEach(slide => {
-                slide.style.display = 'block';
-            });
-        } else {
-            const targetSlides = document.querySelectorAll(`.lec-swiper .lec-slide.status-${status}`);
-            targetSlides.forEach(slide => {
-                slide.style.display = 'block';
+        // 2. 기존 Swiper 인스턴스가 있다면 파괴
+        if (lecSlideSwiper) {
+            lecSlideSwiper.destroy(true, true);
+        }
+
+        // 3. 필터링을 위해 모든 슬라이드를 다시 채움
+        swiperWrapper.innerHTML = allSlidesHTML;
+
+        if (status !== 'all') {
+            const allSlides = swiperWrapper.querySelectorAll('.lec-slide');
+            allSlides.forEach(slide => {
+                if (!slide.classList.contains(`status-${status}`)) {
+                    slide.remove();
+                }
             });
         }
-        lecSlideSwiper.update();
-        lecSlideSwiper.slideTo(0);
+        
+        // 4. 필터링된 슬라이드로 Swiper 새로 초기화
+        initSwiper();
     }
 
-    // 탭 클릭 이벤트 리스너 추가
+    // 탭 클릭 이벤트 리스너
     tabLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -218,19 +225,20 @@ document.addEventListener('DOMContentLoaded', function () {
             tabLinks.forEach(l => l.parentElement.classList.remove('active'));
             this.parentElement.classList.add('active');
 
-            const tabStatus = this.dataset.tab; // 클릭한 탭의 data-tab 값 가져오기
-            showSlidesByStatus(tabStatus); // 해당 상태의 슬라이드 보여주기
+            const tabStatus = this.dataset.tab;
+            showSlidesByStatus(tabStatus);
         });
     });
 
-    // 페이지 로드 시 '전체' 탭이 기본으로 선택되고 모든 슬라이드가 보이도록 설정
-    document.addEventListener('DOMContentLoaded', () => {
-        const allTab = document.querySelector('.main-lecture .tab-list a[data-tab="all"]');
-        if (allTab) {
-            allTab.parentElement.classList.add('active');
-        }
-        showSlidesByStatus('all');
-    });
+    // 페이지 로드 시 '전체' 탭 기본 활성화 및 Swiper 초기화
+    const allTab = document.querySelector('.tab-list a[data-tab="all"]');
+    if (allTab) {
+        allTab.parentElement.classList.add('active');
+    }
+    initSwiper(); // 처음 페이지 로드 시 Swiper 초기화
+
+
+    
 
     // 1. 필요한 DOM 요소들을 선택합니다.
     const dateList = document.querySelector('.date-selector'); // 탭 버튼들을 감싸는 ul
