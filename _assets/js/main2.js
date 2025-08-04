@@ -287,4 +287,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    $('.ft-site-btn').on('click', function(e) {
+        // a 태그의 기본 동작(페이지 이동) 방지
+        e.preventDefault();
+        
+        // 부모 .ft-site-box에 'on' 클래스를 추가/제거
+        $(this).closest('.ft-site-box').toggleClass('on');
+    });
+
 });

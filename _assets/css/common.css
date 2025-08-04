@@ -135,7 +135,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .footer .copy{font-size:0.9rem;text-align:center;color:#999;}
 
 .ft-site-box{position: relative;max-width:260px;margin:20px auto 10px;border:1px solid #767676;border-radius:3px;}
-.ft-site-btn{position: relative; display:block ; align-items: center; padding: 10px 25px; font-size:0.8rem;border-bottom: 1px solid #767676;}
+.ft-site-btn{position: relative; display:block ; align-items: center; padding: 10px 25px; font-size:0.8rem;}
 .ft-site-list{display: none; position: absolute; left: 0; bottom:42px; width: 100%; z-index: 9;background:#fff;border:1px solid #ccc;border-bottom:0;border-radius:3px 3px 0 0;}
 .ft-site-list ul li a{display:block;border-bottom:1px solid #ccc;font-size:0.8rem;padding:10px 25px;}
 .ft-site-list ul li:last-child a{border-bottom:0;}
