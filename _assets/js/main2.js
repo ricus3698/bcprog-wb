@@ -117,6 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         touchStartPreventDefault: false,
         touchReleaseOnEdges: true,
+        observer: true,          // DOM 변경 감지
+        observeParents: true,    // 부모 요소 변경 감지
         breakpoints: {
             0: {
                 slidesPerView: 1.4,
@@ -128,20 +130,29 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             769: {
                 slidesPerView: 3,
+                centeredSlides: false,
             },
             1024: {
                 slidesPerView: 5,
                 spaceBetween: 30,
+                centeredSlides: false,
             },
             1280: {
                 slidesPerView: 6,
+                centeredSlides: false,
             }
         },
         on: {
             resize: function () {
-                this.slideTo(0, 0); // 리사이즈 시 항상 첫 슬라이드로 초기화
+                console.log('[Swiper] resize 감지됨');
+                swiper.update();
+                swiper.slideTo(0, 0);
+            },
+            init: function () {
+                console.log('[Swiper] 초기화됨');
             }
         }
+
     });
 
     // ---
@@ -295,4 +306,8 @@ document.addEventListener('DOMContentLoaded', function () {
         $(this).closest('.ft-site-box').toggleClass('on');
     });
 
+});
+
+window.addEventListener('resize', () => {
+  console.log('브라우저 리사이즈 발생!');
 });
