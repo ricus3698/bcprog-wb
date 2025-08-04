@@ -182,13 +182,35 @@ document.addEventListener('DOMContentLoaded', function () {
     // Swiper를 초기화하는 함수
     function initSwiper() {
         lecSlideSwiper = new Swiper(".lec-swiper", {
-            slidesPerView: 4,
+            slidesPerView: 1.2,
             spaceBetween: 30,
             loop: false,
             navigation: {
                 prevEl: ".lec-slide-wrap .lec-prev-btn",
                 nextEl: ".lec-slide-wrap .lec-next-btn",
             },
+            breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+                centeredSlides: true,
+            },
+            560: {
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
+            769: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
+        on: {
+            resize: function () {
+                this.slideTo(0, 0); // 리사이즈 시 항상 첫 슬라이드로 초기화
+            }
+        },
             // 슬라이드가 없을 때 네비게이션 버튼 비활성화
             watchOverflow: true, 
         });
