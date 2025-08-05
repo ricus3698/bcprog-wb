@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+    .bbs-category-box{margin-bottom:var(--spacing-lg);}
+    .bbs-category-box .bbs-tab-category{border:1px solid var(--color-primary);border-radius:5px;}
+    .bbs-category-box .bbs-tab-category::after{content:"";display:block;clear:both;}
+    .bbs-category-box .bbs-tab-category li{float:left;width:calc(100% / 6);border-radius:4px;position:relative;}
+    .bbs-category-box .bbs-tab-category li:before{content:"";position:absolute;top:12px;left:-1px;width:1px;height:22px;background-color:var(--color-primary);}
+    .bbs-category-box .bbs-tab-category li a{display:block;text-align:center;color:var(--color-primary);line-height:3rem;font-size:1.2rem;}
+    .bbs-category-box .bbs-tab-category li.active{background-color:var(--color-primary);}
+    .bbs-category-box .bbs-tab-category li.active a{color:#fff;}
+    .bbs-category-box .bbs-tab-category li.active:before{display:none;}
+
+    .b-cate01-m{position:relative;background-color:var(--color-primary);border-radius:5px;margin-bottom:var(--spacing-lg);}
+    .b-cate01-m label{display:block;width:100%;line-height:40px;border-radius:5px;color:#fff;padding:0 15px;text-align:center;}
+    .b-cate01-m #category-option{width:100%;position:absolute;top:0;left:0;background:transparent;border:0;opacity:0;}
+
+    .bbs-search form{background-color:#f9fafd;margin-bottom:var(--spacing-md);padding:15px 30px;}
+    .bbs-search-text{float:left;margin-bottom:0;margin-top:var(--spacing-sm);}
+    .bbs-total-number{font-weight:600;}
+
+    .bbs-search-group{position:relative;float:right;}
+    .bbs-search-select{display:inline-block;width:130px;padding-right:var(--spacing-sm);}
+    .bbs-search-select select{display:block;width:100%;}
+    .bbs-search-btn{position:absolute;top:6px;right:6px;width:25px;height:25px;text-indent:-9999px;background-image:url("../images/glass_icon.svg");background-repeat:no-repeat;background-size:contain;}
+
+    .board-table{width:100%;}
+    .board-table thead{background:var(--color-table-thead);}
+    .board-table thead th{line-height:66px;}
+    .board-table tbody td{text-align:center;padding:20px 10px;border-bottom:1px solid var(--color-border);}
+    .board-table tbody td.board-td-left{text-align:left;}
+    .board-title-box a{display:inline-block;max-width:calc(100% - 48px);text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;vertical-align:middle;}
+    .board-title-box .board-etc-box{display:inline-block;}
+    .board-title-box .board-etc-box p{margin-bottom:0;}
+
+    .b-col01{width:10%;}
+    .b-col02{width:15%;}
+    .b-col03{width:50%;}
+    .b-col04{width:15%;}
+    .b-col05{width:10%;}
+
+/* ========== 모바일 전용 (max-width: 767px) ========== */
+ @media (max-width: 767px) {
+    
+    .bbs-search form{padding:10px 20px;}
+    .bbs-search-text{float:none;margin-bottom:var(--spacing-sm);}
+    .bbs-search-group{float:none;display:table;width:100%;table-layout:fixed;margin-bottom:var(--spacing-sm);}
+    .bbs-search-select{display:table-cell;width:90px;padding-right:var(--spacing-sm)}
+    .bbs-search-group input[type=text]{width:100%;}
+
+ }
+
+/* ========== 태블릿 (min-width: 768px) ========== */
+  @media (min-width: 768px) {
+
+  }
+/* ========== 데스크탑 (min-width: 1024px) ========== */
+  @media (min-width: 1024px) {
+
+  }
+/* ========== 일반 데스크탑 시작 (min-width: 1280px) ========== */
+  @media (min-width: 1280px) {
+
+    .pc-hide{display:none;}
+    .board-moblie-content{display:none;}
+  }
+/* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
+  @media (min-width: 1400px) {
+
+  }
+/* ========== 와이드 데스크탑 (min-width: 1600px) ========== */
+  @media (min-width: 1600px) {
+
+ }
+  @media (min-width: 1680px) {
+
+}
+ /* ========== PC전용요소 (max-width: 1279px) ========== */
+  @media (max-width: 1279px) {
+    
+    .mobile-hide{display:none;}
+ }
+
+ 

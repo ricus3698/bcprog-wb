@@ -15,6 +15,7 @@
   --color-text: #333;
   --color-bg: #fff;
   --color-border: #e0e0e0;
+  --color-table-thead:#f6f6f6;
 
   /* 폰트 */
   --font-base: 'Pretendard', sans-serif;
