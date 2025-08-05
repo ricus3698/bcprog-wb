@@ -24,19 +24,37 @@
     .bbs-search-btn{position:absolute;top:6px;right:6px;width:25px;height:25px;text-indent:-9999px;background-image:url("../images/glass_icon.svg");background-repeat:no-repeat;background-size:contain;}
 
     .board-table{width:100%;}
-    .board-table thead{background:var(--color-table-thead);}
-    .board-table thead th{line-height:66px;}
+    .board-table thead th{line-height:66px;background:var(--color-table-thead);font-weight:600;border-bottom:1px solid var(--color-border);}
+    .board-table thead tr th:first-child{border-radius:5px 0 0 5px;}
+    .board-table thead tr th:last-child{border-radius:0 5px 5px 0;}
     .board-table tbody td{text-align:center;padding:20px 10px;border-bottom:1px solid var(--color-border);}
     .board-table tbody td.board-td-left{text-align:left;}
     .board-title-box a{display:inline-block;max-width:calc(100% - 48px);text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;vertical-align:middle;}
     .board-title-box .board-etc-box{display:inline-block;}
     .board-title-box .board-etc-box p{margin-bottom:0;}
 
+    .board-table tbody .notice-tr td{background-color:#f8f5ff;}
+    .board-table tbody .notice-tr td.board-num-box{color:#6b21a8;}
+
     .b-col01{width:10%;}
     .b-col02{width:15%;}
     .b-col03{width:50%;}
     .b-col04{width:15%;}
     .b-col05{width:10%;}
+
+    .board-file{display:inline-block;text-indent:-9999px;width:20px;height:20px;background-image:url("../images/att_file_grey.svg");background-repeat:no-repeat;background-size:contain;vertical-align:middle;}
+
+    /*페이징*/
+    .pagination {margin-top:var(--spacing-lg);margin-bottom:var(--spacing-lg);display:flex;justify-content:center;gap:10px;}
+    .pagination .paging {display:flex;gap:10px;}
+    .pagination .paging a {display:flex;width:35px;height:35px;align-items:center;justify-content:center;color:#555;border:1px solid var(--color-border);border-radius:50%;font-size:1rem;}
+    .pagination .paging .page {background-color:#f4f4f4;background-position:center;background-repeat:no-repeat;border:0;}
+    .pagination .page {background-image:url("../images/bbs-arr-doub.svg");}
+    .pagination .page.first {background-image:url("../images/bbs-arr.svg");}
+    .pagination .page.next {transform:rotate(180deg);background-position: 4px 6px;}
+    .pagination .page.last {background-image:url("../images/bbs-arr.svg");transform:rotate(180deg);}
+    .pagination .paging.num .active {background-color:var(--color-primary);border-color:var(--color-primary);color:#fff; font-weight:500;border:0;}
+
 
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
