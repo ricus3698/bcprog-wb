@@ -121,3 +121,18 @@ function searchClose() {
     $('.overlay').hide();
     $('.header .search-btn').focus();
 }
+
+//공유하기
+$('.share-toggle').click(function(e){
+    e.preventDefault();
+    const $sharebtn = $(this);
+    const $shareBlind = $(this).find('span.blind');
+    const $snsShareList = $('.share-wrap');
+
+    $snsShareList.stop().slideToggle(200, function(e) {
+        var snsShareOpen = $snsShareList.is(':visible');
+        // aria-expanded 속성 및 텍스트 변경
+        $sharebtn.attr('aria-expanded', snsShareOpen ? 'true' : 'false');
+        $shareBlind.text(snsShareOpen ? 'sns 공유하기 닫기' : 'sns 공유하기 열기');
+    });
+})
