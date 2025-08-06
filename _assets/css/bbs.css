@@ -10,7 +10,7 @@
     .bbs-category-box .bbs-tab-category li.active a{color:#fff;}
     .bbs-category-box .bbs-tab-category li.active:before{display:none;}
 
-    .b-cate01-m{position:relative;background-color:var(--color-primary);border-radius:5px;margin-bottom:var(--spacing-lg);}
+    .b-cate01-m.b-cate01-m{position:relative;background-color:var(--color-primary);border-radius:5px;margin-bottom:var(--spacing-lg);background-image: url("../images/cate-down.svg");background-repeat: no-repeat;background-position: calc(100% - 10px) center;}
     .b-cate01-m label{display:block;width:100%;line-height:40px;border-radius:5px;color:#fff;padding:0 15px;text-align:center;}
     .b-cate01-m #category-option{width:100%;position:absolute;top:0;left:0;background:transparent;border:0;opacity:0;}
 
@@ -23,7 +23,7 @@
     .bbs-search-select select{display:block;width:100%;}
     .bbs-search-btn{position:absolute;top:6px;right:6px;width:25px;height:25px;text-indent:-9999px;background-image:url("../images/glass_icon.svg");background-repeat:no-repeat;background-size:contain;}
 
-    .board-table{width:100%;}
+    .board-table{width:100%;table-layout:fixed;}
     .board-table thead th{line-height:66px;background:var(--color-table-thead);font-weight:600;border-bottom:1px solid var(--color-border);}
     .board-table thead tr th:first-child{border-radius:5px 0 0 5px;}
     .board-table thead tr th:last-child{border-radius:0 5px 5px 0;}
@@ -37,8 +37,8 @@
     .board-table tbody .notice-tr td.board-num-box{color:#6b21a8;}
 
     .b-col01{width:10%;}
-    .b-col02{width:15%;}
-    .b-col03{width:50%;}
+    .b-col02{width:10%;}
+    .b-col03{width:55%;}
     .b-col04{width:15%;}
     .b-col05{width:10%;}
 
@@ -55,6 +55,30 @@
     .pagination .page.last {background-image:url("../images/bbs-arr.svg");transform:rotate(180deg);}
     .pagination .paging.num .active {background-color:var(--color-primary);border-color:var(--color-primary);color:#fff; font-weight:500;border:0;}
 
+    .board-view{border-top:2px solid var(--color-border);}
+    .board-view-section{border-bottom:1px solid var(--color-border)}
+    .flex-area{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;}
+    
+    .vs1,.vs2,.vs3{box-sizing:border-box;padding:20px;}
+    .vs1 .board-view-subject{flex:1;word-break:keep-all;font-size:1.6rem;}
+    .board-view-info{flex:0 0 300px;display:flex;gap:10px;justify-content: center;}
+    .board-view-info dt{flex:0 0 50px;color:#000;}
+    .board-view-info dd{color:#747474}
+    .board-view-info dd.b-date{flex:0 0 100px;}
+
+    .board-view-btn{box-sizing:border-box;padding:20px 0;text-align:center;}
+    .b-list{background:var(--color-primary);color:#fff;}
+
+    .board-view-nav{margin-top:var(--spacing-lg);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);}
+    .board-view-nav dl{width:100%;height:50px;display:table;table-layout:fixed;}
+    .board-view-nav dl + dl{border-top:1px solid var(--color-border)}
+    .board-view-nav dl dt,.board-view-nav dl dd{display:table-cell;vertical-align:top;line-height:36px;}
+    .board-view-nav dl dt{position:relative;width:150px;text-align:center;box-sizing:border-box;padding:12px 0;background:#f8f8fc;}
+    .board-view-nav dl dt:after{content:"";display:inline-block;width:0;height:0;border:5px solid transparent;border-bottom-color:#000;vertical-align:middle;margin-left:15px;}
+    .board-view-nav dl dt.prev-v::after{position:relative;top:-4px}
+    .board-view-nav dl dt.next-v::after{transform:rotate(180deg)}
+    .board-view-nav dl dd{color:#757575;padding:12px 0 12px 40px;}
+    .board-view-nav dl dd a{color:#000;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:block;width:calc(100% - 20px);}
 
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
@@ -65,6 +89,18 @@
     .bbs-search-select{display:table-cell;width:90px;padding-right:var(--spacing-sm)}
     .bbs-search-group input[type=text]{width:100%;}
 
+    .b-col01{width:20%;}
+    .b-col03{width:80%;}
+    .board-col.bbs-mobile-hide{width:0;}
+    .board-table tbody td{padding:5px;}
+    .bbs-mobile-hide{display:none !important;}
+    .board-table thead th{line-height:46px;}
+    .board-table thead tr th:nth-child(3){border-radius:0 5px 5px 0;}
+    .board-table tbody td.board-num-box{vertical-align:middle;}
+
+    .board-moblie-content{font-size:0.9rem;}
+    .board-moblie-content span{margin-right:var(--spacing-sm);}
+    .board-moblie-content a{vertical-align:top;}
  }
 
 /* ========== 태블릿 (min-width: 768px) ========== */
