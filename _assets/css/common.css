@@ -133,7 +133,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .footer .addr .text span{display:inline-block;margin:0 10px;}
 .footer .addr .text span:first-child,.footer .addr .text span.last{display:block;}
 .footer .addr .text span.last{font-size:14px;}
-.footer .copy{font-size:0.9rem;text-align:center;color:#999;}
+.footer .copy{font-size:0.9rem;text-align:center;color:#585858;}
 
 .ft-site-box{position: relative;max-width:260px;margin:30px auto 10px;}
 .ft-site-btn{position: relative; display:block ; align-items: center; padding: 15px 20px; font-size:14px;border:1px solid #CCCCCC;border-radius:3px;}
