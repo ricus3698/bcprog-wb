@@ -15,7 +15,7 @@ input:-webkit-autofill:active {transition: background-color 5000s ease-in-out 0s
 a:hover {text-decoration: underline; text-underline-offset: 3px;}
 select {-webkit-appearance:none; /* for chrome */ -moz-appearance:none; /*for firefox*/ appearance:none;}
 select::-ms-expand{display:none;/*for IE10,11*/}
-select {background-color: #fff; background-image: url("../images/common/select-arrow.png"); background-position:95% center ; background-repeat: no-repeat; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+select {height: 40px; padding: 0 15px; border: 1px solid #dcdcdc;background-color: #fff;border-radius:5px;background-image: url("../images/sel-down.svg"); background-position:95% center ; background-repeat: no-repeat; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
 .blind {position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); margin: -1px;}
 .inner {max-width: 1600px; margin: 0 auto; box-sizing: border-box;}
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {outline: 2px dashed #0e0852;}
@@ -38,6 +38,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .tac{text-align: center;}
 .tar{text-align: right;}
 .df{display: flex; gap: 10px; align-items: center;}
+
+.btn-a{display:inline-block;min-width:80px;box-sizing:border-box;padding:0 20px;border-radius:3px;line-height:46px;}
 
 
 .header{position:relative;background-color:#fff;z-index:10;}
