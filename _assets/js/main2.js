@@ -211,10 +211,12 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             769: {
                 slidesPerView: 3,
+                centeredSlides: false,
             },
             1024: {
                 slidesPerView: 4,
                 spaceBetween: 30,
+                centeredSlides: false,
             },
         },
         on: {
@@ -315,9 +317,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // 키보드 포커스 이동 시 탭 전환
-        button.addEventListener('focus', (e) => {
+        /*button.addEventListener('focus', (e) => {
             switchTab(e.currentTarget);
-        });
+        });*/
     });
 
     $('.ft-site-btn').on('click', function(e) {
@@ -327,6 +329,17 @@ document.addEventListener('DOMContentLoaded', function () {
         // 부모 .ft-site-box에 'on' 클래스를 추가/제거
         $(this).closest('.ft-site-box').toggleClass('on');
     });
+
+
+    //탑버튼
+    const topBtn = document.getElementById('top-btn');
+
+    topBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        });
 
 });
 
