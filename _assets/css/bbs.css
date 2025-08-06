@@ -80,6 +80,29 @@
     .board-view-nav dl dd{color:#757575;padding:12px 0 12px 40px;}
     .board-view-nav dl dd a{color:#000;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:block;width:calc(100% - 20px);}
 
+    .board-files{flex:1;}
+    .board-files .file-list{display:flex;justify-content:flex-start;align-items:center;width:100%;}
+    .board-files .file-list dt{flex:0 0 109px;padding:20px;display:inline-block;vertical-align:middle;text-align:center;}
+    .board-files .file-list dd{width:85%;flex:1;}
+    .board-files .file-list .ico-file{display:inline-block;width:20px;height:20px;background-image:url("../images/att_file_grey.svg");background-repeat:no-repeat;background-size:contain;vertical-align:middle;}
+
+    .board-view-share{flex:0 0 300px;display:flex;gap:10px;justify-content:center;position:relative;}
+    .board-view-share button{width:47px;height:47px;border:1px solid var(--color-border);border-radius:50%;display:flex;align-items:center;justify-content:center;;}
+    .board-view-share button.share-toggle:before{content:"";display:inline-block;vertical-align:middle;width:20px;height:20px;background:url("../images/bbs-share.svg") no-repeat;background-size:contain;}
+    .board-view-share button.page-print:before{content:"";display:inline-block;vertical-align:middle;width:20px;height:20px;background:url("../images/bbs-print.svg") no-repeat;background-size:contain;}
+    
+    .share-wrap{display:block;position:absolute;text-align:center;top:50px;left:40px;z-index:15;width:160px;padding:10px 5px;border:1px solid var(--color-border);background:#fff;border-radius:5px;}
+    .share-wrap{display:none;}
+    .share-wrap a{display:inline-block;width:38px;height:38px;vertical-align:middle;}
+    .share-wrap a span{display:inline-block;width: 38px; height: 38px; border-radius: 50%; background-position: center;  background-repeat: no-repeat;}
+    /* 
+      .sns-list .snsbtn-insta {background:url("../images/common/sns_insta.png") center, linear-gradient(to right bottom, #652d91 13%, #ed519d 58%, #f5bb1d 90%)}
+      .sns-list .snsbtn-youtube {background-color: #e30000; background-image: url("../images/common/sns_youtube.png");}
+    */
+    .share-wrap a span.sns-facebook {background-color: #1a55a5; background-image: url("../images/sns_facebook.png");}
+    .share-wrap a span.sns-kakao {background-color: #ffde58; background-image: url("../images/sns_kakao.png");}
+    .share-wrap a span.sns-twitter {background-color: #000; background-image: url("../images/sns_twitter.png");}
+
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
     
@@ -133,5 +156,3 @@
     
     .mobile-hide{display:none;}
  }
-
- 

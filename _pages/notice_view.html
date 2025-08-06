@@ -362,7 +362,7 @@
 
                     <div class="bbs-wrap bbs-view">
                         
-                        <div class="board-view">
+                        <div class="board-view print-area">
                             
                             <div class="board-view-section flex-area vs1">
                                 
@@ -388,7 +388,7 @@
                                                 <div class="file-list__set__item">
                                                     <a href="#">
                                                         <span class="file-name"> 
-                                                            <i class="ico-hwp"></i>
+                                                            <i class="ico-file"></i>
                                                             <span class="name">[보도자료] 창업 부담은 줄이고, 성장 기회는 키운다... 경콘진, ‘2025 북부 경기문화창조허브’ 하반기 입주기업 모집.hwp </span>
                                                         </span>
                                                     </a>
@@ -396,7 +396,7 @@
                                                 <div class="file-list__set__item">
                                                     <a href="#">
                                                         <span class="file-name"> 
-                                                            <i class="ico-hwp"></i>
+                                                            <i class="ico-file"></i>
                                                             <span class="name">[보도자료] 창업 부담은 줄이고, 성장 기회는 키운다... 경콘진, ‘2025 북부 경기문화창조허브’ 하반기 입주기업 모집.hwp </span>
                                                         </span>
                                                     </a>
@@ -412,16 +412,13 @@
                                     </button>
                                     <div class="share-wrap">
                                         <a href="javascript:gfnToTwitter(document.location.href);">
-                                        <span data-type="twitter" class="tweeter"><i class="blind">트위터 공유 새창열림</i></span>
+                                            <span class="sns-twitter"><i class="blind">트위터 공유 새창열림</i></span>
                                         </a>
                                         <a href="javascript:sendLink();">
-                                        <span data-type="kakaotalk" class="kakaotalk"><i class="blind">카카오톡 공유 새창열림</i></span>
-                                        </a>
-                                        <a href="javascript:naverOpen();">
-                                        <span data-type="naverblog" class="blog"><i class="blind">블로그 공유 새창열림</i></span>
+                                            <span class="sns-kakao"><i class="blind">카카오톡 공유 새창열림</i></span>
                                         </a>
                                         <a href="javascript:;" onclick="facebook();return false;" class="facebook" target="_blank">
-                                        <span data-type="facebook" class="facebook"><i class="blind">페이스북 공유 새창열림</i></span>
+                                            <span class="sns-facebook"><i class="blind">페이스북 공유 새창열림</i></span>
                                         </a>
                                     </div>
                                     <button onclick="window.print()" aria-label="인쇄하기" class="page-print"></button>
@@ -564,7 +561,7 @@
         <div class="overlay"></div>
     </div>
 
-    <script src="../_assets/js/main2.js"></script>
+    <script src="../_assets/js/common.js"></script>
     <!-- <script src="../_assets/js/acc-swp.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
