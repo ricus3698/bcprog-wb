@@ -26,6 +26,42 @@
     }
   }
 
+  /* 애니메이션 키프레임 정의 */
+@keyframes dot_scale {
+    0%, 100% {
+        /* 시작과 끝: 원래 위치 */
+        transform: translateY(0);
+    }
+    50% {
+        /* 중간: 위로 10px 이동 */
+        transform: translateY(-10px);
+    }
+}
+
+/* 점들을 감싸는 컨테이너 */
+.deco {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 7px;
+    width: 53px;
+    height: 100%;
+}
+
+/* 모든 점의 공통 스타일 */
+.deco .dot {
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    width: 6px;
+    height: 6px;
+    background-color: #9da7ff;
+    bottom: 29px;
+    left: 61px;
+    animation-delay: 250ms;
+    animation: dot_scale 1250ms infinite ease-in-out;
+}
+
 .movie-more-link{display:inline-block;background-color:#fff;color:#B3B3B3;border: 1px solid #B3B3B3; width:28px;height:28px;border-radius:50%;text-align:center;line-height:29px;position: relative; top: -1px;transition: background-color 300ms ease-in-out;margin-left: 20px;}
 .movie-more-link:hover{background-color:var(--color-primary);color:#fff;border: 1px solid var(--color-primary);}
 
@@ -90,8 +126,8 @@
 .schedule-date-wrap { display: flex; justify-content: space-between; align-items: center;}
 .schedule-date{width: 100%;}
 .current-month { font-size: 18px; font-weight: bold; color: #212529; margin: 0; float: left;}
-.current-more{color:#6071A6; font-size: 14px; float: right;}
-.date-selector { list-style: none; display: flex; margin: 0; padding-right: 10px; justify-content: space-between; flex-direction: column; position: relative;}
+.current-more{color:#4a5780; font-size: 14px; float: right;}
+.date-selector { list-style: none; display: flex; margin: 0; padding-right: 10px; justify-content: space-between; flex-direction: column; position: relative; width: 97px;}
 .date-selector:after { width: 1px; height: 100%; right: 0; left: auto; bottom: 0px; content: ''; background-color: #E2E2E2; position: absolute;}
 .date-selector li{display: contents;}
 .date-selector li button {margin: 20px 0; padding: 0 12px; text-align: center; cursor: pointer; border-radius: 30px; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; display: flex; align-items: center;justify-content: center;}
@@ -103,17 +139,18 @@
 .date-selector li:first-child .day-number { color: #fa5252; } 
 .date-selector li:last-child .day-number { color: #4c6ef5; }
 .date-selector li button.active .day-number { color: #fff; }
-.showtime-content{min-height: 127px; width: 100%;}
+.showtime-content{min-height: 127px; width: 100%; min-width: 0;}
 .showtime-list { display: none; }
 .showtime-list.active { display: flex; flex-wrap: wrap; gap: 10px; padding-left: 10px;}
-.showtime-list a{width: 100%;}
+.showtime-list a{width: 100%; min-width: 0;}
 .movie-card { border: 1px solid #e9ecef; border-radius: 5px; padding: 10px 10px; min-width: 0; width: 100%;}
 .movie-card>p { margin-bottom: 0;}
-.age-icon { display: inline-block; vertical-align: middle; position: relative; top: -3px; }
+.age-icon { display: inline-block; vertical-align: middle; position: relative; top: 2px; }
 .age-icon img{width: 20px;}
+.movie-card .age-icon{float: left; padding-right: 4px;}
 .movie-card p { margin: 4px 0; font-size: 14px; color: #495057; }
 .movie-card p:first-child{margin-bottom: 7px;}
-.movie-card .title { font-size: 16px; font-weight: 700; margin:8px 0; color: #000;}
+.movie-card .title { font-size: 16px; font-weight: 700; color: #000; display: block; white-space: nowrap;  overflow: hidden; text-overflow: ellipsis;}
 .movie-card .time{font-weight: 600;}
 .movie-card .seats strong { color: #4c6ef5; font-weight: 700; }
 .rating {display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 4px; color: #fff; font-weight: 700; font-size: 12px; }
@@ -180,7 +217,7 @@
 .lec-date p { margin: 0; color: #333; width: 70px; flex-shrink: 0; font-weight: bold; word-break: auto-phrase;}
 .lec-date span {word-break: auto-phrase; line-height: normal;}
 .lec-detail ul { display: flex; align-items: center; gap: 16px; margin: 0; padding: 0; list-style: none; }
-.lec-detail li { display: flex; align-items: center; font-size: 14px; color: #666666; }
+.lec-detail li { display: flex; align-items: center; font-size: 14px; color: #666666; white-space: nowrap;}
 .lec-detail li img { width: 17px; height: auto; margin-right: 6px; }
 .lec-detail li:last-child img{width: 20px;}
 
@@ -267,7 +304,7 @@
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
-
+    .main-info .inner{flex-direction: row; padding-top: 60px; gap: 10px;}
   }
 /* ========== 데스크탑 (min-width: 1024px) ========== */
   @media (min-width: 1024px) {
@@ -278,11 +315,18 @@
   @media (min-width: 1280px) {
     .title_area{padding-left: 60px; width: auto;}
     .title_area h2{font-size: 32px;}
+    .deco .dot {
+    width: 8px;
+    height: 8px;
+    bottom: 42px;
+    left: 61px;
+}
+
     .main-movie .tab-list li{font-size: 32px; margin-right: 35px;}
     .main-movie .tab-list li:first-child:after{height: 17px; top: 15px; right: -20px;}
     .main-movie .movie-item{max-width:220px;}
     .movie-more-link{width: 33px; height: 33px; line-height: 33px; top: -5px;}
-    .main-info .inner{flex-direction: row; padding-top: 60px;}
+    .main-info .inner{gap: 70px;}
     
     .main-movie .title_area:after{width: 31px; height: 27px; top: 12px; left: 17px;}
     .main-lecture .title_area:after{width: 27px; height: 27px; top: 6px;}
@@ -293,7 +337,7 @@
     .main-movie .title_area { margin-bottom: 40px; }
     .main-movie:after{top: -190px;}
     .schedule-container-wrap{flex-direction: row; gap: 55px;}
-    .date-selector{flex-direction: row;}
+    .date-selector{flex-direction: row; width: auto;}
     .date-selector:after{display: none;}
     .date-selector li button{margin: 0; padding: 0 17px;}
     .date-selector li .day-number{font-size: 34px;}

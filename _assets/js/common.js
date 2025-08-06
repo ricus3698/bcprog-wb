@@ -136,3 +136,36 @@ $('.share-toggle').click(function(e){
         $shareBlind.text(snsShareOpen ? 'sns 공유하기 닫기' : 'sns 공유하기 열기');
     });
 })
+
+// 서브메뉴 드롭다운
+$(function() {
+
+    $('.mobile-dropdown-toggle').on('click', function(event) {
+        event.stopPropagation();
+        
+        $('.sub-nav').toggleClass('is-open');
+    });
+
+    $(document).on('click', function() {
+        $('.sub-nav').removeClass('is-open');
+    });
+
+});
+
+// 공유 버튼
+$(function() {
+    $('.share-item.sns > .share-button').on('click', function(e) {
+        e.stopPropagation();
+        $(this).parent('.share-item.sns').toggleClass('is-active');
+    });
+
+    $('.close-button').on('click', function() {
+        $(this).closest('.share-item.sns').removeClass('is-active');
+    });
+
+    $(document).on('click', function(e) {
+        if ($(e.target).closest('.share-item.sns').length === 0) {
+            $('.share-item.sns').removeClass('is-active');
+        }
+    });
+});
