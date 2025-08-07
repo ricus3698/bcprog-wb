@@ -152,20 +152,3 @@ $(function() {
 
 });
 
-// 공유 버튼
-$(function() {
-    $('.share-item.sns > .share-button').on('click', function(e) {
-        e.stopPropagation();
-        $(this).parent('.share-item.sns').toggleClass('is-active');
-    });
-
-    $('.close-button').on('click', function() {
-        $(this).closest('.share-item.sns').removeClass('is-active');
-    });
-
-    $(document).on('click', function(e) {
-        if ($(e.target).closest('.share-item.sns').length === 0) {
-            $('.share-item.sns').removeClass('is-active');
-        }
-    });
-});

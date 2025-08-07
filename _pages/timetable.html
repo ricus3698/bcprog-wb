@@ -38,7 +38,6 @@
     
     <script src="../_core/js/jquery-3.6.0.min.js"></script>
     <script src="../_core/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="../_core/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <script src="../_assets/js/common.js"></script>
 
@@ -356,191 +355,227 @@
             </div>    
         </header>
         <div class="subtitle-area">
-            <div class="container">
-                <h2 class="subtitle-heading">FAQ</h2>
-                <div class="share-box">
-                    <ul class="share-box-wrap">
-                        <li class="share-item sns">
-                            <button type="button" class="share-button">
+            <div class="subtitle-wrap">
+                <div class="container">
+                    <h2 class="subtitle-heading">상영시간표</h2>
+                    <div class="share-box">
+                        <div class="board-list-share">
+                            <button type="button" class="share-toggle">
                                 <span class="blind">SNS 공유하기 레이어 열기</span>
                             </button>
-                            <div class="share-panel">
-                                <ul class="share-list">
-                                    <li><a href="javascript:gfnToTwitter(document.location.href);"><span class="sns-twitter"><i class="blind">트위터 공유 새창열림</i></span></a></li>
-                                    <li><a href="javascript:sendLink();"> <span class="sns-kakao"><i class="blind">카카오톡 공유 새창열림</i></span> </a></li>
-                                    <li><a href="javascript:;" onclick="facebook();return false;" class="facebook" target="_blank"> <span class="sns-facebook"><i class="blind">페이스북 공유 새창열림</i></span> </a></li>
-                                </ul>
-                                <button type="button" class="close-button">
-                                    <span class="sr-only">닫기</span>
-                                </button>
+                            <div class="share-wrap">
+                                <a href="javascript:gfnToTwitter(document.location.href);">
+                                    <span class="sns-twitter"><i class="blind">트위터 공유 새창열림</i></span>
+                                </a>
+                                <a href="javascript:sendLink();">
+                                    <span class="sns-kakao"><i class="blind">카카오톡 공유 새창열림</i></span>
+                                </a>
+                                <a href="javascript:;" onclick="facebook();return false;" class="facebook" target="_blank">
+                                    <span class="sns-facebook"><i class="blind">페이스북 공유 새창열림</i></span>
+                                </a>
                             </div>
-                        </li>
-                        <li class="share-item print">
-                            <button onclick="window.print()" aria-label="인쇄하기" class="page-print share-button"></button>
-                        </li>
-                    </ul>
+                            <button onclick="window.print()" aria-label="인쇄하기" class="page-print"></button>
+                        </div>
+                    </div>
                 </div>
+                <nav class="sub-nav">
+                    <a href="#" class="home-btn" aria-label="홈으로 가기">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 22V12H15V22" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+
+                    <button type="button" class="mobile-dropdown-toggle">
+                        <span>상영시간표</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <ul class="sub-menu-list">
+                        <li><a href="#" >극장안내</a></li>
+                        <li><a href="#" class="active">상영시간표</a></li>
+                        <li><a href="#">상영작</a></li>
+                        <li><a href="#">기획전/특별전</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="sub-nav">
-                <a href="#" class="home-btn" aria-label="홈으로 가기">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M9 22V12H15V22" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-
-                <button type="button" class="mobile-dropdown-toggle">
-                    <span>FAQ</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-
-                <ul class="sub-menu-list">
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">홍보콘텐츠</a></li>
-                    <li><a href="#">보도자료</a></li>
-                    <li><a href="#">자료실</a></li>
-                    <li><a href="#" class="active">FAQ</a></li>
-                </ul>
-            </nav>
         </div>
         
         <main id="contents">
             <div class="main-wrap">
                 <div class="inner">
-
-                    <div class="bbs-wrap bbs-list">
-                        
-                        <div class="bbs-category b-cate01">
-                            <div class="bbs-category-box mobile-hide">
-                                <ul class="bbs-tab-category">
-                                    <li>
-                                        <a href="#" title="선택됨">전체</a>
-                                    </li>
-                                    <li><a href="#">상영</a></li>
-                                    <li class="active"><a href="#">교육</a></li>
-                                    <li><a href="#">대여</a></li>
-                                    <li><a href="#">행사</a></li>
-                                    <li><a href="#">기타</a></li>
-                                </ul>
-                            </div>
-                            <div class="b-cate01-m pc-hide">
-                                <label for="category-option" id="label-trigger">전체</label>
-                                <select id="category-option" class="bbs-tab-select hidden-select">
-                                    <option value="">전체</option>
-                                    <option value="">상영</option>
-                                    <option value="">교육</option>
-                                    <option value="">대여</option>
-                                    <option value="">행사</option>
-                                    <option value="">기타</option>
-                                </select>
-                            </div>
-                            
-                        </div>
-                        <!-- bbs-category END -->
-                        
-                        <div class="bbs-search">
-                            <form method="get" action="?" id="searchForm">
-                                <fieldset class="bbs-search-wrap">
-                                    <legend class="blind">게시글 검색</legend>
-                                    <input type="hidden" name="mode" value="list">
-                                    <p class="bbs-search-text">
-                                        전체 <span class="bbs-total-number">3545</span>건
-                                    </p>
-                                    <div class="bbs-search-group">
-                                        <div class="bbs-search-select">
-                                            <label for="search-option" class="blind">검색분류선택</label>
-                                            <select id="search-option" class="search-option-select" name="searchOptionk" title="검색분류선택">
-                                                <option value="" selected="">전체</option>
-                                                <option value="article_title">제목</option>
-                                                <option value="article_text">내용</option>
-                                            </select>
-                                        </div>
-                                        <label for="bbs-search-var" class="bbs-search-varlabel blind">
-                                            <span>검색어</span>
-                                        </label>
-                                        <input type="text" id="bbs-search-var" name="searchVar" value="" placeholder="검색어를 입력해 주세요">
-                                        <button type="submit" class="bbs-search-btn">검색</button>
-                                    </div>
-                                    <!-- bbs-search-group END -->
-                                </fieldset>
-                            </form>                        
-                        </div>
-                        <!-- bbs-search END -->
-
-                        <div class="bbs-faq-contact">
-                            <p><span class="contact-span1">문의</span><span class="contact-span2">서부산영상미디어센터 000-0000-0000</span></p>
-                        </div>
-
-                        <div class="bbs-faq-list">
-                            
-                            <div class="bbs-faq-item">
-                                <button class="bbs-faq-button" type="button" data-board-id="7120" title="내용 숨겨짐">
-                                    <span class="bbs-faq-icon-question">Q</span>
-                                    <span class="bbs-faq-title">
-                                        <span class="bbs-faq-category" aria-hidden="true">[장비대여]</span>
-                                        <span class="bbs-faq-text">장비나 시설 대여 시간은 언제까지 인가요?</span>
-                                    </span>
-                                </button>
-                                <div class="bbs-faq-description">
-                                    <div class="bbs-faq-icon-answer">A</div>
-                                    <div class="pre-contents">
-                                        평일(화~금) 09:00~18:00 / 토요일 09:00~17:00 입니다.
-                                    </div>                                      
+                    <div class="movie-calendar-wrap">
+                        <div class="year-month-wrap">
+                            <div class="calendar-control-box">
+                                <div class="control-button prev-btn">
+                                    <a href="#"><span class="hide">이전달</span></a>
                                 </div>
-                            </div>
-
-                            <div class="bbs-faq-item">
-                                <button class="bbs-faq-button" type="button" data-board-id="7120" title="내용 숨겨짐">
-                                    <span class="bbs-faq-icon-question">Q</span>
-                                    <span class="bbs-faq-title">
-                                        <span class="bbs-faq-category" aria-hidden="true">[교육]</span>
-                                        <span class="bbs-faq-text">사정이 생겨 교육을 이월하거나 친구에게 양도가 가능한가요?</span>
-                                    </span>
-                                </button>
-                                <div class="bbs-faq-description">
-                                    <div class="bbs-faq-icon-answer">A</div>
-                                    <div class="pre-contents">
-                                        미디어센터에서 진행되는 교육은 이월이나 양도가 되지 않습니다.
-                                    </div>                                      
+                                <div class="year-month">
+                                    <span class="title-text year">2025.</span>
+                                    <span class="title-text month">8</span>
                                 </div>
-                            </div>
-
-                            
-
-                        </div>
-                        <!-- bbs-faq-list END -->
-
-                        <div class="bbs-paging">
-                            <div class="pagination">
-                                <div class="paging prev">
-                                    <a href="#" class="page first" title="첫 페이지로 가기">
-                                        <span class="blind">&lt;&lt;</span>
-                                    </a>
-                                    <a href="#" class="page prev" title="이전 페이지로 가기">
-                                        <span class="blind">&lt;</span>
-                                    </a>
+                                <div class="control-button next-btn">
+                                    <a href="#"><span class="hide">다음달</span></a>
                                 </div>
-                                <ul class="paging num">
-                                    <li><a href="#" class="active" title="현재 페이지">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                </ul>
-                                <div class="paging next">
-                                    <a href="#" class="page next" title="다음 페이지로 가기">
-                                        <span class="blind">3</span>
-                                    </a>
-                                    <a href="#" class="page last" title="마지막 페이지로 가기">
-                                        <span class="blind">&gt;&gt;</span>
-                                    </a>
+                                <div class="ex_box">
+                                    <div class="ex_day to_day">오늘</div>
                                 </div>
                             </div>
                         </div>
-                        <!-- bbs-paging END -->
-
+                        <div class="calendar-table">
+                            <table>
+                                <caption>영화상영 시간표</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="sun">일</th>
+                                        <th scope="col">월</th>
+                                        <th scope="col">화</th>
+                                        <th scope="col">수</th>
+                                        <th scope="col">목</th>
+                                        <th scope="col">금</th>
+                                        <th scope="col" class="sat">토</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="day"></span>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day"></span>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day"></span>
+                                            <h4 class="hide"></h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day"></span>
+                                            <h4 class="hide"></h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day"></span>
+                                            <h4 class="hide"></h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">1</span>
+                                            <h4 class="hide">금요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">2</span>
+                                            <h4 class="hide">토요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="day">3</span>
+                                            <h4 class="hide">일요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    14:00
+                                                    <span>고독한 미식가 더 무비</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">4</span>
+                                            <h4 class="hide">월요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    14:00
+                                                    <span>고독한 미식가 더 무비</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">5</span>
+                                            <h4 class="hide">화요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">6</span>
+                                            <span class="today_text hide">TODAY</span>
+                                            <h4 class="hide">수요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span>고독한 미식가 더 무비</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">7</span>
+                                            <span class="today_text hide"></span>
+                                            <h4 class="hide">목요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">8</span>
+                                            <h4 class="hide">금요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">9</span>
+                                            <h4 class="hide">토요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <!-- bbs-wrap END -->
+                    
                 </div>
                 <!-- inner END -->
             </div>
@@ -631,8 +666,8 @@
         <div class="overlay"></div>
     </div>
 
-    <script src="../_assets/js/s-faq.js"></script>
-    <!-- <script src="../_assets/js/main2.js"></script> -->
+    <script src="../_assets/js/main2.js"></script>
+    <script src="../_assets/js/common.js"></script>
     <!-- <script src="../_assets/js/acc-swp.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
