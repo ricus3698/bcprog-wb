@@ -1,36 +1,27 @@
 @charset "utf-8";
 
-    .subtitle-area {max-width: 1600px; margin: 0 auto; text-align: center; padding: 0 15px;}
-    .subtitle-area .container {background-color: #DEF4FF; background-image: url('../images/subbg.png'); background-repeat: no-repeat; background-size: contain; background-position: left; padding: 60px 0; max-width: 1600px; margin: 0 auto; border-radius: 20px;}
-    .subtitle-heading { font-size: 28px; margin-bottom: 24px; font-weight: bold;}
-    .sub-nav { position: relative; display: flex; align-items: center; background-color: white; border-radius: 99px; top: -30px; padding: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); max-width: 300px; margin: 0 auto; }
+    .subtitle-area {padding: 0 15px; }
+    .subtitle-wrap{max-width: 1600px; margin: 0 auto; text-align: center;}
+    .subtitle-area .container {background-color: #DEF4FF; background-image: url('../images/subbg.png'); background-repeat: no-repeat; background-size: contain; background-position: left; padding: 60px 0 40px; max-width: 1600px; margin: 0 auto; border-radius: 20px;}
+    .subtitle-heading { font-size: 28px; margin-bottom: 14px; font-weight: bold;}
+    .sub-nav { position: relative; display: flex; align-items: center; background-color: white; border-radius: 99px; top: -30px; padding: 6px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); max-width: 300px; margin: 0 auto; }
     .home-btn { display: flex; align-items: center; justify-content: center; padding: 10px; background-color: #fff; border-radius: 50%; margin-right: 8px; flex-shrink: 0; }
     .home-btn:hover { background-color: #f1f3f5; }
     .sub-menu-list { display: none; position: absolute; top: calc(100% + 8px); left: 0; right: 0; background-color: white; border-radius: 16px; padding: 8px; margin: 0; list-style: none; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); z-index: 9; }
     .sub-nav.is-open .sub-menu-list { display: block; }
-        .sub-menu-list li{margin: 3px 0;}
+    .sub-menu-list li{margin: 3px 0;}
     .sub-menu-list li a { display: block; padding: 12px 16px; border-radius: 8px; font-size: 16px; color: #333; }
     .sub-menu-list li a:hover, .sub-menu-list li a.active { background-color: #f1f3f5;}
     .mobile-dropdown-toggle { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 0 20px; height: 44px; border: none; border-radius: 99px; background-color: var(--color-primary); color: white; font-size: 16px; font-weight: 600; cursor: pointer; }
     .mobile-dropdown-toggle svg { transition: transform 0.2s; }
     .sub-nav.is-open .mobile-dropdown-toggle svg { transform: rotate(180deg); }
 
-    .share-box { position: relative;}
-    .share-box-wrap { display: flex; /* 버튼들을 가로로 나열 */ align-items: center; gap: 10px; /* 버튼 사이 간격 */ padding: 0; margin: 0; list-style: none; }
-    .share-item { position: relative; /* .share-panel의 기준점 */ }
-    .share-button { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid #eee; background-color: white; border-radius: 50%; /* 원 모양 */ cursor: pointer; background-repeat: no-repeat; background-position: center; transition: box-shadow 0.2s; }
-    .share-button:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
-    .share-panel { position: absolute; bottom: 50%; /* 버튼 중앙에 위치 */ right: calc(100% + 10px); /* 버튼 왼쪽에 위치 */ display: flex; align-items: center; padding: 8px 12px; background-color: white; border-radius: 99px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-50%) scale(0.8);
-    transform-origin: right center;
-    transition: all 0.25s ease-out;}
-    .share-item.sns.is-active .share-panel { opacity: 1; visibility: visible; transform: translateY(-50%) scale(1); }
-    .share-list { display: flex; align-items: center; gap: 8px; padding: 0; margin: 0; list-style: none; }
-    .share-list li a { display: block; width: 36px; height: 36px; background-repeat: no-repeat; background-position: center; background-size: contain; transition: transform 0.2s; }
-    .close-button { width: 24px; height: 24px; border: none; background-color: transparent; cursor: pointer; margin-left: 12px; background-image: url('../_assets/images/close_icon.svg'); /* 닫기 아이콘 경로 */ background-repeat: no-repeat; background-position: center; flex-shrink: 0; opacity: 0.5; }
-    .close-button:hover { opacity: 1; }
+    .share-box {justify-content: flex-end; position: relative; display: flex;}
+    .board-list-share{flex:0 0 120px;display:flex;gap:5px;justify-content:center;position:relative;}    
+    .board-list-share .share-wrap{left: -30px;}
+    .board-list-share button{background-color: #fff; width:35px;height:35px;border:1px solid var(--color-border);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+    .board-list-share button.share-toggle:before{content:"";display:inline-block;vertical-align:middle;width:18px;height:18px;background:url("../images/bbs-share.svg") no-repeat;background-size:contain;}
+    .board-list-share button.page-print:before{content:"";display:inline-block;vertical-align:middle;width:18px;height:18px;background:url("../images/bbs-print.svg") no-repeat;background-size:contain;}
 
     #contents{padding: 0 15px;}
     .bbs-category-box{margin-bottom:var(--spacing-lg);}
@@ -120,7 +111,7 @@
     .board-files .file-list .ico-file{display:inline-block;width:20px;height:20px;background-image:url("../images/att_file_grey.svg");background-repeat:no-repeat;background-size:contain;vertical-align:middle;}
 
     .board-view-share{flex:0 0 300px;display:flex;gap:10px;justify-content:center;position:relative;}
-    .board-view-share button{width:47px;height:47px;border:1px solid var(--color-border);border-radius:50%;display:flex;align-items:center;justify-content:center;;}
+    .board-view-share button{width:37px;height:37px;border:1px solid var(--color-border);border-radius:50%;display:flex;align-items:center;justify-content:center;;}
     .board-view-share button.share-toggle:before{content:"";display:inline-block;vertical-align:middle;width:20px;height:20px;background:url("../images/bbs-share.svg") no-repeat;background-size:contain;}
     .board-view-share button.page-print:before{content:"";display:inline-block;vertical-align:middle;width:20px;height:20px;background:url("../images/bbs-print.svg") no-repeat;background-size:contain;}
     
@@ -161,7 +152,7 @@
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
-    .subtitle-area .container{padding: 70px 0;}
+    .subtitle-area .container{padding: 80px 0 50px;}
 
   }
 /* ========== 데스크탑 (min-width: 1024px) ========== */
@@ -172,19 +163,26 @@
   @media (min-width: 1280px) {
 
     .pc-hide{display:none;}
+
+    .subtitle-area .container{padding: 60px 0 40px;}
     .board-moblie-content{display:none;}
+    .board-list-share{flex: 0 0 160px; gap: 10px;}
+    .board-list-share button{width:47px;height:47px;}
+    .board-list-share button.share-toggle:before{width:20px;height:20px;}
+    .board-list-share button.page-print:before{width:20px;height:20px;}
 
     .sub-nav{max-width: 1000px; width: fit-content; padding: 8px 20px;}
     .sub-nav.is-open .sub-menu-list{display: flex;}
     .home-btn{padding: 12px;}
-    .subtitle-area{padding: 0;}
-    .subtitle-area .container { padding: 110px 0; border-radius: 30px;}
-    .subtitle-heading{font-size: 48px;}
+    .subtitle-area .container { padding: 110px 0 30px; border-radius: 30px;}
+    .subtitle-heading{font-size: 48px;margin-bottom: 64px;}
     .mobile-dropdown-toggle { display: none;}
     .sub-menu-list { display: flex; gap: 10px;  position: static; background-color: transparent; box-shadow: none; padding: 0; margin: 0; list-style: none; width: 100%; justify-content: space-around; }
     .sub-menu-list li a { padding: 12px 20px; color: #555; font-weight: 500; transition: all 0.2s; border-radius: 99px;}
     .sub-menu-list li a.active{ background-color: var(--color-primary); color: white; border-radius: 99px; }
     .sub-menu-list li a:not(.active):hover{background-color: #e6e6e6; border-radius: 99px; }
+
+    .board-view-share button{width: 47px; height: 47px;}
 
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */

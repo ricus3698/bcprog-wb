@@ -394,11 +394,10 @@
                     </button>
 
                     <ul class="sub-menu-list">
+                        <li><a href="#" >극장안내</a></li>
                         <li><a href="#" class="active">상영시간표</a></li>
                         <li><a href="#">상영작</a></li>
-                        <li><a href="#">상영예정작</a></li>
-                        <li><a href="#">특별프로그램</a></li>
-                        <li><a href="#">좌석배치도</a></li>
+                        <li><a href="#">기획전/특별전</a></li>
                     </ul>
                 </nav>
             </div>
@@ -407,164 +406,176 @@
         <main id="contents">
             <div class="main-wrap">
                 <div class="inner">
-
-                    <div class="bbs-wrap bbs-list">
-                        
-                        <div class="bbs-category b-cate01">
-                            <div class="bbs-category-box mobile-hide">
-                                <ul class="bbs-tab-category">
-                                    <li>
-                                        <a href="#" title="선택됨">전체</a>
-                                    </li>
-                                    <li><a href="#">상영</a></li>
-                                    <li class="active"><a href="#">교육</a></li>
-                                    <li><a href="#">대여</a></li>
-                                    <li><a href="#">행사</a></li>
-                                    <li><a href="#">기타</a></li>
-                                </ul>
+                    <div class="movie-calendar-wrap">
+                        <div class="year-month-wrap">
+                            <div class="calendar-control-box">
+                                <div class="control-button prev-btn">
+                                    <a href="#"><span class="hide">이전달</span></a>
+                                </div>
+                                <div class="year-month">
+                                    <span class="title-text year">2025.</span>
+                                    <span class="title-text month">8</span>
+                                </div>
+                                <div class="control-button next-btn">
+                                    <a href="#"><span class="hide">다음달</span></a>
+                                </div>
+                                <div class="ex_box">
+                                    <div class="ex_day to_day">오늘</div>
+                                </div>
                             </div>
-                            <div class="b-cate01-m pc-hide">
-                                <label for="category-option" id="label-trigger">전체</label>
-                                <select id="category-option" class="bbs-tab-select hidden-select">
-                                    <option value="">전체</option>
-                                    <option value="">상영</option>
-                                    <option value="">교육</option>
-                                    <option value="">대여</option>
-                                    <option value="">행사</option>
-                                    <option value="">기타</option>
-                                </select>
-                            </div>
-                            
                         </div>
-                        <!-- bbs-category END -->
-                        
-                        <div class="bbs-search">
-                            <form method="get" action="?" id="searchForm">
-                                <fieldset class="bbs-search-wrap">
-                                    <legend class="blind">게시글 검색</legend>
-                                    <input type="hidden" name="mode" value="list">
-                                    <p class="bbs-search-text">
-                                        전체 <span class="bbs-total-number">3545</span>건
-                                    </p>
-                                    <div class="bbs-search-group">
-                                        <div class="bbs-search-select">
-                                            <label for="search-option" class="blind">검색분류선택</label>
-                                            <select id="search-option" class="search-option-select" name="searchOptionk" title="검색분류선택">
-                                                <option value="" selected="">전체</option>
-                                                <option value="article_title">제목</option>
-                                                <option value="article_text">내용</option>
-                                            </select>
-                                        </div>
-                                        <label for="bbs-search-var" class="bbs-search-varlabel blind">
-                                            <span>검색어</span>
-                                        </label>
-                                        <input type="text" id="bbs-search-var" name="searchVar" value="" placeholder="검색어를 입력해 주세요">
-                                        <button type="submit" class="bbs-search-btn">검색</button>
-                                    </div>
-                                    <!-- bbs-search-group END -->
-                                </fieldset>
-                            </form>                        
-                        </div>
-                        <!-- bbs-search END -->
-
-                        <div class="bbs-list-table">
-                            <div class="bbs-list-table-top"></div>
-                            <table summary="공지사항" class="board-table">
-                                <caption class="blind">공지사항</caption>
-                                <colgroup>
-                                    <col class="board-col b-col01">
-                                    <col class="board-col b-col02 bbs-mobile-hide">
-                                    <col class="board-col b-col03">
-                                    <col class="board-col b-col04 bbs-mobile-hide">
-                                    <col class="board-col b-col05 bbs-mobile-hide">
-                                </colgroup>
+                        <div class="calendar-table">
+                            <table>
+                                <caption>영화상영 시간표</caption>
                                 <thead>
                                     <tr>
-                                        <th scope="col">번호</th>
-                                        <th scope="col" class="bbs-mobile-hide">분류</th>
-                                        <th scope="col">제목</th>
-                                        <th scope="col" class="bbs-mobile-hide">작성일</th>
-                                        <th scope="col" class="bbs-mobile-hide">조회</th>
+                                        <th scope="col" class="sun">일</th>
+                                        <th scope="col">월</th>
+                                        <th scope="col">화</th>
+                                        <th scope="col">수</th>
+                                        <th scope="col">목</th>
+                                        <th scope="col">금</th>
+                                        <th scope="col" class="sat">토</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="notice-tr">
-                                        <td class="board-num-box">공지</td>
-                                        <td class="board-cate-box bbs-mobile-hide"><a href="#">교육</a></td>
-                                        <td class="board-td-left board-td-title">
-                                            <div class="board-title-box">
-                                                <a href="#" title="「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내 자세히 보기">
-                                                    「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내
+                                    <tr>
+                                        <td>
+                                            <span class="day"></span>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
                                                 </a>
-                                                <div class="board-etc-box">
-                                                    <p class="board-file"><span>첨부파일</span></p>
-                                                </div>
-                                                <div class="board-moblie-content">
-                                                    <span class="board-cate"><a href="#">교육</a></span>
-                                                    <span class="board-date">25-08-04</span>
-                                                    <span class="board-hit">조회수 45</span>
-                                                </div>
                                             </div>
                                         </td>
-                                        <td class="bbs-mobile-hide">25-08-04</td>
-                                        <td class="bbs-mobile-hide">45</td>
-                                    </tr>
-                                    <tr class="">
-                                        <td class="board-num-box">193</td>
-                                        <td class="board-cate-box bbs-mobile-hide"><a href="#">상영</a></td>
-                                        <td class="board-td-left board-td-title">
-                                            <div class="board-title-box">
-                                                <a href="#" title="「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내 자세히 보기">
-                                                    「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내
+                                        <td>
+                                            <span class="day"></span>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
                                                 </a>
-                                                <div class="board-etc-box">
-                                                    <p class="board-file"><span>첨부파일</span></p>
-                                                </div>
-                                                <div class="board-moblie-content">
-                                                    <span class="board-cate"><a href="#">상영</a></span>
-                                                    <span class="board-date">25-08-04</span>
-                                                    <span class="board-hit">조회수 45</span>
-                                                </div>
                                             </div>
                                         </td>
-                                        <td class="bbs-mobile-hide">25-08-04</td>
-                                        <td class="bbs-mobile-hide">45</td>                                        
+                                        <td>
+                                            <span class="day"></span>
+                                            <h4 class="hide"></h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day"></span>
+                                            <h4 class="hide"></h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day"></span>
+                                            <h4 class="hide"></h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">1</span>
+                                            <h4 class="hide">금요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">2</span>
+                                            <h4 class="hide">토요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
                                     </tr>
-
+                                    <tr>
+                                        <td>
+                                            <span class="day">3</span>
+                                            <h4 class="hide">일요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    14:00
+                                                    <span>고독한 미식가 더 무비</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">4</span>
+                                            <h4 class="hide">월요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    14:00
+                                                    <span>고독한 미식가 더 무비</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">5</span>
+                                            <h4 class="hide">화요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">6</span>
+                                            <span class="today_text hide">TODAY</span>
+                                            <h4 class="hide">수요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span>고독한 미식가 더 무비</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">7</span>
+                                            <span class="today_text hide"></span>
+                                            <h4 class="hide">목요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">8</span>
+                                            <h4 class="hide">금요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="day">9</span>
+                                            <h4 class="hide">토요일</h4>
+                                            <div class="day-item">
+                                                <a href="" title="">
+                                                    <span></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <!-- bbs-list-table END -->
-
-                        <div class="bbs-paging">
-                            <div class="pagination">
-                                <div class="paging prev">
-                                    <a href="#" class="page first" title="첫 페이지로 가기">
-                                        <span class="blind">&lt;&lt;</span>
-                                    </a>
-                                    <a href="#" class="page prev" title="이전 페이지로 가기">
-                                        <span class="blind">&lt;</span>
-                                    </a>
-                                </div>
-                                <ul class="paging num">
-                                    <li><a href="#" class="active" title="현재 페이지">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                </ul>
-                                <div class="paging next">
-                                    <a href="#" class="page next" title="다음 페이지로 가기">
-                                        <span class="blind">3</span>
-                                    </a>
-                                    <a href="#" class="page last" title="마지막 페이지로 가기">
-                                        <span class="blind">&gt;&gt;</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- bbs-paging END -->
-
                     </div>
-                    <!-- bbs-wrap END -->
+                    
                 </div>
                 <!-- inner END -->
             </div>

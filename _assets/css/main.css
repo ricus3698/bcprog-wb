@@ -13,7 +13,7 @@
 .title_area{padding-left: 55px; position: relative; text-align: left; width: 100%; display: inline-block;}
 .title_area h2{display: inline-block; font-weight: bold; font-size: 20px;}
 .title_area:after{content: ''; display: block; width: 25px; height: 22px; background: url(../images/film-icon.svg) no-repeat; background-size: contain; overflow: hidden; position: absolute; top: 6px; left: 20px; filter: drop-shadow(2px 4px 6px rgba(83, 137, 197, 0.4)); }
-.title_area:hover:after{animation: float 1.5s ease-in-out infinite;}
+.title_area:hover:after{animation: float 1250ms ease-in-out infinite;}
 @keyframes float {
     0% {
       transform: translateY(0);
@@ -57,7 +57,7 @@
     height: 6px;
     background-color: #9da7ff;
     bottom: 29px;
-    left: 61px;
+    left: 21px;
     animation-delay: 250ms;
     animation: dot_scale 1250ms infinite ease-in-out;
 }
@@ -114,7 +114,7 @@
 .main-movie .movie-item .movie-title .age-icon img{width:20px;}
 .main-movie .movie-item .movie-title .title-text{line-height:23px;font-weight:600;font-size:1.2rem;}
 
-.main-movie .movie-btn button{position:absolute;top:50%;transform:translateY(-100%);z-index:10;color:#b3b3b3;background:#fff;box-shadow:0 0 15px #b1c7d7;width:45px;height:45px;border-radius:50%;text-align:center;line-height:39px;font-size: 20px;}
+.main-movie .movie-btn button{position:absolute;top:50%;transform:translateY(-100%);z-index:9;color:#b3b3b3;background:#fff;box-shadow:0 0 15px #b1c7d7;width:45px;height:45px;border-radius:50%;text-align:center;line-height:39px;font-size: 20px;}
 .main-movie .movie-btn button.swiper-button-disabled{opacity:0.5;}
 .main-movie .movie-prev-btn i{margin-left: -3px;}
 .main-movie .movie-next-btn i{margin-right: -3px;}
@@ -169,7 +169,7 @@
 .main-lecture .tab-list li.active a { background-color: var(--color-primary); color: #ffffff; font-weight: bold;}
 .main-lecture .tab-list li:not(.active) a:hover { background-color:#d7e0e9;}
 
-.main-lecture .lec-btn button{position:absolute;top:50%;transform:translateY(-100%);z-index:10;color:#b3b3b3;background:#fff;box-shadow:0 0 15px #b1c7d7;width:45px;height:45px;border-radius:50%;text-align:center;line-height:39px;font-size: 20px;}
+.main-lecture .lec-btn button{position:absolute;top:50%;transform:translateY(-100%);z-index:9;color:#b3b3b3;background:#fff;box-shadow:0 0 15px #b1c7d7;width:45px;height:45px;border-radius:50%;text-align:center;line-height:39px;font-size: 20px;}
 .main-lecture .lec-btn button.swiper-button-disabled{opacity:0.5;}
 .main-lecture .lec-prev-btn i{margin-left: -3px;}
 .main-lecture .lec-next-btn i{margin-right: -3px;}
@@ -319,7 +319,7 @@
     width: 8px;
     height: 8px;
     bottom: 42px;
-    left: 61px;
+    left: 21px;
 }
 
     .main-movie .tab-list li{font-size: 32px; margin-right: 35px;}
