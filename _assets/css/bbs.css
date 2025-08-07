@@ -75,7 +75,13 @@
     .b-col04{width:15%;}
     .b-col05{width:10%;}
 
+    .b-col2-01{width:15%;}
+    .b-col2-02{width:15%;}
+    .b-col2-03{width:55%;}
+    .b-col2-04{width:15%;}
+
     .board-file{display:inline-block;text-indent:-9999px;width:20px;height:20px;background-image:url("../images/att_file_grey.svg");background-repeat:no-repeat;background-size:contain;vertical-align:middle;}
+    .board-link{display:inline-block;text-indent:-9999px;width:20px;height:20px;background-image:url("../images/ext-link.svg");background-repeat:no-repeat;background-size:contain;vertical-align:middle;}
 
     /*페이징*/
     .pagination {margin-top:var(--spacing-lg);margin-bottom:var(--spacing-lg);display:flex;justify-content:center;gap:10px;}
@@ -180,6 +186,8 @@
     .board-view-share{margin-top:var(--spacing-sm);}
     .share-wrap{left:115px;}
     
+    .board-company:before{content:"언론사";display:inline-block;background:#eee;box-sizing:border-box;padding:0 5px;border-radius:3px;margin-right:5px;font-size:0.8rem;}
+    .board-pdate:before{content:"보도일";display:inline-block;background:#eee;box-sizing:border-box;padding:0 5px;border-radius:3px;margin-right:5px;font-size:0.8rem;}
  }
 
 /* ========== 태블릿 (min-width: 768px) ========== */
