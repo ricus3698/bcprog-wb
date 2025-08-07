@@ -154,6 +154,11 @@
     .bbs-faq-list .is-selected, .bbs-faq-list .is-selected:hover{background-color:#176ac7;color:#fff;}
     .bbs-faq-list .is-selected .bbs-faq-title{background-image:url("../images/faq-up.svg");}
 
+    /* .contact-span1{display:inline-block;background:#eee;border-radius:3px;box-sizing:border-box;padding:0 4px;margin-right:5px;font-size:1rem;color:#555;font-weight:600;}
+    .contact-span2{color:#777;} */
+    .bbs-faq-contact p{padding: 8px 12px; background-color: #f9f9f9; border-radius: 6px;color: #555;}
+    .contact-span1{display:inline-block;background:#ccc;border-radius:3px;box-sizing:border-box;padding:0 4px;margin-right:5px;font-size:0.8;color:#666;font-weight:600;}
+
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
     
