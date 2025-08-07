@@ -38,6 +38,7 @@
     
     <script src="../_core/js/jquery-3.6.0.min.js"></script>
     <script src="../_core/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../_core/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <script src="../_assets/js/common.js"></script>
 
@@ -356,55 +357,51 @@
         </header>
         <div class="subtitle-area">
             <div class="container">
-                <h2 class="subtitle-heading">공지사항</h2>
+                <h2 class="subtitle-heading">FAQ</h2>
                 <div class="share-box">
                     <ul class="share-box-wrap">
                         <li class="share-item sns">
                             <button type="button" class="share-button">
                                 <span class="blind">SNS 공유하기 레이어 열기</span>
                             </button>
-                            <div class="share-wrap">
-                                <a href="javascript:gfnToTwitter(document.location.href);">
-                                    <span class="sns-twitter"><i class="blind">트위터 공유 새창열림</i></span>
-                                </a>
-                                <a href="javascript:sendLink();">
-                                    <span class="sns-kakao"><i class="blind">카카오톡 공유 새창열림</i></span>
-                                </a>
-                                <a href="javascript:;" onclick="facebook();return false;" class="facebook" target="_blank">
-                                    <span class="sns-facebook"><i class="blind">페이스북 공유 새창열림</i></span>
-                                </a>
+                            <div class="share-panel">
+                                <ul class="share-list">
+                                    <li><a href="javascript:gfnToTwitter(document.location.href);"><span class="sns-twitter"><i class="blind">트위터 공유 새창열림</i></span></a></li>
+                                    <li><a href="javascript:sendLink();"> <span class="sns-kakao"><i class="blind">카카오톡 공유 새창열림</i></span> </a></li>
+                                    <li><a href="javascript:;" onclick="facebook();return false;" class="facebook" target="_blank"> <span class="sns-facebook"><i class="blind">페이스북 공유 새창열림</i></span> </a></li>
+                                </ul>
+                                <button type="button" class="close-button">
+                                    <span class="sr-only">닫기</span>
+                                </button>
                             </div>
-                            <button onclick="window.print()" aria-label="인쇄하기" class="page-print"></button>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="share-item print">
+                            <button onclick="window.print()" aria-label="인쇄하기" class="page-print share-button"></button>
+                        </li>
+                    </ul>
                 </div>
-                <nav class="sub-nav">
-                    <a href="#" class="home-btn" aria-label="홈으로 가기">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 22V12H15V22" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
+            </div>
+            <nav class="sub-nav">
+                <a href="#" class="home-btn" aria-label="홈으로 가기">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 22V12H15V22" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
 
-                    <button type="button" class="mobile-dropdown-toggle">
-                        <span>상영시간표</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
                 <button type="button" class="mobile-dropdown-toggle">
-                    <span>공지사항</span>
+                    <span>FAQ</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
 
                 <ul class="sub-menu-list">
-                    <li><a href="#" class="active">공지사항</a></li>
+                    <li><a href="#">공지사항</a></li>
                     <li><a href="#">홍보콘텐츠</a></li>
                     <li><a href="#">보도자료</a></li>
                     <li><a href="#">자료실</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#" class="active">FAQ</a></li>
                 </ul>
             </nav>
         </div>
@@ -472,74 +469,48 @@
                         </div>
                         <!-- bbs-search END -->
 
-                        <div class="bbs-list-table">
-                            <div class="bbs-list-table-top"></div>
-                            <table summary="공지사항" class="board-table">
-                                <caption class="blind">공지사항</caption>
-                                <colgroup>
-                                    <col class="board-col b-col01">
-                                    <col class="board-col b-col02 bbs-mobile-hide">
-                                    <col class="board-col b-col03">
-                                    <col class="board-col b-col04 bbs-mobile-hide">
-                                    <col class="board-col b-col05 bbs-mobile-hide">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th scope="col">번호</th>
-                                        <th scope="col" class="bbs-mobile-hide">분류</th>
-                                        <th scope="col">제목</th>
-                                        <th scope="col" class="bbs-mobile-hide">작성일</th>
-                                        <th scope="col" class="bbs-mobile-hide">조회</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="notice-tr">
-                                        <td class="board-num-box">공지</td>
-                                        <td class="board-cate-box bbs-mobile-hide"><a href="#">교육</a></td>
-                                        <td class="board-td-left board-td-title">
-                                            <div class="board-title-box">
-                                                <a href="#" title="「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내 자세히 보기">
-                                                    「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내
-                                                </a>
-                                                <div class="board-etc-box">
-                                                    <p class="board-file"><span>첨부파일</span></p>
-                                                </div>
-                                                <div class="board-moblie-content">
-                                                    <span class="board-cate"><a href="#">교육</a></span>
-                                                    <span class="board-date">25-08-04</span>
-                                                    <span class="board-hit">조회수 45</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="bbs-mobile-hide">25-08-04</td>
-                                        <td class="bbs-mobile-hide">45</td>
-                                    </tr>
-                                    <tr class="">
-                                        <td class="board-num-box">193</td>
-                                        <td class="board-cate-box bbs-mobile-hide"><a href="#">상영</a></td>
-                                        <td class="board-td-left board-td-title">
-                                            <div class="board-title-box">
-                                                <a href="#" title="「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내 자세히 보기">
-                                                    「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내
-                                                </a>
-                                                <div class="board-etc-box">
-                                                    <p class="board-file"><span>첨부파일</span></p>
-                                                </div>
-                                                <div class="board-moblie-content">
-                                                    <span class="board-cate"><a href="#">상영</a></span>
-                                                    <span class="board-date">25-08-04</span>
-                                                    <span class="board-hit">조회수 45</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="bbs-mobile-hide">25-08-04</td>
-                                        <td class="bbs-mobile-hide">45</td>                                        
-                                    </tr>
-
-                                </tbody>
-                            </table>
+                        <div class="bbs-faq-contact">
+                            <p><span class="contact-span1">문의</span><span class="contact-span2">서부산영상미디어센터 000-0000-0000</span></p>
                         </div>
-                        <!-- bbs-list-table END -->
+
+                        <div class="bbs-faq-list">
+                            
+                            <div class="bbs-faq-item">
+                                <button class="bbs-faq-button" type="button" data-board-id="7120" title="내용 숨겨짐">
+                                    <span class="bbs-faq-icon-question">Q</span>
+                                    <span class="bbs-faq-title">
+                                        <span class="bbs-faq-category" aria-hidden="true">[장비대여]</span>
+                                        <span class="bbs-faq-text">장비나 시설 대여 시간은 언제까지 인가요?</span>
+                                    </span>
+                                </button>
+                                <div class="bbs-faq-description">
+                                    <div class="bbs-faq-icon-answer">A</div>
+                                    <div class="pre-contents">
+                                        평일(화~금) 09:00~18:00 / 토요일 09:00~17:00 입니다.
+                                    </div>                                      
+                                </div>
+                            </div>
+
+                            <div class="bbs-faq-item">
+                                <button class="bbs-faq-button" type="button" data-board-id="7120" title="내용 숨겨짐">
+                                    <span class="bbs-faq-icon-question">Q</span>
+                                    <span class="bbs-faq-title">
+                                        <span class="bbs-faq-category" aria-hidden="true">[교육]</span>
+                                        <span class="bbs-faq-text">사정이 생겨 교육을 이월하거나 친구에게 양도가 가능한가요?</span>
+                                    </span>
+                                </button>
+                                <div class="bbs-faq-description">
+                                    <div class="bbs-faq-icon-answer">A</div>
+                                    <div class="pre-contents">
+                                        미디어센터에서 진행되는 교육은 이월이나 양도가 되지 않습니다.
+                                    </div>                                      
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+                        <!-- bbs-faq-list END -->
 
                         <div class="bbs-paging">
                             <div class="pagination">
@@ -660,8 +631,8 @@
         <div class="overlay"></div>
     </div>
 
-    <script src="../_assets/js/main2.js"></script>
-    <script src="../_assets/js/common.js"></script>
+    <script src="../_assets/js/s-faq.js"></script>
+    <!-- <script src="../_assets/js/main2.js"></script> -->
     <!-- <script src="../_assets/js/acc-swp.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

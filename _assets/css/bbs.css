@@ -25,14 +25,14 @@
 
     #contents{padding: 0 15px;}
     .bbs-category-box{margin-bottom:var(--spacing-lg);}
-    .bbs-category-box .bbs-tab-category{border:1px solid var(--color-primary);border-radius:5px;}
+    .bbs-category-box .bbs-tab-category{border:1px solid var(--color-border);border-radius:5px;}
     .bbs-category-box .bbs-tab-category::after{content:"";display:block;clear:both;}
     .bbs-category-box .bbs-tab-category li{float:left;width:calc(100% / 6);border-radius:4px;position:relative;}
-    .bbs-category-box .bbs-tab-category li:before{content:"";position:absolute;top:12px;left:-1px;width:1px;height:22px;background-color:var(--color-primary);}
-    .bbs-category-box .bbs-tab-category li a{display:block;text-align:center;color:var(--color-primary);line-height:3rem;font-size:1.2rem;}
+    .bbs-category-box .bbs-tab-category li:before{content:"";position:absolute;top:12px;left:-1px;width:1px;height:22px;background-color:var(--color-border);}
+    .bbs-category-box .bbs-tab-category li a{display:block;text-align:center;line-height:3rem;font-size:1rem;}
     .bbs-category-box .bbs-tab-category li.active{background-color:var(--color-primary);}
     .bbs-category-box .bbs-tab-category li.active a{color:#fff;}
-    .bbs-category-box .bbs-tab-category li.active:before{display:none;}
+    .bbs-category-box .bbs-tab-category li.active + li:before{display:none;}
 
     .b-cate01-m.b-cate01-m{position:relative;background-color:var(--color-primary);border-radius:5px;margin-bottom:var(--spacing-lg);background-image: url("../images/cate-down.svg");background-repeat: no-repeat;background-position: calc(100% - 10px) center;}
     .b-cate01-m label{display:block;width:100%;line-height:40px;border-radius:5px;color:#fff;padding:0 15px;text-align:center;}
@@ -66,7 +66,13 @@
     .b-col04{width:15%;}
     .b-col05{width:10%;}
 
+    .b-col2-01{width:15%;}
+    .b-col2-02{width:15%;}
+    .b-col2-03{width:55%;}
+    .b-col2-04{width:15%;}
+
     .board-file{display:inline-block;text-indent:-9999px;width:20px;height:20px;background-image:url("../images/att_file_grey.svg");background-repeat:no-repeat;background-size:contain;vertical-align:middle;}
+    .board-link{display:inline-block;text-indent:-9999px;width:20px;height:20px;background-image:url("../images/ext-link.svg");background-repeat:no-repeat;background-size:contain;vertical-align:middle;}
 
     /*페이징*/
     .pagination {margin-top:var(--spacing-lg);margin-bottom:var(--spacing-lg);display:flex;justify-content:center;gap:10px;}
@@ -127,6 +133,23 @@
     .share-wrap a span.sns-kakao {background-color: #ffde58; background-image: url("../images/sns_kakao.png");}
     .share-wrap a span.sns-twitter {background-color: #000; background-image: url("../images/sns_twitter.png");}
 
+    .bbs-faq-list .bbs-faq-button{position:relative;display:block;padding:20px 20px 20px 70px;text-align:left;border-radius:5px;border:1px solid var(--color-border);width:100%;box-sizing:border-box;}
+    .bbs-faq-list .bbs-faq-icon-question{position:absolute;top:50%;left:20px;font-size:1.6rem;line-height:100%;transform:translateY(-50%);}
+    .bbs-faq-list .bbs-faq-title{display:block;line-height:140%;padding-right:30px;background:url("../images/faq-down.svg")no-repeat 100% 0px;font-weight:600;word-break:keep-all;}
+    .bbs-faq-list .bbs-faq-description{display:none;position:relative;padding:20px 20px 20px 70px;line-height:140%;}
+    .bbs-faq-list .bbs-faq-icon-answer{position:absolute;top:20px;left:20px;color:#f74040;line-height:1;font-size:1.6rem;}
+    .bbs-faq-list .pre-contents{line-height:150%;word-break:keep-all;}
+
+    .bbs-faq-list .bbs-faq-item ~ .bbs-faq-item{margin-top:var(--spacing-md);}
+    .bbs-faq-list .bbs-faq-button:hover{color:#176ac7;}
+    .bbs-faq-list .is-selected, .bbs-faq-list .is-selected:hover{background-color:#176ac7;color:#fff;}
+    .bbs-faq-list .is-selected .bbs-faq-title{background-image:url("../images/faq-up.svg");}
+
+    /* .contact-span1{display:inline-block;background:#eee;border-radius:3px;box-sizing:border-box;padding:0 4px;margin-right:5px;font-size:1rem;color:#555;font-weight:600;}
+    .contact-span2{color:#777;} */
+    .bbs-faq-contact p{padding: 8px 12px; background-color: #f9f9f9; border-radius: 6px;color: #555;}
+    .contact-span1{display:inline-block;background:#ccc;border-radius:3px;box-sizing:border-box;padding:0 4px;margin-right:5px;font-size:0.8;color:#666;font-weight:600;}
+
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
     
@@ -148,6 +171,19 @@
     .board-moblie-content{font-size:0.9rem;}
     .board-moblie-content span{margin-right:var(--spacing-sm);}
     .board-moblie-content a{vertical-align:top;}
+
+    .board-view-section{display:block;}
+    .vs1 .board-view-subject{font-size:1.2rem;}
+    .board-view-info{justify-content:flex-start;margin-top:var(--spacing-md);}
+    .board-files .file-list{display:block;}
+    .board-files .file-list dt{padding:0;margin-bottom:var(--spacing-sm);}
+    .board-files .file-list dd{width:100%;}
+
+    .board-view-share{margin-top:var(--spacing-sm);}
+    .share-wrap{left:115px;}
+    
+    .board-company:before{content:"언론사";display:inline-block;background:#eee;box-sizing:border-box;padding:0 5px;border-radius:3px;margin-right:5px;font-size:0.8rem;}
+    .board-pdate:before{content:"보도일";display:inline-block;background:#eee;box-sizing:border-box;padding:0 5px;border-radius:3px;margin-right:5px;font-size:0.8rem;}
  }
 
 /* ========== 태블릿 (min-width: 768px) ========== */
@@ -157,7 +193,7 @@
   }
 /* ========== 데스크탑 (min-width: 1024px) ========== */
   @media (min-width: 1024px) {
-
+      .dbdata{min-height:360px;}
   }
 /* ========== 일반 데스크탑 시작 (min-width: 1280px) ========== */
   @media (min-width: 1280px) {
@@ -170,6 +206,8 @@
     .board-list-share button{width:47px;height:47px;}
     .board-list-share button.share-toggle:before{width:20px;height:20px;}
     .board-list-share button.page-print:before{width:20px;height:20px;}
+
+    .bbs-wrap{padding:2rem 5rem;}
 
     .sub-nav{max-width: 1000px; width: fit-content; padding: 8px 20px;}
     .sub-nav.is-open .sub-menu-list{display: flex;}
