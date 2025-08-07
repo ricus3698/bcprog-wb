@@ -34,14 +34,14 @@
 
     #contents{padding: 0 15px;}
     .bbs-category-box{margin-bottom:var(--spacing-lg);}
-    .bbs-category-box .bbs-tab-category{border:1px solid var(--color-primary);border-radius:5px;}
+    .bbs-category-box .bbs-tab-category{border:1px solid var(--color-border);border-radius:5px;}
     .bbs-category-box .bbs-tab-category::after{content:"";display:block;clear:both;}
     .bbs-category-box .bbs-tab-category li{float:left;width:calc(100% / 6);border-radius:4px;position:relative;}
-    .bbs-category-box .bbs-tab-category li:before{content:"";position:absolute;top:12px;left:-1px;width:1px;height:22px;background-color:var(--color-primary);}
-    .bbs-category-box .bbs-tab-category li a{display:block;text-align:center;color:var(--color-primary);line-height:3rem;font-size:1.2rem;}
+    .bbs-category-box .bbs-tab-category li:before{content:"";position:absolute;top:12px;left:-1px;width:1px;height:22px;background-color:var(--color-border);}
+    .bbs-category-box .bbs-tab-category li a{display:block;text-align:center;line-height:3rem;font-size:1rem;}
     .bbs-category-box .bbs-tab-category li.active{background-color:var(--color-primary);}
     .bbs-category-box .bbs-tab-category li.active a{color:#fff;}
-    .bbs-category-box .bbs-tab-category li.active:before{display:none;}
+    .bbs-category-box .bbs-tab-category li.active + li:before{display:none;}
 
     .b-cate01-m.b-cate01-m{position:relative;background-color:var(--color-primary);border-radius:5px;margin-bottom:var(--spacing-lg);background-image: url("../images/cate-down.svg");background-repeat: no-repeat;background-position: calc(100% - 10px) center;}
     .b-cate01-m label{display:block;width:100%;line-height:40px;border-radius:5px;color:#fff;padding:0 15px;text-align:center;}
@@ -157,6 +157,17 @@
     .board-moblie-content{font-size:0.9rem;}
     .board-moblie-content span{margin-right:var(--spacing-sm);}
     .board-moblie-content a{vertical-align:top;}
+
+    .board-view-section{display:block;}
+    .vs1 .board-view-subject{font-size:1.2rem;}
+    .board-view-info{justify-content:flex-start;margin-top:var(--spacing-md);}
+    .board-files .file-list{display:block;}
+    .board-files .file-list dt{padding:0;margin-bottom:var(--spacing-sm);}
+    .board-files .file-list dd{width:100%;}
+
+    .board-view-share{margin-top:var(--spacing-sm);}
+    .share-wrap{left:115px;}
+    
  }
 
 /* ========== 태블릿 (min-width: 768px) ========== */
@@ -173,6 +184,8 @@
 
     .pc-hide{display:none;}
     .board-moblie-content{display:none;}
+
+    .bbs-wrap{padding:2rem 5rem;}
 
     .sub-nav{max-width: 1000px; width: fit-content; padding: 8px 20px;}
     .sub-nav.is-open .sub-menu-list{display: flex;}
