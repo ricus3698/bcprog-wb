@@ -40,6 +40,10 @@
 .contact-banner .main-text { margin: 0; font-weight: bold; line-height: 1.3; }
 .contact-banner .sub-text { margin: 4px 0 0; opacity: 0.95; font-size: var(--font-size-sm);}
 
+.external-info{box-sizing:border-box;padding-left:24px;}
+.external-info dl{border:1px solid #eee;max-width:800px;box-sizing:border-box;padding:10px;border-radius:5px;}
+.external-info dd p{margin-bottom:0;}
+
 /*교육안내*/
 .temp_step_box{display:block;position:relative;width:100%;box-sizing:border-box;}
 .temp_step_box .step_list{display:block;position:relative;width:100%;box-sizing:border-box;}
@@ -95,6 +99,8 @@
     .notice-content{padding-bottom: 60px;}
     .notice-title-wrap{padding-left: 60px; }
     .notice-content.flex{display: flex; gap: 40px;}
+
+    .external-info dl{padding:20px;}
 
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
