@@ -71,6 +71,11 @@
 .facility-info .step_list .step_item .text_box{height:auto;}
 .facility-info .step_list .step_item .text_box .text{position:static;transform:none;}
 
+.map-container .root_daum_roughmap{position:relative;overflow:hidden;height:0;padding-bottom:42%;width: 100%;border-radius:30px;}
+.map-container .wrap_map{position: absolute !important;top:0;left:0;width:100%;height: 100% !important;}
+.map-container .root_daum_roughmap .cont,.map-container .root_daum_roughmap .wrap_controllers{display:none;}
+.map-container .map_border{border:0 !important;background-color:transparent !important;}
+
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
   .spaceWrap { overflow-x: scroll; }
@@ -99,7 +104,7 @@
 
     .facility-info .step_list .step_item{margin-left:var(--spacing-md);margin-top:0;}
     .facility-info .step_list .step_item:nth-child(3n){margin-left:var(--spacing-md);}
-    .temp_step_box .step_list .step_item:nth-child(5n){margin-left:var(--spacing-md);}
+    .facility-info  .step_list .step_item:nth-child(5n){margin-left:var(--spacing-md);}
     .facility-info .step_list .step_item:before{display:none;}
     .facility-info .step_list .step_item{width:calc((100% - 40px) / 3);}
 
@@ -122,6 +127,8 @@
     .facility-info .step_list .step_item:nth-child(4n){margin-left:var(--spacing-md);margin-top:0;}
     .facility-info .step_list .step_item:nth-child(4n + 1){margin-left:0;}
     .facility-info .icon_box{padding-bottom:54%;}
+
+    .map-container .root_daum_roughmap{padding-bottom:0;height:400px;}
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
   @media (min-width: 1400px) {
