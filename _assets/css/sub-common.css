@@ -25,6 +25,8 @@
   @media (min-width: 1280px) {
     
     .flx-list2 .etiquette-list{flex-basis:50%;}
+    .sub-depth-menu .depth4.min-w-260 li{min-width:240px;}
+    .sub-depth-menu .depth4.min-w-260 li a{width:100%;text-align:center;}
 
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */

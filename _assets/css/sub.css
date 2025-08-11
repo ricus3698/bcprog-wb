@@ -63,6 +63,14 @@
 .temp_step_box .step_list .step_item .text_box{display:block;position:relative;width:100%;height:42px;box-sizing:border-box;text-align:center;}
 .temp_step_box .step_list .step_item .text_box .text{display:inline-block;position:relative;top:50%;transform:translateY(-50%);color:#333;line-height:21px;letter-spacing:-0.03em;font-weight:400;word-break:keep-all;vertical-align:top;box-sizing:border-box;}
 
+.facility-info{margin-bottom:var(--spacing-lg)}
+.facility-info .step_list .step_item{width:calc((100% - 20px) / 2);padding:10px;margin-left:var(--spacing-md);margin-bottom:var(--spacing-md);}
+.facility-info .step_list .step_item:before{display:none;}
+.facility-info .icon_box{overflow:hidden;border-radius:10px;height:0 !important;padding-bottom:45%;margin-bottom:var(--spacing-sm);}
+.facility-info .icon_box img{position:absolute;top:0;left:0;width:100%;height:100%;}
+.facility-info .step_list .step_item .text_box{height:auto;}
+.facility-info .step_list .step_item .text_box .text{position:static;transform:none;}
+
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
   .spaceWrap { overflow-x: scroll; }
@@ -89,6 +97,12 @@
     .temp_step_box .step_list .step_item:nth-child(3n):before{display:none;}
     .temp_step_box .step_list .step_item:before{left: calc(100% + 10px); display: block;}
 
+    .facility-info .step_list .step_item{margin-left:var(--spacing-md);margin-top:0;}
+    .facility-info .step_list .step_item:nth-child(3n){margin-left:var(--spacing-md);}
+    .temp_step_box .step_list .step_item:nth-child(5n){margin-left:var(--spacing-md);}
+    .facility-info .step_list .step_item:before{display:none;}
+    .facility-info .step_list .step_item{width:calc((100% - 40px) / 3);}
+
   }
 /* ========== 일반 데스크탑 시작 (min-width: 1280px) ========== */
   @media (min-width: 1280px) {
@@ -102,6 +116,12 @@
 
     .external-info dl{padding:20px;}
 
+    .facility-info .step_list .step_item:before{display:none;}
+    .facility-info .step_list .step_item:nth-child(2n):before{display:none;}
+    .facility-info .step_list .step_item{width:calc((100% - 80px) / 4);margin-top:0;}
+    .facility-info .step_list .step_item:nth-child(4n){margin-left:var(--spacing-md);margin-top:0;}
+    .facility-info .step_list .step_item:nth-child(4n + 1){margin-left:0;}
+    .facility-info .icon_box{padding-bottom:54%;}
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
   @media (min-width: 1400px) {
@@ -111,6 +131,13 @@
     .temp_step_box .step_list .step_item:nth-child(n+5){margin-top: 0;}
     .temp_step_box .step_list .step_item:nth-child(2n+1):before{display: block;}
     .temp_step_box .step_list .step_item:last-child::before{display: none;}
+
+    .facility-info .step_list .step_item:nth-child(2n+1):before{display:none;}
+    .facility-info .step_list .step_item:before{display:none;}
+    .facility-info .step_list .step_item{width:calc((100% - 100px) / 5);margin-top:0;}
+    .facility-info .step_list .step_item:nth-child(3n+1){margin-left:var(--spacing-md);}
+    .facility-info .step_list .step_item:nth-child(4n + 1){margin-left:var(--spacing-md);}
+    .facility-info .step_list .step_item:nth-child(5n+1){margin-left:0;margin-top:0;}
 
   }
 /* ========== 와이드 데스크탑 (min-width: 1600px) ========== */
