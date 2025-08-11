@@ -25,7 +25,7 @@
 .table-notice {font-weight: bold; color: #333; margin-bottom: 15px; padding-left: 5px; }
 .notice-content{border-bottom: 1px solid #ccc; padding-bottom: 30px;}
 .notice-content .etiquette-list{list-style:none;padding-left:0;margin:0;color:#555;}
-.notice-content .etiquette-list li{position:relative;padding-left:24px;margin-bottom:5px;line-height:1.7;}
+.notice-content .etiquette-list li{position:relative;padding-left:24px;margin-bottom:5px;line-height:1.7;word-break:keep-all;}
 .notice-content .etiquette-list li::before{content:'';position:absolute;left:10px;top:0.7rem;width: 3px;height: 3px;border-radius: 50%; font-weight:bold;background-color:#333;}
 .notice-content .etiquette-list .listyle-no li{padding-left: 0;}
 .notice-content .etiquette-list .listyle-no li:before{display: none;}

@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+
+
+.sub-depth-menu{display:flex;justify-content:center;margin-top:var(--spacing-lg);margin-bottom:var(--spacing-lg)}
+.sub-depth-menu .depth4{display:flex;gap:28px;align-items:flex-end;}
+.sub-depth-menu .depth4 li{position:relative;}
+.sub-depth-menu .depth4 li a{display:inline-block;box-sizing:border-box;padding:8px 6px;font-size:var(--font-size-lg)}
+.sub-depth-menu .depth4 li.active a{font-weight:600;color:var(--color-primary);}
+.sub-depth-menu .depth4 li.active::after{content:"";position: absolute;left:0;right:0;bottom:-8px;height:4px;background:var(--color-primary);border-radius:4px;}
+
+/* ========== 모바일 전용 (max-width: 767px) ========== */
+ @media (max-width: 767px) {
+
+ }
+/* ========== 태블릿 (min-width: 768px) ========== */
+  @media (min-width: 768px) {
+    
+  }
+/* ========== 데스크탑 (min-width: 1024px) ========== */
+  @media (min-width: 1024px) {
+
+  }
+/* ========== 일반 데스크탑 시작 (min-width: 1280px) ========== */
+  @media (min-width: 1280px) {
+    
+    .flx-list2 .etiquette-list{flex-basis:50%;}
+
+  }
+/* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
+  @media (min-width: 1400px) {
+    
+
+  }
+/* ========== 와이드 데스크탑 (min-width: 1600px) ========== */
+  @media (min-width: 1600px) {
+
+ }
+  @media (min-width: 1680px) {
+
+}
+ /* ========== PC전용요소 (max-width: 1279px) ========== */
+  @media (max-width: 1279px) {
+    
+ }
+
