@@ -356,51 +356,50 @@
         </header>
         
         <div class="subtitle-area">
-            <div class="container">
-                <h2 class="subtitle-heading">영화·교육</h2>
-                <div class="share-box">
-                    <ul class="share-box-wrap">
-                        <li class="share-item sns">
-                            <button type="button" class="share-button">
+            <div class="subtitle-wrap">
+                <div class="container">
+                    <h2 class="subtitle-heading">영화·교육</h2>
+                    <div class="share-box">
+                        <div class="board-list-share">
+                            <button type="button" class="share-toggle">
                                 <span class="blind">SNS 공유하기 레이어 열기</span>
                             </button>
-                            <div class="share-panel">
-                                <ul class="share-list">
-                                    <li><a href="javascript:gfnToTwitter(document.location.href);"><span class="sns-twitter"><i class="blind">트위터 공유 새창열림</i></span></a></li>
-                                    <li><a href="javascript:sendLink();"> <span class="sns-kakao"><i class="blind">카카오톡 공유 새창열림</i></span> </a></li>
-                                    <li><a href="javascript:;" onclick="facebook();return false;" class="facebook" target="_blank"> <span class="sns-facebook"><i class="blind">페이스북 공유 새창열림</i></span> </a></li>
-                                </ul>
-                                <button type="button" class="close-button">
-                                    <span class="sr-only">닫기</span>
-                                </button>
+                            <div class="share-wrap">
+                                <a href="javascript:gfnToTwitter(document.location.href);">
+                                    <span class="sns-twitter"><i class="blind">트위터 공유 새창열림</i></span>
+                                </a>
+                                <a href="javascript:sendLink();">
+                                    <span class="sns-kakao"><i class="blind">카카오톡 공유 새창열림</i></span>
+                                </a>
+                                <a href="javascript:;" onclick="facebook();return false;" class="facebook" target="_blank">
+                                    <span class="sns-facebook"><i class="blind">페이스북 공유 새창열림</i></span>
+                                </a>
                             </div>
-                        </li>
-                        <li class="share-item print">
-                            <button onclick="window.print()" aria-label="인쇄하기" class="page-print share-button"></button>
-                        </li>
-                    </ul>
+                            <button onclick="window.print()" aria-label="인쇄하기" class="page-print"></button>
+                        </div>
+                    </div>
                 </div>
+                <nav class="sub-nav">
+                    <a href="#" class="home-btn" aria-label="홈으로 가기">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 22V12H15V22" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+
+                    <button type="button" class="mobile-dropdown-toggle">
+                        <span>영화·교육</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <ul class="sub-menu-list">
+                        <li><a href="#" class="active">영화·교육</a></li>
+                        <li><a href="#">발간물</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="sub-nav">
-                <a href="#" class="home-btn" aria-label="홈으로 가기">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M9 22V12H15V22" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-
-                <button type="button" class="mobile-dropdown-toggle">
-                    <span>영화·교육</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-
-                <ul class="sub-menu-list">
-                    <li><a href="#" class="active">영화·교육</a></li>
-                    <li><a href="#">발간물</a></li>
-                </ul>
-            </nav>
         </div>
         
         <main id="contents">
