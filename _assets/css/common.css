@@ -170,7 +170,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     .header-wrap .gnb > li::before {position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 32px; border: 1px dashed #fff; opacity: 0.5; content: '';}
     .header-wrap .gnb > li:last-child::after {position: absolute; right: 0; top: 50%; transform: translateY(-50%); height: 32px; border: 1px dashed #fff; opacity: 0.5; content: '';}
     .header-wrap .gnb > li > a {display: inline-flex; width: 100%; height: 100%; font-size: 1.2rem; font-weight: 500; align-items: center; justify-content: center; color: #333; text-decoration: none;}
-    .header-wrap .gnb > li > a::after {opacity: 0; position: absolute; left: 50%; bottom: -2px; width: 0; height: 4px; transform: translateX(-50%); border-radius: 5px; background-color: #725bc9; content: ''; z-index: 11; transition: .3s;}
+    .header-wrap .gnb > li > a::after {opacity: 0; position: absolute; left: 50%; bottom: -2px; width: 0; height: 4px; transform: translateX(-50%); border-radius: 5px; background-color:var(--color-primary); content: ''; z-index: 11; transition: .3s;}
     .header-wrap .gnb > li.active > a {color: var(--main-color);}
     .header-wrap .gnb > li.active > a::after {opacity: 1; width: 75%;}
     .header-wrap .gnb > li > a > .lab-txt {position: relative; padding: 8px 15px; color: #0274c9; background-color: #fff; border-radius: 30px;}
@@ -190,6 +190,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     .header-wrap .gnb-bg .bg-inner {width: 100%; height: 100%; max-width: 1430px; margin: 0 auto; padding-left: 270px;}
     .gnb-active .header-wrap .gnb .depth-area {opacity: 1; visibility: visible;}
     .gnb-active .header-wrap .gnb-bg {opacity: 1; visibility: visible;} 
+
+    .header-wrap  .gnb > li:hover > a {color: var(--color-primary); transition: .3s;}
+    .header-wrap  .gnb > li:hover > a::after {opacity: 1; width: 75%; transition: .3s;}
+    .header-wrap .gnb .depth2 > li > a:hover {color:var(--color-primary);}
 
     .header-wrap .total-group{display:flex;}
     .header-wrap .total-group button[class*="-btn"] {width: 45px; height: 45px; border-radius: 50%;}

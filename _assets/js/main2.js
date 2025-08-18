@@ -3,8 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // 1. 첫 번째 Swiper (.mv-swiper) 초기화
     const swiper = new Swiper('.mv-swiper', {
         loop: false,
+        navigation: {
+            prevEl: ".main-slide-wrap .main-prev-btn",
+            nextEl: ".main-slide-wrap .main-next-btn",
+        },
         pagination: {
             el: '.main-custom-pagination',
+            
             clickable: true,
             type: 'custom',
             renderCustom: function (swiper, current, total) {
