@@ -177,6 +177,12 @@
 
     .gall2 .photo-list>ul{max-width:460px;margin:0 auto;}
 
+    .empty-list p{padding:var(--spacing-xl);text-align:center;}
+    .empty-gall-li{width:100% !important;border:0 !important;}
+    .empty-gall-li p {padding:var(--spacing-xl);text-align:center;}
+    .bbs-faq-empty p {padding:var(--spacing-xl);text-align:center;}
+
+
   @media (max-width: 1024px) {
     .archive-list > li {width: calc(100% / 2 - 13px);}
     .gall2 .archive-list > li {width: calc(100% / 3 - 17px);}
