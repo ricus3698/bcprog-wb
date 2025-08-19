@@ -21,6 +21,8 @@
 .title_area h2{display: inline-block; font-weight: bold; font-size: 20px;}
 .title_area:after{content: ''; display: block; width: 25px; height: 22px; background: url(../images/film-icon.svg) no-repeat; background-size: contain; overflow: hidden; position: absolute; top: 6px; left: 20px; filter: drop-shadow(2px 4px 6px rgba(83, 137, 197, 0.4)); }
 .title_area:hover:after{animation: float 1250ms ease-in-out infinite;}
+
+
 @keyframes float {
     0% {
       transform: translateY(0);

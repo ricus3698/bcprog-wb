@@ -96,9 +96,115 @@
 .location-article + .location-article{margin-top:var(--spacing-lg);}
 .location-article:last-child{margin-bottom:var(--spacing-lg);}
 
+.movie-list .archive-list > li{border:0;}
+.movie-list .archive-list > li > a{padding-bottom:var(--spacing-sm);}
+.movie-list .archive-list > li .thumb-img{border-radius:10px;box-shadow:4px 4px 8px rgba(0,0,0,0.26);margin-bottom:var(--spacing-md);}
+.thumb-tit .movie-title>p{margin-bottom:0;line-height:20px;white-space:nowrap;overflow: hidden;text-overflow: ellipsis;}
+.thumb-tit .movie-title .age-icon{display:inline-block;vertical-align:middle;position:relative;top:-3px;}
+.thumb-tit .movie-title .age-icon img{width:20px;}
+.thumb-tit .movie-title .title-text{line-height:23px;font-weight:600;font-size:1.2rem;}
+.movie-more{box-sizing:border-box;padding:20px;padding-top:0;}
+.movie-more-flex{display:flex;flex-wrap:wrap;justify-content:space-between;}
+.movie-more-flex p{margin-bottom:0;}
+.movie-more-flex p.movie-ticket-a a{color:var(--color-primary);}
+
+.movie-info-top{box-sizing:border-box;padding-top:var(--spacing-xl);padding-bottom:var(--spacing-xl);}
+.movie-info-flex{display:flex;flex-wrap:wrap;gap:40px;max-width:1200px;margin:0 auto;}
+.m-info-photo{width:560px;}
+.poster-area{max-width:300px;margin:0 auto;}
+.poster-area p {position:relative;height:0;padding-bottom:142.56%;overflow:hidden;box-shadow:4px 4px 8px rgba(0,0,0,0.26);}
+.poster-area p img {position:absolute;left:0;top:0;display:block;width:100%;height:100%;object-fit:contain;transition:.3s;}
+.m-info-text{flex:1;}
+
+.dl-row{display:flex;}
+.dl-row + .dl-row{margin-top:var(--spacing-sm);}
+.dl-row dt{width:160px;color:var(--color-dark-gr);}
+.m-info-title{margin-bottom:var(--spacing-lg);}
+.m-info-title .age-icon{top:-5px;margin-right:10px;}
+.m-info-title .age-icon img{vertical-align:middle;}
+.m-info-title h3{display:inline-block;}
+
+.movie-reser-btn{margin-top:var(--spacing-md);}
+.movie-reser-btn a{display:block;background:var(--color-primary);color:#fff;max-width:360px;text-align:center;line-height:60px;border-radius:5px;}
+
+.inner-movie-detail{background:#F5F8FD;padding-bottom:var(--spacing-lg);}
+.movie-inner{max-width: 1200px; margin: 0 auto; box-sizing: border-box;}
+.movie-detail-article{background:#fff;box-sizing: border-box;padding:20px;border-radius:15px;}
+.movie-detail-article + .movie-detail-article{margin-top:var(--spacing-lg);}
+.movie-article-title{margin-bottom:var(--spacing-md);}
+
+.movie-detail-tap {position:relative;overflow-x:auto;overflow-y:hidden;white-space: nowrap;-webkit-overflow-scrolling: touch;margin-bottom:var(--spacing-lg);padding-top:var(--spacing-lg);}
+.movie-detail-tap::before{content:"";position:absolute;bottom:0;left:0;display:block;width:100%;height:2px;background:var(--color-border);}
+.movie-tab-sticky{position:sticky;top:0;background:#F5F8FD;z-index:10;}
+.movie-tap{display: inline-flex;gap:10px;padding:0;margin:0;}
+.movie-tap li{flex: 0 0 auto;}
+.movie-tap a {display:block;padding: 10px 16px;text-decoration: none;color: #333;position:relative;}
+.movie-tap a::after{opacity: 0; position: absolute; left: 50%; bottom:0; width: 0; height: 2px; transform: translateX(-50%); border-radius: 5px; background-color:var(--color-primary); content: ''; z-index: 11; transition: .3s;}
+.movie-tap a.active{font-weight: bold;}
+.movie-tap a.active::after{opacity: 1; width:100%; transition: .3s;}
+.movie-tap a:hover::after{opacity: 1; width:100%; transition: .3s;}
+
+.detail-timetable>ul>li + li{margin-top:var(--spacing-md);}
+.timet-date{display:flex;flex-wrap: wrap;gap:20px;align-items: center;}
+.timet-date .date-area{width:100px;}
+.timet-date .time-area{flex:1;}
+.timet-date .time-area ul{display:flex;gap:10px;}
+.timet-date .time-area ul li a{display:inline-block;border:1px solid var(--color-border);box-sizing:border-box;padding:5px 0;min-width:80px;text-align:center;border-radius:5px;color:var(--color-primary);transition:0.3s;}
+.timet-date .time-area ul li a:hover{background:var(--color-primary);color:#fff;}
+
+.detail-photos ul{display:flex;gap:15px;}
+.detail-photos ul li{flex:1;max-width:calc(100% / 4);}
+.photo-size{position:relative;height:0;padding-bottom:52%;overflow:hidden;box-shadow:4px 4px 8px rgba(0,0,0,0.26);}
+.photo-size img {position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transition:.3s;}
+
+.youtube-thmb .photo-size{padding-bottom:56%;}
+.rating-starts-area, .star-numb-area, .rating-date{display:inline-block;}
+.rating-starts-area{margin-right:10px;}
+.rating-starts-area i{color:var(--color-primary);}
+.rating-starts-area.star-4 i:nth-child(5){color:var(--color-border);}
+.rating-starts-area.star-3 i:nth-child(5){color:var(--color-border);}
+.rating-starts-area.star-3 i:nth-child(4){color:var(--color-border);}
+.rating-starts-area.star-2 i:nth-child(5){color:var(--color-border);}
+.rating-starts-area.star-2 i:nth-child(4){color:var(--color-border);}
+.rating-starts-area.star-2 i:nth-child(3){color:var(--color-border);}
+.rating-starts-area.star-1 i:nth-child(5){color:var(--color-border);}
+.rating-starts-area.star-1 i:nth-child(4){color:var(--color-border);}
+.rating-starts-area.star-1 i:nth-child(3){color:var(--color-border);}
+.rating-starts-area.star-1 i:nth-child(2){color:var(--color-border);}
+.rating-date{margin-left:10px;color:var(--color-dark-gr);}
+
+.rating-article{background:#f8f8fa;padding:20px;border-radius:15px;}
+.review-delete{background:var(--color-dark-gr);color:#fff;display:inline-block;padding:3px 5px;border-radius:5px;}
+.review-delete i{position:relative;top:1px;}
+.del-btn-area{margin-bottom:0;margin-top:var(--spacing-sm);text-align:right;}
+
+.rating-wrap + .rating-wrap{margin-top:var(--spacing-lg);}
+
+.movie-rating-write{margin-bottom:var(--spacing-lg);}
+.write-wrap{border:1px solid var(--color-border);border-radius:15px;}
+.write-text-area{padding:20px;padding-bottom:10px;box-sizing:border-box;}
+.write-text-area textarea{width:100%;border:0;min-height:60px;}
+.write-text-btns{border-top:1px solid var(--color-border);box-sizing:border-box;padding:10px;text-align:right;background:#f8f8fa;border-radius:0 0 15px 15px;}
+.write-text-btns .rating-select{display:inline-block;}
+.write-text-btns .rating-select select{min-width:110px;}
+.write-text-btns .rating-submit{background:var(--color-primary);color:#fff;height:38px;border-radius:5px;padding:0 15px;}
+
+.youtube-text{text-align:center;white-space:nowrap;overflow: hidden;text-overflow: ellipsis;}
+.youtube-video{margin-bottom:var(--spacing-xl);}
+.iframe-wrap{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;}
+.iframe-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;z-index:1;}
+
+.detail-photo-big{margin-bottom:var(--spacing-xl);}
+.still-btn{display:block;width:100%;}
+
+
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
-  .spaceWrap { overflow-x: scroll; }
+  .spaceWrap {overflow-x: scroll;}
+  .movie-article-title h4{font-size:1.2rem;}
+  .movie-reser-btn a{max-width:100%;}
+
+  .timet-date{display:block;}
  }
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
@@ -112,6 +218,7 @@
     .map-info-flex{display:flex;gap:30px;align-items:center;}
     .map-info-tit p{margin-bottom:0;}
     
+    .m-info-photo{width:360px;}
   }
 /* ========== 데스크탑 (min-width: 1024px) ========== */
   @media (min-width: 1024px) {
@@ -130,6 +237,8 @@
     .facility-info  .step_list .step_item:nth-child(5n){margin-left:var(--spacing-md);}
     .facility-info .step_list .step_item:before{display:none;}
     .facility-info .step_list .step_item{width:calc((100% - 40px) / 3);}
+
+    .m-info-photo{width:460px;}
 
   }
 /* ========== 일반 데스크탑 시작 (min-width: 1280px) ========== */
@@ -167,6 +276,8 @@
     .lo-article-title h5{text-align:center;}
     .lo-article-cont{border-left:4px double #eee;box-sizing:border-box;padding-left:30px;}
 
+    .m-info-photo{width:560px;}
+
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
   @media (min-width: 1400px) {
@@ -184,16 +295,24 @@
     .facility-info .step_list .step_item:nth-child(4n + 1){margin-left:var(--spacing-md);}
     .facility-info .step_list .step_item:nth-child(5n+1){margin-left:0;margin-top:0;}
 
+    .m-info-title{margin-bottom:var(--spacing-xl)}
+    .dl-row dt, .dl-row dd{font-size:1.2rem;}
+    .movie-reser-btn{margin-top:var(--spacing-xl);}
+    .movie-tap a{font-size:1.2rem;}
   }
 /* ========== 와이드 데스크탑 (min-width: 1600px) ========== */
   @media (min-width: 1600px) {
 
- }
+    .movie-detail-article{padding:30px;}
+}
   @media (min-width: 1680px) {
 
 }
  /* ========== PC전용요소 (max-width: 1279px) ========== */
   @media (max-width: 1279px) {
-    
+
+    .dl-row dt{width:80px;}
+    .movie-info-top,.movie-inner{box-sizing:border-box;padding:0 15px;}
+    .movie-info-top{box-sizing:border-box;padding-top:var(--spacing-lg);padding-bottom:var(--spacing-lg);}
  }
 
