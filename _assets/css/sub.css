@@ -237,6 +237,11 @@
 .movie-reser-btn a.back-mprg{background:#fff;color:var(--color-primary);border:1px solid var(--color-primary);}
 .movie-reser-btn span.ticket-close{display:block;text-align:center;max-width:360px;line-height:60px;border-radius:5px;background:var(--color-dark-gr);color:#fff;cursor:default;}
 
+.edu-list .archive-list .thumb-img{padding-top:100%;}
+.edu-list .mov-prg-thmb{flex:0 0 260px;position:relative;}
+.edu-list-ul > li > a{padding:0;}
+.edu-list .archive-list .thumb-tit p{white-space:normal;}
+
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
   .spaceWrap {overflow-x: scroll;}
@@ -361,6 +366,8 @@
     .mprg-movie-list > li + li{margin-top:0 !important;}
     
     .mprg-movie-list{display: grid;  grid-template-columns: repeat(2, 1fr);  gap: 20px;}
+
+    .edu-list .info-flex .dl-row dt, .edu-list .info-flex .dl-row dd{font-size:1rem;}
   }
 /* ========== 와이드 데스크탑 (min-width: 1600px) ========== */
   @media (min-width: 1600px) {
