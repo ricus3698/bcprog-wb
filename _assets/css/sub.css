@@ -197,6 +197,21 @@
 .detail-photo-big{margin-bottom:var(--spacing-xl);}
 .still-btn{display:block;width:100%;}
 
+/* .movie-tab-program .movie-detail-tap::before{display:none;}
+.movie-tab-program .movie-tap::before{content:"";position:absolute;bottom:0;left:0;display:block;width:100%;height:2px;background:var(--color-border);} */
+
+.movie-program .archive-list > li{width:calc(100% / 2 - 13px)}
+.movie-program .archive-list .thumb-img{margin-bottom:0;border-radius:15px;}
+.mov-prg-flex{display:flex;flex-direction: row;align-items:flex-start;gap:20px;}
+.mov-prg-thmb{flex:0 0 200px}
+.mov-prg-info{flex:1;min-width:0;padding-top:20px;padding-right:20px;}
+.mov-prg-info .thumb-tit{margin-bottom:var(--spacing-md);}
+.info-flex .dl-row dt{width:100px;}
+.info-flex .dl-row dd{flex:1;min-width:0;word-break: keep-all;}
+.info-btns{margin-top:var(--spacing-md);}
+.info-btns p{display:inline-block;}
+.info-btns p a{border:1px solid var(--color-dark-gr);display:inline-block;padding:3px 8px;border-radius:5px;transition:0.3s;}
+.info-btns p a:hover{background:var(--color-primary);color:#fff;border-color:var(--color-primary);}
 
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
@@ -205,6 +220,10 @@
   .movie-reser-btn a{max-width:100%;}
 
   .timet-date{display:block;}
+
+  .mov-prg-flex{display:block;}
+  .info-flex .dl-row{display:block;}
+  .mov-prg-info{padding:10px;}
  }
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
@@ -278,6 +297,12 @@
 
     .m-info-photo{width:560px;}
 
+    .movie-tab-program .movie-tap li{min-width:120px;}
+    .movie-tab-program .movie-tap li a{text-align:center;}
+
+    .mov-prg-info .thumb-tit .movie-title .title-text{font-size:1.4rem;margin-bottom:var(--spacing-xl);}
+    .mov-prg-info .thumb-tit{margin-bottom:var(--spacing-lg);}
+
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
   @media (min-width: 1400px) {
@@ -299,6 +324,8 @@
     .dl-row dt, .dl-row dd{font-size:1.2rem;}
     .movie-reser-btn{margin-top:var(--spacing-xl);}
     .movie-tap a{font-size:1.2rem;}
+    .info-flex .dl-row dt,.info-flex .dl-row dd{font-size:1.1rem;}
+    
   }
 /* ========== 와이드 데스크탑 (min-width: 1600px) ========== */
   @media (min-width: 1600px) {
@@ -314,5 +341,7 @@
     .dl-row dt{width:80px;}
     .movie-info-top,.movie-inner{box-sizing:border-box;padding:0 15px;}
     .movie-info-top{box-sizing:border-box;padding-top:var(--spacing-lg);padding-bottom:var(--spacing-lg);}
+
+    .movie-program .archive-list > li{width:100%}
  }
 
