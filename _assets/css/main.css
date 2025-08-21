@@ -156,7 +156,7 @@
 .movie-card>p { margin-bottom: 0;}
 .age-icon { display: inline-block; vertical-align: middle; position: relative; top: 2px; }
 .age-icon img{width: 20px;}
-.movie-card .age-icon{float: left; padding-right: 4px;}
+.movie-card .age-icon{float: left; padding-right: 4px;top:6px;}
 .movie-card p { margin: 4px 0; font-size: 14px; color: #495057; }
 .movie-card p:first-child{margin-bottom: 7px;}
 .movie-card .title { font-size: 16px; font-weight: 700; color: #000; display: block; white-space: nowrap;  overflow: hidden; text-overflow: ellipsis;}
