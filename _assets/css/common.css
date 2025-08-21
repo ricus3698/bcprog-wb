@@ -41,6 +41,38 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .btn-a{display:inline-block;min-width:80px;box-sizing:border-box;padding:0 20px;border-radius:3px;line-height:46px;}
 
+input[type="text"].form-input{height:50px;}
+.form-select{height:50px;}
+.form-control.radio{line-height:50px;}
+.form-control.radio label{box-sizing:border-box;padding-left:5px;padding-right:35px;}
+.form-control.checkbox{line-height:50px;}
+.form-control.checkbox label{box-sizing:border-box;padding-left:5px;padding-right:35px;}
+
+.agree-scroll{border:1px solid var(--color-border);max-height:200px;overflow-y:scroll;border-radius:3px;}
+.agree-text{box-sizing:border-box;padding:var(--spacing-md);background:#f8f8f8;}
+.agree-radio-text{font-weight:600;margin-right:35px;}
+
+.f-w-mid{width:100%;max-width:360px;}
+.f-tel-wrap{display:flex;align-items: center;}
+.f-tel-wrap span{display:block;flex:0 0 10px;text-align:center;}
+.f-tel-wrap .form-input{width:calc(340px / 3)}
+
+.necessary{position:relative; color:#fff;}
+.necessary::before{display:inline-block; content:'*'; color:red;}
+
+.form-row{display:flex;gap:20px;align-items:center;}
+
+.form-row .form-head{width:160px;font-weight:600;}
+.form-row .form-body{flex:1;}
+
+.form-row + .form-row{margin-top:var(--spacing-lg);}
+
+.form-row-double{display:grid;gap: 40px;grid-template-columns: repeat(2, 1fr);}
+.form-row-double .form-row + .form-row{margin-top:0;}
+.form-row-double + .form-row{margin-top:var(--spacing-lg);}
+.form-row-double + .form-row-double{margin-top:var(--spacing-lg);}
+
+
 
 .header{position:relative;background-color:#fff;z-index:10;}
 .header-wrap{height:60px;}
@@ -144,6 +176,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .ft-site-list ul li:last-child a{border-bottom:0;}
 .site-list-icon{position:absolute;right:10px;top: 50%; transform: translateY(-50%);}
 .site-list-icon img{width:16px;}
+
+/* ========== 모바일 전용 (max-width: 767px) ========== */
+ @media (max-width: 767px) {
+  .form-row{display:block;}
+ }
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
@@ -277,4 +314,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     .total-group .total-area{display:none}
     .site-mgnb .site-modal{display:none;}
     .quick-menu{display: none;}
+
+    .form-row-double{display:block;}
+    .form-row-double .form-row + .form-row{margin-top:var(--spacing-lg);}
+    
  }

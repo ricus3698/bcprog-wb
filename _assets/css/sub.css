@@ -242,6 +242,25 @@
 .edu-list-ul > li > a{padding:0;}
 .edu-list .archive-list .thumb-tit p{white-space:normal;}
 
+.inner-edu-detail{padding-top:var(--spacing-xl);}
+.edu-detail .poster-area{max-width:500px;}
+.edu-detail .poster-area p{padding-bottom:100%;}
+.edu-detail .poster-area p img{object-fit:cover;}
+
+.teacher-info-wrap .date-area{text-align:center;font-size:1.2rem;}
+
+.class-info .info-table{margin-top:0;}
+.class-info-a-tit{margin-bottom:var(--spacing-md);}
+.class-info-article + .class-info-article{margin-top:var(--spacing-md);}
+.class-info .notice-content{padding-bottom:var(--spacing-md);}
+
+.edu-bottom-btn{display:flex;justify-content: center;}
+.edu-bottom-btn a{width:100%;}
+.edu-bottom-btn button{width:100%;display:block;background:var(--color-primary);color:#fff;max-width:360px;text-align:center;line-height:60px;border-radius:5px;}
+
+.edu-form-title .movie-info-flex{border-bottom:1px solid var(--color-border);}
+.edu-form-title + .movie-info-flex{margin-top:var(--spacing-xl);}
+
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
   .spaceWrap {overflow-x: scroll;}
@@ -336,6 +355,8 @@
 
     .mov-prg-info .thumb-tit .movie-title .title-text{font-size:1.4rem;margin-bottom:var(--spacing-xl);}
     .mov-prg-info .thumb-tit{margin-bottom:var(--spacing-lg);}
+
+    .edu-detail .m-info-photo{width:680px;}
 
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
