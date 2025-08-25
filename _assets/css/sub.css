@@ -272,6 +272,11 @@
 .edu-form-title + .movie-info-flex{margin-top:var(--spacing-xl);}
 
 
+.schedule_panel .schedule_month {display: flex;justify-content: space-around;align-items: center;height:120px;padding: 0 62px;border-radius: 10px;border:1px solid var(--color-border)}
+.schedule_panel .schedule_month .month_current {color: var(--color-primary);font-size:2rem;font-weight:800;}
+.schedule_panel .schedule_month a {color:#717a81;font-size:1.6rem;}
+.schedule_panel .schedule_month a i{vertical-align: middle;}
+
 
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
