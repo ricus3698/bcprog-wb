@@ -92,6 +92,16 @@
 .lo-article-cont dl dt{color:var(--color-dark-gr);font-weight:600;}
 .lo-article-cont dl dd{box-sizing:border-box;padding-left:15px;position:relative;}
 .lo-article-cont dl dd:before{content:"•";position:absolute;top:0;left:0;}
+.lo-article-cont.bus-dd dl dd.bus-dd{padding-left:0;}
+.lo-article-cont.bus-dd dl dd:before{content:"";}
+
+.bus-info > li{position:relative;box-sizing:border-box;display:inline-block;margin-right:var(--spacing-lg);}
+.bus-info > li:before{content:"";position:relative;top:-2px;display:inline-block;color:#fff;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
+.bus-info > li.bus-t1:before{content:"지선";background:#47af1b;font-size:0.8rem;}
+.bus-info > li.bus-t2:before{content:"일반";background:#00afbd;font-size:0.8rem;}
+.bus-info > li.bus-t3:before{content:"마을";background:#47af1b;font-size:0.8rem;}
+
+.sub-line3::before{content:"3";position:relative;top:-2px;width:20px;display:inline-block;text-align:center;border-radius:50%;background:#cea43a;color:#fff;font-size:0.8rem;margin-right:3px;}
 
 .location-article + .location-article{margin-top:var(--spacing-lg);}
 .location-article:last-child{margin-bottom:var(--spacing-lg);}
@@ -260,6 +270,8 @@
 
 .edu-form-title .movie-info-flex{border-bottom:1px solid var(--color-border);}
 .edu-form-title + .movie-info-flex{margin-top:var(--spacing-xl);}
+
+
 
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
