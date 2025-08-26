@@ -72,6 +72,12 @@
     .b-col2-03{width:55%;}
     .b-col2-04{width:15%;}
 
+    .b-col3-01{width:10%;}
+    .b-col3-02{width:40%;}
+    .b-col3-03{width:10%;}
+    .b-col3-04{width:30%;}
+    .b-col3-05{width:10%;}
+
     .board-file{display:inline-block;text-indent:-9999px;width:20px;height:20px;background-image:url("../images/att_file_grey.svg");background-repeat:no-repeat;background-size:contain;vertical-align:middle;}
     .board-link{display:inline-block;text-indent:-9999px;width:20px;height:20px;background-image:url("../images/ext-link.svg");background-repeat:no-repeat;background-size:contain;vertical-align:middle;}
 
@@ -183,6 +189,9 @@
     .empty-gall-li p {padding:var(--spacing-xl);text-align:center;}
     .bbs-faq-empty p {padding:var(--spacing-xl);text-align:center;}
 
+    .mypage-appl .board-title-box a{max-width:100%;text-overflow:unset;overflow:visible;white-space:normal;color:var(--color-link);}
+    .mypage-appl .board-cate-box{vertical-align:middle;}
+    
 
   @media (max-width: 1024px) {
     .archive-list > li {width: calc(100% / 2 - 13px);}
@@ -229,13 +238,17 @@
     .archive-list > li > a{padding:15px;}
 
     .gall2 .archive-list > li {width:100%;}
+
+    .mypage-appl .board-status:before{content:"상태";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
+    .mypage-appl .board-dates:before{content:"신청일/취소일";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
+    .mypage-appl .board-price:before{content:"금액";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
  }
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
     .subtitle-area .container{padding: 80px 0 50px;}
     
-
+    .mypage-appl .board-moblie-content{display:none;}
   }
 
 
