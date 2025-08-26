@@ -278,6 +278,59 @@
 .schedule_panel .schedule_month a i{vertical-align: middle;}
 
 
+/* 학사일정 calendar */
+.schedule_calendar{
+  display:inline-block;
+  position:relative;
+  width:70%;
+  padding-top:var(--spacing-xl);
+  padding-right:65px;
+  box-sizing: border-box;
+  vertical-align:top
+}
+.schedule_calendar:before{content:"";display:inline-block;position:absolute;right:0;bottom:-10px;width:1px;height:calc(100% - 123px);border-right:2px dotted var(--color-border);}
+.top-cale{text-align:center;position:relative;}
+.schedule_calendar .cal_month {font-size:1.6rem;font-weight:800;}
+.schedule_calendar .call_today{position:absolute;right:0;background:var(--color-primary);color:#fff;box-sizing:border-box;padding:3px 15px;border-radius:15px;}
+.schedule_calendar > table {margin-top:var(--spacing-md);width:100%;}
+.schedule_calendar col {width: calc(100%/7);}
+.schedule_calendar .cal_headDay {color:#222;font-size:1.2rem;padding:15px 0;}
+.schedule_calendar .cal_headDay:first-child {color: #e32165;}
+.schedule_calendar .cal_headDay:last-child {color: #025dcf;}
+.schedule_calendar .cal_day{position:relative;width:100%;height:88px;margin-bottom:2px;text-align:left;}
+.schedule_calendar .cal_week {border-bottom: 1px solid var(--color-border);}
+.schedule_calendar .cal_week:first-child {border-top: 2px solid #000;}
+.schedule_calendar .cal_week:first-child > td {padding-top: 7px;}
+.schedule_calendar .date {display:inline-block;position: relative;width: 100%;box-sizing: border-box;border: none;border-radius: 10px;text-align:left;}
+.schedule_calendar .date span {display:inline-block;width:32px;padding: 1px 2px 1px 1px;border-radius: 14px;text-align:center;color:#222;font-size:1rem;font-weight:600;transition:0.3s;}
+.schedule_calendar th.active .date span {background-color:var(--color-primary);color:#fff;}
+.schedule_calendar .date:hover span{background-color: rgba(0,102,255,0.5);color: #fff;}
+.schedule_calendar .cal_day_head th {padding: 12px 0 6px;}
+.schedule_calendar .cal_day_body td {vertical-align: top;}
+.schedule_calendar .cal_day_body td .info_min_h{min-height:84px;}
+.schedule_calendar .cal_day_body .info_sub{display: block;position: relative;max-width: 100%;height: 21px;margin-bottom: 3px;}
+.schedule_calendar .cal_day_body .info_sub .info_inner{display: inline-block;overflow: hidden;position: absolute;width: 100%;padding: 0 3px;font-size: 0.9rem;line-height: 21px;white-space: nowrap;text-overflow: ellipsis;}
+
+.schedule_calendar .cal_day_body .info_sub .info_inner img{width:16px;display:inline;position:relative;top:2px;}
+
+.schedule_info {display: inline-block;width:25.1%;margin-top:var(--spacing-xl);margin-left:50px;padding-top:48px;}
+.schedule_info .info_top {padding: 21px 0;border-bottom: 2px solid #222;text-align: center}
+.schedule_info .info_top span {color: #222;font-size: 21px;font-weight: 600;line-height: normal;letter-spacing: -0.02em;}
+.schedule_info .info_bot {padding-top: 10px;}
+.schedule_info .info_bot li {padding: 20px;border-bottom: 1px solid #dadce0;background-color: #fff;}
+.schedule_info .info_bot p {margin-bottom: 8px;color: #222;font-size: 19px;font-weight: 400;line-height: normal;letter-spacing: -.02em;}
+.schedule_info .info_bot p span {color: #000;}
+.schedule_info .info_bot li>span {display: block;color: #444;font-size: 16px;font-weight: 400;line-height: normal;letter-spacing: -.02em}
+.schedule_info .info_bot.empty {position: relative;min-height: 230px;margin-top: 30px;border: 1px solid #dadce0;border-radius: 7px;}
+.schedule_info .info_bot.empty span {position: absolute;top: calc(50% - 68px);left: calc(50% - 68px);padding-top: 110px;color: #728189;font-size: 17px;font-weight: 400;line-height: normal;letter-spacing: 0;}
+.schedule_info .info_bot.empty span:before {display: block;position: absolute;top: 0;left: calc(50% - 45px);width: 90px;height: 90px;border-radius: 40px;background: url("../images/program/cts4526_schedule_empty.png") no-repeat center;content: '';box-shadow: 3px 4px 50px 5px rgba(20,126,186,0.1);}
+
+
+.mvs-detail-wrap .mvs-time{margin-right:var(--spacing-sm);display:inline-block;min-width:46px;}
+.mvs-detail-wrap .mvs-icon img{width:18px;display:inline;position:relative;top:3px;}
+
+.schedule_calendar .date span.today{position:absolute;top:0;right:0;width:60px;font-size:0.8rem;box-sizing:border-box;padding:3px 5px;background-color:#F44336 !important;}
+
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
   .spaceWrap {overflow-x: scroll;}
@@ -375,6 +428,8 @@
 
     .edu-detail .m-info-photo{width:680px;}
 
+    .mvs-a .mvs-time{display:inline-block;min-width:42px;}
+
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
   @media (min-width: 1400px) {
@@ -425,5 +480,18 @@
     .movie-info-top{box-sizing:border-box;padding-top:var(--spacing-lg);padding-bottom:var(--spacing-lg);}
 
     .movie-program .archive-list > li{width:100%}
+
+    .schedule_calendar, .schedule_info{display:block;width:100%;}
+    .schedule_calendar{padding:0 15px;}
+    .schedule_calendar:before{display:none;}
+    .schedule_info{margin-top:30px;margin-left:0;box-sizing:border-box;padding:0 15px;}
+    .schedule_calendar .cal_headDay{font-size:1rem;}
+    .schedule_calendar .cal_day_body .info_sub .info_inner{font-size:0.8rem;}
+    .month-num{display:none;}
+    .schedule_panel{box-sizing:border-box;padding:0 15px;margin-bottom:var(--spacing-xl)}
+    .schedule_panel .schedule_month{padding:0 15px;height:80px;}
+    .schedule_calendar .date span{font-size:0.9rem;}
+
+    .schedule_calendar .date span.today{font-size:0.6rem;padding:0;position:absolute;top:-17px;}
  }
 

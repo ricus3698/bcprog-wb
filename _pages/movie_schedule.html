@@ -412,183 +412,589 @@
                         <div class="schedule_panel">
                             <div class="schedule_month">
                                 <a href="#" class="month_prev" title="2025년도 09월 달력 이동">
-                                    <i class="xi-angle-left"></i> 2025. 09
+                                    <i class="xi-angle-left"></i>
+                                    <span class="month-num">2025. 09</span> 
                                 </a>
                                 <span class="month_current">2025. 10</span>
                                 <a href="#" class="month_next" title="2025년도 11월 달력 이동">
-                                    2025. 11
+                                    <span class="month-num">2025. 11</span>
                                     <i class="xi-angle-right"></i>
                                 </a>
                             </div>
                         </div>
 
-                        <div class="year-month-wrap">
-                            <div class="calendar-control-box">
-                                <div class="control-button prev-btn">
-                                    <a href="#"><span class="hide">이전달</span></a>
+                        <div class="schedule_content">
+                            <div class="schedule_calendar">
+                                <div class="top-cale">
+                                    <span class="cal_month">10월</span>
+                                    <a class="call_today temp_btn type3" title="오늘 달력 불러오기" href="#">오늘 일정</a>
                                 </div>
-                                <div class="year-month">
-                                    <span class="title-text year">2025.</span>
-                                    <span class="title-text month">8</span>
+                                <table>
+                                    <caption class="blind">2025년도 10월 학사일정 - 요일별 정보 제공</caption>
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="cal_headDay">SUN</th>
+                                            <th scope="col" class="cal_headDay">MON</th>
+                                            <th scope="col" class="cal_headDay">TUE</th>
+                                            <th scope="col" class="cal_headDay">WED</th>
+                                            <th scope="col" class="cal_headDay">THU</th>
+                                            <th scope="col" class="cal_headDay">FRI</th>
+                                            <th scope="col" class="cal_headDay">SAT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="cal_week">
+                                            <td colspan="7">
+                                                <table class="cal_day">
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <caption class="blind">1주차 일정</caption>
+                                                    <thead>
+                                                        <tr class="cal_day_head">
+                                                            <th scope="col"></th>
+                                                            <th scope="col"></th>
+                                                            <th scope="col"></th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>01</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>02</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>03</span></button>
+                                                            </th>
+                                                            <th scope="col" class="active">
+                                                                <button type="button" class="date">
+                                                                    <span>04</span>
+                                                                    <span class="today">
+                                                                        Today
+                                                                    </span>
+                                                                </button>
+                                                                
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="cal_day_body">
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td colspan="1">
+                                                                <div class="info_min_h">
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">11:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">88:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">15:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td colspan="1">
+                                                                <div class="info_sub">
+                                                                    <div class="info_inner">
+                                                                        <a href="#" class="mvs-a">
+                                                                            <span class="mvs-time">24:24</span>
+                                                                            <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                            <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td></td>
+                                                            <td colspan="1">
+                                                                <div class="info_sub">
+                                                                    <div class="info_inner">
+                                                                        <a href="#" class="mvs-a">
+                                                                            <span class="mvs-time">11:00</span>
+                                                                            <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                            <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr class="cal_week">
+                                            <td colspan="7">
+                                                <table class="cal_day">
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <caption class="blind">2주차 일정</caption>
+                                                    <thead>
+                                                        <tr class="cal_day_head">
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>05</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>06</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>07</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>08</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>09</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>10</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>11</span></button>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="cal_day_body">
+                                                            <td></td>
+                                                            
+                                                            
+                                                            <td colspan="1">
+                                                                <div class="info_min_h">
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">11:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">88:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">15:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td colspan="1">
+                                                                <div class="info_sub">
+                                                                    <div class="info_inner">
+                                                                        <a href="#" class="mvs-a">
+                                                                            <span class="mvs-time">24:24</span>
+                                                                            <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                            <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td></td>
+                                                            <td colspan="1">
+                                                                <div class="info_sub">
+                                                                    <div class="info_inner">
+                                                                        <a href="#" class="mvs-a">
+                                                                            <span class="mvs-time">11:00</span>
+                                                                            <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                            <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr class="cal_week">
+                                            <td colspan="7">
+                                                <table class="cal_day">
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <caption class="blind">2주차 일정</caption>
+                                                    <thead>
+                                                        <tr class="cal_day_head">
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>12</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>13</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>14</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>15</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>16</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>17</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>18</span></button>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="cal_day_body">
+                                                            <td></td>
+                                                            
+                                                            
+                                                            <td colspan="1">
+                                                                <div class="info_min_h">
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">11:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">88:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">15:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td colspan="1">
+                                                                <div class="info_sub">
+                                                                    <div class="info_inner">
+                                                                        <a href="#" class="mvs-a">
+                                                                            <span class="mvs-time">24:24</span>
+                                                                            <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                            <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td></td>
+                                                            <td colspan="1">
+                                                                <div class="info_sub">
+                                                                    <div class="info_inner">
+                                                                        <a href="#" class="mvs-a">
+                                                                            <span class="mvs-time">11:00</span>
+                                                                            <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                            <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr class="cal_week">
+                                            <td colspan="7">
+                                                <table class="cal_day">
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <caption class="blind">2주차 일정</caption>
+                                                    <thead>
+                                                        <tr class="cal_day_head">
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>19</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>20</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>21</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>22</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>23</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>24</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>25</span></button>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="cal_day_body">
+                                                            <td></td>
+                                                            
+                                                            
+                                                            <td colspan="1">
+                                                                <div class="info_min_h">
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">11:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">88:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">15:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td colspan="1">
+                                                                <div class="info_sub">
+                                                                    <div class="info_inner">
+                                                                        <a href="#" class="mvs-a">
+                                                                            <span class="mvs-time">24:24</span>
+                                                                            <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                            <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td></td>
+                                                            <td colspan="1">
+                                                                <div class="info_sub">
+                                                                    <div class="info_inner">
+                                                                        <a href="#" class="mvs-a">
+                                                                            <span class="mvs-time">11:00</span>
+                                                                            <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                            <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr class="cal_week">
+                                            <td colspan="7">
+                                                <table class="cal_day">
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <caption class="blind">2주차 일정</caption>
+                                                    <thead>
+                                                        <tr class="cal_day_head">
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>26</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>27</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>28</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>29</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <button type="button" class="date"><span>30</span></button>
+                                                            </th>
+                                                            <th scope="col">
+                                                            </th>
+                                                            <th scope="col">
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="cal_day_body">
+                                                            <td></td>
+                                                            
+                                                            
+                                                            <td colspan="1">
+                                                                <div class="info_min_h">
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">11:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">88:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="info_sub">
+                                                                        <div class="info_inner">
+                                                                            <a href="#" class="mvs-a">
+                                                                                <span class="mvs-time">15:00</span>
+                                                                                <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                                                <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="schedule_info">
+                                <div class="info_top">
+                                    <span>2025. 10. 04 (토)</span>
                                 </div>
-                                <div class="control-button next-btn">
-                                    <a href="#"><span class="hide">다음달</span></a>
-                                </div>
-                                <div class="ex_box">
-                                    <div class="ex_day to_day">오늘</div>
+                                <div class="info_bot">
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="mvs-d-a">
+                                                <div class="mvs-detail-wrap">
+                                                    <span class="mvs-time">11:00</span>
+                                                    <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                    <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="mvs-d-a">
+                                                <div class="mvs-detail-wrap">
+                                                    <span class="mvs-time">13:00</span>
+                                                    <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                    <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="mvs-d-a">
+                                                <div class="mvs-detail-wrap">
+                                                    <span class="mvs-time">15:00</span>
+                                                    <span class="mvs-icon"><img src="../_assets/images/age-15.svg" alt="15세 이상 관람가"></span>
+                                                    <span class="mvs-title">전지적 독자 시점(한글자막CC)</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="calendar-table">
-                            <table>
-                                <caption>영화상영 시간표</caption>
-                                <thead>
-                                    <tr>
-                                        <th scope="col" class="sun">일</th>
-                                        <th scope="col">월</th>
-                                        <th scope="col">화</th>
-                                        <th scope="col">수</th>
-                                        <th scope="col">목</th>
-                                        <th scope="col">금</th>
-                                        <th scope="col" class="sat">토</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <span class="day"></span>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day"></span>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day"></span>
-                                            <h4 class="hide"></h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day"></span>
-                                            <h4 class="hide"></h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day"></span>
-                                            <h4 class="hide"></h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day">1</span>
-                                            <h4 class="hide">금요일</h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day">2</span>
-                                            <h4 class="hide">토요일</h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="day">3</span>
-                                            <h4 class="hide">일요일</h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    14:00
-                                                    <span>고독한 미식가 더 무비</span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day">4</span>
-                                            <h4 class="hide">월요일</h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    14:00
-                                                    <span>고독한 미식가 더 무비</span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day">5</span>
-                                            <h4 class="hide">화요일</h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day">6</span>
-                                            <span class="today_text hide">TODAY</span>
-                                            <h4 class="hide">수요일</h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span>고독한 미식가 더 무비</span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day">7</span>
-                                            <span class="today_text hide"></span>
-                                            <h4 class="hide">목요일</h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day">8</span>
-                                            <h4 class="hide">금요일</h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="day">9</span>
-                                            <h4 class="hide">토요일</h4>
-                                            <div class="day-item">
-                                                <a href="" title="">
-                                                    <span></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        
+                        
                     </div>
                     
                 </div>
