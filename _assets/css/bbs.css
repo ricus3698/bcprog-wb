@@ -303,3 +303,23 @@
     .mobile-hide{display:none;}
     
  }
+
+@media print {
+  /* 기본적으로 모든 요소 숨김 */
+  body * {
+    visibility: hidden;
+  }
+
+  /* 특정 영역만 보이게 */
+  #p-area, #p-area * {
+    visibility: visible;
+  }
+
+  /* 출력할 영역을 페이지 맨 앞으로 */
+  #p-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+

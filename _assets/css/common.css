@@ -72,7 +72,13 @@ input[type="text"].form-input{height:50px;}
 .form-row-double + .form-row{margin-top:var(--spacing-lg);}
 .form-row-double + .form-row-double{margin-top:var(--spacing-lg);}
 
+.bd-0{border:0 !important;}
+.bd-t-0{border-top:0 !important;}
+.bd-l-0{border-left:0 !important;}
+.bd-r-0{border-right:0 !important;}
+.bd-b-0{border-bottom:0 !important;}
 
+.lh-1d2{line-height:1.2;display:inline-block;}
 
 .header{position:relative;background-color:#fff;z-index:10;}
 .header-wrap{height:60px;}

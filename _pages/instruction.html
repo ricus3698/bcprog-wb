@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="../_assets/css/common.css">  
     <link rel="stylesheet" href="../_assets/css/main.css">
     <link rel="stylesheet" href="../_assets/css/bbs.css">    
+    <link rel="stylesheet" href="../_assets/css/sub.css">
+    <link rel="stylesheet" href="../_assets/css/sub-common.css">     
     
     <script src="../_core/js/jquery-3.6.0.min.js"></script>
     <script src="../_core/vendor/swiper/swiper-bundle.min.js"></script>
@@ -354,11 +356,10 @@
 
             </div>    
         </header>
-        
         <div class="subtitle-area">
             <div class="subtitle-wrap">
                 <div class="container">
-                    <h2 class="subtitle-heading">모두알림</h2>
+                    <h2 class="subtitle-heading">센터소개</h2>
                     <div class="share-box">
                         <div class="board-list-share">
                             <button type="button" class="share-toggle">
@@ -388,195 +389,101 @@
                     </a>
 
                     <button type="button" class="mobile-dropdown-toggle">
-                        <span>자료실</span>
+                        <span>이용안내</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
 
                     <ul class="sub-menu-list">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">홍보콘텐츠</a></li>
-                        <li><a href="#">보도자료</a></li>
-                        <li><a href="#"  class="active">자료실</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">센터안내</a></li>
+                        <li><a href="#" class="active">이용안내</a></li>
+                        <li><a href="#">층별안내</a></li>
+                        <li><a href="#">오시는길</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-
+        
         <main id="contents">
             <div class="main-wrap">
                 <div class="inner">
-
-                    <div class="bbs-wrap bbs-list">
-                        
-                        <div class="bbs-category b-cate01">
-                            <div class="bbs-category-box mobile-hide">
-                                <ul class="bbs-tab-category">
-                                    <li>
-                                        <a href="#" title="선택됨">전체</a>
-                                    </li>
-                                    <li><a href="#">상영</a></li>
-                                    <li class="active"><a href="#">교육</a></li>
-                                    <li><a href="#">대여</a></li>
-                                    <li><a href="#">행사</a></li>
-                                    <li><a href="#">기타</a></li>
-                                </ul>
-                            </div>
-                            <div class="b-cate01-m pc-hide">
-                                <label for="category-option" id="label-trigger">전체</label>
-                                <select id="category-option" class="bbs-tab-select hidden-select">
-                                    <option value="">전체</option>
-                                    <option value="">상영</option>
-                                    <option value="">교육</option>
-                                    <option value="">대여</option>
-                                    <option value="">행사</option>
-                                    <option value="">기타</option>
-                                </select>
-                            </div>
-                            
-                        </div>
-                        <!-- bbs-category END -->
-                        
-                        <div class="bbs-search">
-                            <form method="get" action="?" id="searchForm">
-                                <fieldset class="bbs-search-wrap">
-                                    <legend class="blind">게시글 검색</legend>
-                                    <input type="hidden" name="mode" value="list">
-                                    <p class="bbs-search-text">
-                                        전체 <span class="bbs-total-number">3545</span>건
-                                    </p>
-                                    <div class="bbs-search-group">
-                                        <div class="bbs-search-select">
-                                            <label for="search-option" class="blind">검색분류선택</label>
-                                            <select id="search-option" class="search-option-select" name="searchOptionk" title="검색분류선택">
-                                                <option value="" selected="">전체</option>
-                                                <option value="article_title">제목</option>
-                                                <option value="article_text">내용</option>
-                                            </select>
-                                        </div>
-                                        <label for="bbs-search-var" class="bbs-search-varlabel blind">
-                                            <span>검색어</span>
-                                        </label>
-                                        <input type="text" id="bbs-search-var" name="searchVar" value="" placeholder="검색어를 입력해 주세요">
-                                        <button type="submit" class="bbs-search-btn">검색</button>
-                                    </div>
-                                    <!-- bbs-search-group END -->
-                                </fieldset>
-                            </form>                        
-                        </div>
-                        <!-- bbs-search END -->
-
-                        <div class="bbs-list-table">
-                            <div class="bbs-list-table-top"></div>
-                            <table summary="공지사항" class="board-table">
-                                <caption class="blind">공지사항</caption>
-                                <colgroup>
-                                    <col class="board-col b-col01">
-                                    <col class="board-col b-col02 bbs-mobile-hide">
-                                    <col class="board-col b-col03">
-                                    <col class="board-col b-col04 bbs-mobile-hide">
-                                    <col class="board-col b-col05 bbs-mobile-hide">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th scope="col">번호</th>
-                                        <th scope="col" class="bbs-mobile-hide">분류</th>
-                                        <th scope="col">제목</th>
-                                        <th scope="col" class="bbs-mobile-hide">작성일</th>
-                                        <th scope="col" class="bbs-mobile-hide">조회</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <!-- empty -->
-                                    <tr class="">
-                                        <td class="empty-list" colspan="5">
-                                            <p>등록된 게시글이 없습니다.</p>
-                                        </td>
-                                    </tr>
-
-                                    <!-- notice -->
-                                    <tr class="notice-tr">
-                                        <td class="board-num-box">공지</td>
-                                        <td class="board-cate-box bbs-mobile-hide"><a href="#">교육</a></td>
-                                        <td class="board-td-left board-td-title">
-                                            <div class="board-title-box">
-                                                <a href="#" title="「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내 자세히 보기">
-                                                    「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내
-                                                </a>
-                                                <div class="board-etc-box">
-                                                    <p class="board-file"><span>첨부파일</span></p>
-                                                </div>
-                                                <div class="board-moblie-content">
-                                                    <span class="board-cate"><a href="#">교육</a></span>
-                                                    <span class="board-date">25-08-04</span>
-                                                    <span class="board-hit">조회수 45</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="bbs-mobile-hide">25-08-04</td>
-                                        <td class="bbs-mobile-hide">45</td>
-                                    </tr>
-
-                                    <!-- normal -->
-                                    <tr class="">
-                                        <td class="board-num-box">193</td>
-                                        <td class="board-cate-box bbs-mobile-hide"><a href="#">상영</a></td>
-                                        <td class="board-td-left board-td-title">
-                                            <div class="board-title-box">
-                                                <a href="#" title="「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내 자세히 보기">
-                                                    「2025년 육아기 연구과제 지원(브릿지펀드) 사업」신규 지원대상 모집 안내
-                                                </a>
-                                                <div class="board-etc-box">
-                                                    <p class="board-file"><span>첨부파일</span></p>
-                                                </div>
-                                                <div class="board-moblie-content">
-                                                    <span class="board-cate"><a href="#">상영</a></span>
-                                                    <span class="board-date">25-08-04</span>
-                                                    <span class="board-hit">조회수 45</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="bbs-mobile-hide">25-08-04</td>
-                                        <td class="bbs-mobile-hide">45</td>                                        
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- bbs-list-table END -->
-
-                        <div class="bbs-paging">
-                            <div class="pagination">
-                                <div class="paging prev">
-                                    <a href="#" class="page first" title="첫 페이지로 가기">
-                                        <span class="blind">&lt;&lt;</span>
-                                    </a>
-                                    <a href="#" class="page prev" title="이전 페이지로 가기">
-                                        <span class="blind">&lt;</span>
-                                    </a>
-                                </div>
-                                <ul class="paging num">
-                                    <li><a href="#" class="active" title="현재 페이지">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                </ul>
-                                <div class="paging next">
-                                    <a href="#" class="page next" title="다음 페이지로 가기">
-                                        <span class="blind">3</span>
-                                    </a>
-                                    <a href="#" class="page last" title="마지막 페이지로 가기">
-                                        <span class="blind">&gt;&gt;</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- bbs-paging END -->
-
+                    <div class="sub-depth-menu">
+                        <ul class="depth4 min-w-260">
+                            <li class="active"><a href="#">운영안내</a></li>
+                            <li><a href="#">회원구분</a></li>
+                        </ul>
                     </div>
-                    <!-- bbs-wrap END -->
+                    <div class="sub-container">
+                        
+                        <div class="notice-title-wrap">
+                            <h4 class="table-notice">이용방법</h4>
+                        </div>
+                        <div class="content-box">
+                            <div class="notice-wrapper">
+                                <div class="notice-content">
+                                    <ul class="etiquette-list">
+                                        <li>센터에서 이루어지는 모든 프로그램(상영, 교육, 장비, 대관)은 홈페이지 회원가입 및 신청을 통해 이용가능합니다.</li>
+                                        <li>온라인 회원가입이 어려우신 경우, 사무실로 방문해 주시면 친절히 안내드리겠습니다.</li>
+                                        <li>서부산영상미디어센터는 베리어프리 설비를 갖추어 상영관 내 장애인 전용 좌석, 전용 화장실 등.        시설이 마련되어있습니다.</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="notice-title-wrap">
+                            <h4 class="table-notice">센터 운영안내</h4>
+                        </div>
+                        <div class="content-box">
+                            <div class="info-card-container notice-content bd-b-0">
+                                <div class="info-card">
+                                    <div class="card-icon"><img src="../_assets/images/time.svg" alt="시계 아이콘"></div>
+                                    <div class="card-text">
+                                        <h5>시설 운영시간</h5>
+                                        <p>
+                                            월요일 ~ 토요일 10:00 ~ 21:00<br>
+                                            <small class="lh-1d2">점심시간 12:00 ~ 13:00 에는 전화응대 및 이용이 제한되오니 양해 부탁드립니다.</small>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="info-card">
+                                    <div class="card-icon"><img src="../_assets/images/time.svg" alt=""></div>
+                                    <div class="card-text">
+                                        <h5>시설 이용 시간</h5>
+                                        <p>
+                                            <strong>상영관·시설대관</strong><br/>
+                                            월요일 ~ 토요일 10:00 ~ 22:00<br/> 
+                                            <strong>장비대여</strong><br/>
+                                            월요일 ~ 토요일 10:00 ~ 20:00
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="info-card">
+                                    <div class="card-icon"><img src="../_assets/images/door.svg" alt=""></div>
+                                    <div class="card-text">
+                                        <h5>휴관일</h5>
+                                        <p>매주 일요일</p>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                            <div class="contact-banner">
+                                <div class="icon-wrapper">
+                                    <img src="../_assets/images/contact.png" alt="">
+                                </div>
+                                <div class="text-content">
+                                    <p class="main-text">담당자 문의</p>
+                                    <p class="sub-text">서부산영상미디어센터 000-0000-0000</p>
+                                </div>
+                            </div>
+                        </div>
+                                                
+                    </div>
+                    
                 </div>
                 <!-- inner END -->
             </div>
@@ -667,7 +574,7 @@
         <div class="overlay"></div>
     </div>
 
-    <script src="../_assets/js/common.js"></script>
+    <script src="../_assets/js/main2.js"></script>
     <!-- <script src="../_assets/js/acc-swp.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
