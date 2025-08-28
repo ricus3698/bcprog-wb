@@ -72,6 +72,8 @@ input[type="text"].form-input{height:50px;}
 .form-row-double + .form-row{margin-top:var(--spacing-lg);}
 .form-row-double + .form-row-double{margin-top:var(--spacing-lg);}
 
+.form-p-text{margin-bottom:0;}
+
 .bd-0{border:0 !important;}
 .bd-t-0{border-top:0 !important;}
 .bd-l-0{border-left:0 !important;}
