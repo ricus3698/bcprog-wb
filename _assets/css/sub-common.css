@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+.text-center{text-align:center !important;}
+
 
 
 .sub-depth-menu{display:flex;justify-content:center;margin-top:var(--spacing-lg);margin-bottom:var(--spacing-lg)}
