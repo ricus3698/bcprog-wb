@@ -353,6 +353,33 @@
 
 .email-p{margin-top:var(--spacing-lg);margin-bottom:var(--spacing-sm) !important;}
 
+.f-inner.members-inner{box-sizing:border-box;padding:0 15px;max-width:1400px;margin:50px auto;}
+.login-form-wrap{border:1px solid var(--color-border);box-shadow:0 10px 17px rgba(0,0,0,0.1);border-radius:15px;max-width:600px;margin:0 auto;}
+.login-box-title h3{background:var(--color-primary);color:#fff;text-align:center;border-radius:15px 15px 0 0;box-sizing:border-box;padding-top:var(--spacing-md);padding-bottom:var(--spacing-md);font-size:1.2rem;}
+.login-form-wrap .login-box{width:100%;max-width:400px;margin:30px auto;}
+.login-form-wrap .login-box .inp-box + .inp-box{margin-top:var(--spacing-md);}
+.login-form-wrap .login-box .inp-box input[type="text"],.login-form-wrap .login-box .inp-box input[type="password"]{width:100%;}
+
+.login-btn button{width:100%;display:block;background:var(--color-primary);color:#fff;text-align:center;line-height:60px;border-radius:5px;}
+.login-add{margin-top:var(--spacing-md);}
+.login-add p{text-align:center;}
+.login-add p span{color:var(--color-border);display:inline-block;margin:0 var(--spacing-sm);}
+
+.join-type{max-width:1200px;margin:35px auto;}
+.join-type-flex{display:flex;flex-wrap:wrap;gap:60px;}
+.j-type-article {flex: 1 1 calc(50% - 30px);max-width:calc(50% - 30px);box-sizing: border-box;position:relative;}
+
+.j-type-article a{display:block;border:2px solid var(--color-border);border-radius:15px;transition:0.3s;}
+.j-type-article a:hover{box-shadow:0 10px 17px rgba(0,0,0,0.1);border-color:var(--color-primary);}
+.j-article-inner{text-align:center;}
+.j-type-icon{box-sizing:border-box;padding:25px 0 10px;}
+.j-type-icon img{height:60px;margin:0 auto;}
+.j-type-title p{margin-bottom:0;font-size:1.4rem;font-weight:600;}
+.j-type-title p.title-small-letter{color: var(--color-dark-gr);font-size:1rem;font-weight:400;}
+.j-type-info{margin-top:var(--spacing-md);}
+.j-type-info p{color: var(--color-dark-gr);}
+
+
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
   .spaceWrap {overflow-x: scroll;}
@@ -369,6 +396,9 @@
   .pg-row dt{margin-bottom:var(--spacing-md);}
 
   .p-movie-thmb{display:none;}
+
+  .join-type-flex {flex-direction: column;gap: 20px;}
+  .j-type-article {flex: 1 1 100%;max-width: 100%;}
  }
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {

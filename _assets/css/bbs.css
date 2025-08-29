@@ -314,7 +314,11 @@
   #p-area, #p-area * {
     visibility: visible;
   }
-
+  
+  .print-non{
+    display:none;
+  }
+  
   /* 출력할 영역을 페이지 맨 앞으로 */
   #p-area {
     position: absolute;
