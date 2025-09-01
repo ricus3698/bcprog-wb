@@ -374,11 +374,24 @@
 .j-article-inner{text-align:center;}
 .j-type-icon{box-sizing:border-box;padding:25px 0 10px;}
 .j-type-icon img{height:60px;margin:0 auto;}
-.j-type-title p{margin-bottom:0;font-size:1.4rem;font-weight:600;}
+.j-type-title p{margin-bottom:0;font-size:1.4rem;font-weight:600;line-height:1.4;}
 .j-type-title p.title-small-letter{color: var(--color-dark-gr);font-size:1rem;font-weight:400;}
-.j-type-info{margin-top:var(--spacing-md);}
+.j-type-info{margin-top:var(--spacing-md);box-sizing:border-box;padding:10px;}
 .j-type-info p{color: var(--color-dark-gr);}
 
+.steps-dv p{font-weight:600;text-align:center;margin-bottom:var(--spacing-sm);background:var(--color-primary);color:#fff;border-radius:3px;}
+.join-step{border-bottom:0;padding:20px 0 !important;}
+.join-step .step_item{box-shadow:none !important;border:2px solid var(--color-border);}
+
+.join-steps-top .movie-detail-article{max-width:1200px;margin:0 auto;}
+.join-steps-top .steps-dv p{background:var(--color-border);color:#000;}
+.join-steps-top .active .steps-dv p{background:var(--color-primary);color:#fff;}
+.join-steps-top .join-step{padding-bottom:0 !important;}
+.join-steps-top .join-step .step_item{border:0;padding-bottom:0;}
+.join-steps-top .movie-detail-article{padding-bottom:0;}
+
+.like-btn{display:inline-block;background:var(--color-primary);color:#fff;box-sizing:border-box;padding:3px 15px;border-radius:5px;}
+.postnum{display:inline-block;height:50px;line-height:50px;background:var(--color-primary);color:#fff;box-sizing:border-box;padding:0px 15px;border-radius:5px;}
 
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
@@ -481,6 +494,10 @@
     .edu-detail .m-info-photo{width:680px;}
 
     .mvs-a .mvs-time{display:inline-block;min-width:42px;}
+
+    .join-step .step_item .text{font-size:1.2rem;}
+
+    .like-btn{padding:5px 25px;}
 
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */

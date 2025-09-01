@@ -35,6 +35,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .mb30{margin-bottom: 30px;}
 .mb40{margin-bottom: 40px;}
 
+.lh-50{line-height:50px;}
+
 .tal{text-align: left;}
 .tac{text-align: center;}
 .tar{text-align: right;}
@@ -50,6 +52,8 @@ input[type="password"].form-input{height:50px;}
 .form-control.checkbox{line-height:50px;}
 .form-control.checkbox label{box-sizing:border-box;padding-left:5px;padding-right:35px;}
 
+
+
 .agree-scroll{border:1px solid var(--color-border);max-height:200px;overflow-y:scroll;border-radius:3px;}
 .agree-text{box-sizing:border-box;padding:var(--spacing-md);background:#f8f8f8;}
 .agree-radio-text{font-weight:600;margin-right:35px;}
@@ -59,8 +63,8 @@ input[type="password"].form-input{height:50px;}
 .f-tel-wrap span{display:block;flex:0 0 10px;text-align:center;}
 .f-tel-wrap .form-input{width:calc(340px / 3)}
 
-.necessary{position:relative; color:#fff;}
-.necessary::before{display:inline-block; content:'*'; color:red;}
+.necessary{position:relative; color:#fff;font-size:1px;}
+.necessary::before{display:inline-block; content:'*'; color:red;font-size:1rem;}
 
 .form-row{display:flex;gap:20px;align-items:center;}
 
@@ -75,6 +79,21 @@ input[type="password"].form-input{height:50px;}
 .form-row-double + .form-row-double{margin-top:var(--spacing-lg);}
 
 .form-p-text{margin-bottom:0;}
+
+.form-sentent-box{border:1px solid var(--color-border);box-sizing:border-box;padding:var(--spacing-sm) var(--spacing-lg);border-radius:5px;}
+.form-sentent-box .form-body{text-align:right}
+.form-sentent-box .total-agree{margin-bottom:0;font-weight:600;}
+.form-sentent-box .form-body label{padding-right:0;}
+
+.form-sentent-box2{display:block;}
+.form-sentent-box2 .form-sentence p{font-weight:600;font-size:1.2rem;margin-bottom:var(--spacing-sm);} 
+
+.f-baseline{align-items:baseline;}
+
+.address-wrap .addr-t2{box-sizing:border-box;padding-right:10px;margin-top:10px;}
+.address-wrap .addr-t2 input{margin-bottom:10px;}
+
+.email-wrap .dot-span-email{display:inline-block;width:20px;text-align:center;}
 
 .bd-0{border:0 !important;}
 .bd-t-0{border-top:0 !important;}
@@ -304,6 +323,8 @@ input[type="password"].form-input{height:50px;}
     .footer .addr .text span:first-child{margin-left:0;}
     .ft-site-box{width:260px;margin:0;height:55px;margin-top:20px;}
     .footer .copy{text-align:left;}
+
+    .form-sentent-box{font-size:1.1rem;}
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
   @media (min-width: 1400px) {
