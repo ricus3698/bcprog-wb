@@ -417,6 +417,10 @@
 
   .join-type-flex {flex-direction: column;gap: 20px;}
   .j-type-article {flex: 1 1 100%;max-width: 100%;}
+
+  .join-steps-top .join-step .step_item{padding-top:0;}
+  .join-steps-top .join-step .step_item .steps-dv{font-size:0.8rem;}
+
  }
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {

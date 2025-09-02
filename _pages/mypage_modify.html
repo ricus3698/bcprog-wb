@@ -34,7 +34,7 @@
     
     <link rel="stylesheet" href="../_assets/css/common.css">  
     <link rel="stylesheet" href="../_assets/css/main.css">
-    <link rel="stylesheet" href="../_assets/css/bbs.css">    
+    <link rel="stylesheet" href="../_assets/css/bbs.css">
     <link rel="stylesheet" href="../_assets/css/sub.css">    
     
     <script src="../_core/js/jquery-3.6.0.min.js"></script>
@@ -359,7 +359,7 @@
         <div class="subtitle-area">
             <div class="subtitle-wrap">
                 <div class="container">
-                    <h2 class="subtitle-heading">회원서비스</h2>
+                    <h2 class="subtitle-heading">마이페이지</h2>
                 </div>
                 <nav class="sub-nav">
                     <a href="#" class="home-btn" aria-label="홈으로 가기">
@@ -370,105 +370,34 @@
                     </a>
 
                     <button type="button" class="mobile-dropdown-toggle">
-                        <span>로그인</span>
+                        <span>신청내역</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
 
                     <ul class="sub-menu-list">
-                        <li><a href="#">로그인</a></li>
-                        <li><a href="#">아이디/비밀번호찾기</a></li>
-                        <li><a href="#" class="active">회원가입</a></li>
+                        <li><a href="#">신청내역</a></li>
+                        <li><a href="#">장바구니</a></li>
+                        <li><a href="#">정회원신청</a></li>
+                        <li><a href="#" class="active">회원정보수정</a></li>
+                        <li><a href="#">회원탈퇴</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-        
+
         <main id="contents">
             <div class="main-wrap">
-                <div class="inner">
-                    <div class="sub-container">
-                         <div class="movie-info-top edu-detail edu-form join-wrap">
-                            
-                            <div class="edu-form-title">
-                                <div class="movie-info-flex">
-                                    <div class="form-title-wrap">
-                                        <h2>회원가입</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="join-steps-top">
-                                <div class="movie-detail-article">
-                                    <div class="movie-article-title">
-                                        <h4>일반 회원가입 절차</h4>
-                                    </div>
-                                    <div class="movie-article-content">
+                <!-- <div class="inner"> -->
 
-                                        <div class="temp_step_box join-step notice-content">
-                                            <ul class="step_list">
-                                                <li class="step_item">
-                                                    <div class="steps-dv">
-                                                        <p>STEP 01</p>
-                                                    </div>
-                                                    <div class="text_box">
-                                                        <span class="text">회원구분</span>
-                                                    </div>
-                                                </li>    <!--//step_item-->
-                                                <li class="step_item">
-                                                    <div class="steps-dv">
-                                                        <p>STEP 02</p>
-                                                    </div>
-                                                    <div class="text_box">
-                                                        <span class="text">약관동의</span>
-                                                    </div>
-                                                </li>    <!--//step_item-->
-                                                <li class="step_item">
-                                                    <div class="steps-dv">
-                                                        <p>STEP 03</p>
-                                                    </div>
-                                                    <div class="text_box">
-                                                        <span class="text">본인확인</span>
-                                                    </div>
-                                                </li>    <!--//step_item-->
-                                                <li class="step_item active">
-                                                    <div class="steps-dv">
-                                                        <p>STEP 04</p>
-                                                    </div>
-                                                    <div class="text_box">
-                                                        <span class="text">회원정보 입력</span>
-                                                    </div>
-                                                </li>    <!--//step_item-->
-                                                <li class="step_item">
-                                                    <div class="steps-dv">
-                                                        <p>STEP 05</p>
-                                                    </div>
-                                                    <div class="text_box">
-                                                        <span class="text">회원가입 완료</span>
-                                                    </div>
-                                                </li>    <!--//step_item-->
-                                            </ul>
-                                        </div>                                
-
-                                    </div>
-                                </div>
-                                <!-- movie-detail-article END -->                                
-                            </div>
-                            
-                        </div>
-                        <!-- movie-info-top END -->
-                    </div>
-                    <!-- sub-container END -->
-                </div>
-                <!-- inner END -->
-                <div class="inner-movie-detail inner-edu-detail  join-wrap-info">
+                    <div class="inner-movie-detail inner-edu-detail  join-wrap-info">
                     <form action="">
                         <div class="movie-inner">
 
                             <div class="movie-detail-article">
                                 <div class="movie-article-title">
-                                    <h4>회원정보 입력</h4>
+                                    <h4>회원정보 수정</h4>
                                 </div>
                                 <div class="movie-article-content">
                                     <div class="bc-form-group">
@@ -479,8 +408,7 @@
                                                     <span class="necessary">필수항목</span>
                                                 </div>
                                                 <div class="form-body">
-                                                    <input type="text" class="form-input f-w-mid">
-                                                    <p class="form-p-text">※ 6~12자 이내(특수문자 및 한글 입력 불가)</p>
+                                                    <p class="form-p-text lh-50">bluecom</p>
                                                 </div>
                                             </div>
 
@@ -756,7 +684,7 @@
                             <!-- movie-detail-article END -->
 
                             <div class="movie-reser-btn btns-mprg edu-bottom-btn">
-                                <button type="submit" class="ticket-link">가입하기</button>
+                                <button type="submit" class="ticket-link">수정하기</button>
                                 <a href="#" target="_self" class="back-mprg">취소하기</a>
                             </div>
 
@@ -765,6 +693,9 @@
                     </div>
                     <!-- inner-movie-detail END -->
                 </form>
+
+                <!-- </div> -->
+                <!-- inner END -->
             </div>
         </main>
         
@@ -854,6 +785,7 @@
     </div>
 
     <script src="../_assets/js/main2.js"></script>
+    <script src="../_assets/js/common.js"></script>
     <!-- <script src="../_assets/js/acc-swp.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
