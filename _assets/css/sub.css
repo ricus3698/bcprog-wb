@@ -512,6 +512,8 @@
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
   @media (min-width: 1400px) {
     .temp_step_box .step_list .step_item{width:calc((100% - 240px) / 5);}
+    .temp_step_box .step_list.step6 .step_item{width:calc((100% - 300px) / 6);}
+    
     .temp_step_box .step_list .step_item:nth-child(3n+1){margin-top: 0; margin-left: 55px;}
     .temp_step_box .step_list .step_item:first-child{margin-left:0;}
     .temp_step_box .step_list .step_item:nth-child(n+5){margin-top: 0;}
