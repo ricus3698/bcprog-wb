@@ -8,9 +8,11 @@
 .sub-depth-menu .depth4{display:flex;gap:28px;align-items:flex-end;}
 .sub-depth-menu .depth4 li{position:relative;}
 .sub-depth-menu .depth4 li a{display:inline-block;box-sizing:border-box;padding:8px 6px;font-size:var(--font-size-lg)}
+.sub-depth-menu .depth4 li a::after{content:"";position: absolute;left:0;right:0;bottom:-8px;height:4px;background-color:var(--color-border);border-radius:4px;transition:0.3s;}
 .sub-depth-menu .depth4 li.active a{font-weight:600;color:var(--color-primary);}
-.sub-depth-menu .depth4 li.active::after{content:"";position: absolute;left:0;right:0;bottom:-8px;height:4px;background:var(--color-primary);border-radius:4px;}
-
+.sub-depth-menu .depth4 li.active a::after{background-color:var(--color-primary);}
+.sub-depth-menu .depth4 li:hover a{color:var(--color-primary);text-decoration:none;}
+.sub-depth-menu .depth4 li:hover a::after{background-color:var(--color-primary);}
 /* ========== 모바일 전용 (max-width: 767px) ========== */
  @media (max-width: 767px) {
 
