@@ -162,7 +162,7 @@
     .archive-list > li > a {display:block;padding:20px;}
     .archive-list .thumb-img {position:relative;height:0;padding-top:54%;margin-bottom:var(--spacing-lg);background-color:#efefef;overflow: hidden;}
     .archive-list .thumb-img img {position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transition:.3s;}
-    .archive-list .thumb-tit p {margin-bottom:var(--spacing-md);overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+    .archive-list .thumb-tit p {margin-bottom:var(--spacing-md);overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;word-break: keep-all;}
     .archive-list .etc {display:flex;justify-content:space-between;align-items:center;}
     .archive-list .date {display:inline-block;color:#555;}
     .archive-list .hit {display: inline-block;padding-left:25px;color:#777;background:url("../images/view-icon.svg") left no-repeat;background-size:40%;}
@@ -170,7 +170,10 @@
     .gall2 .archive-list .thumb-img {padding-top:100%;}
     .gall2 .archive-list > li {width: calc(100% / 5 - 20px);}
     .gall2 .archive-list .thumb-img{padding-top:135%;}
-    .gall2 .archive-list .thumb-tit p{margin-bottom:0;}
+    .gall2 .archive-list .thumb-tit p{margin-bottom:0;line-height:1.2;}
+    .pub-date{margin-top:var(--spacing-sm);}
+    .pub-date span{display:inline-block;font-size:0.85rem;color: var(--color-dark-gr);}
+    .pub-date span.pub-txt{background:var(--color-border);box-sizing:border-box;padding:2px 5px;border-radius:3px;margin-right:var(--spacing-sm);font-weight:600;}
 
     .board-view-youtube{margin-top:var(--spacing-lg);}
     .youtube-iframe-wrap{max-width:800px;margin:0 auto;}
@@ -192,6 +195,10 @@
     .mypage-appl .board-title-box a{max-width:100%;text-overflow:unset;overflow:visible;white-space:normal;color:var(--color-link);}
     .mypage-appl .board-cate-box{vertical-align:middle;}
     
+    .bbs-tel .text-content p{display:inline-block;margin-right:var(--spacing-md);}
+    .bbs-tel .text-content p.sub-text{margin-top:0;}
+    .bbs-tel .contact-banner{padding:20px;}
+    .bbs-tel .contact-banner .icon-wrapper{width:40px;height:40px;}
 
   @media (max-width: 1024px) {
     .archive-list > li {width: calc(100% / 2 - 13px);}

@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="../_assets/css/common.css">  
     <link rel="stylesheet" href="../_assets/css/main.css">
     <link rel="stylesheet" href="../_assets/css/bbs.css">    
+    <link rel="stylesheet" href="../_assets/css/sub.css">
+    <link rel="stylesheet" href="../_assets/css/sub-common.css">    
     
     <script src="../_core/js/jquery-3.6.0.min.js"></script>
     <script src="../_core/vendor/swiper/swiper-bundle.min.js"></script>
@@ -392,7 +394,7 @@
 
                     <div class="bbs-wrap bbs-list">
                         
-                        <div class="bbs-category b-cate01">
+                        <!-- <div class="bbs-category b-cate01">
                             <div class="bbs-category-box mobile-hide">
                                 <ul class="bbs-tab-category">
                                     <li>
@@ -417,7 +419,7 @@
                                 </select>
                             </div>
                             
-                        </div>
+                        </div> -->
                         <!-- bbs-category END -->
                         
                         <div class="bbs-search">
@@ -429,6 +431,18 @@
                                         전체 <span class="bbs-total-number">3545</span>건
                                     </p>
                                     <div class="bbs-search-group">
+                                        <div class="bbs-search-select">
+                                            <label for="search-option" class="blind">카테고리선택</label>
+                                            <select id="search-option" class="search-option-select" name="searchOptionk" title="카테고리선택">
+                                                <option value="" selected="">카테고리</option>
+                                                <option value="article_title">전체</option>
+                                                <option value="article_title">상영</option>
+                                                <option value="article_text">교육</option>
+                                                <option value="article_text">대여</option>
+                                                <option value="article_text">행사</option>
+                                                <option value="article_text">기타</option>
+                                            </select>
+                                        </div>
                                         <div class="bbs-search-select">
                                             <label for="search-option" class="blind">검색분류선택</label>
                                             <select id="search-option" class="search-option-select" name="searchOptionk" title="검색분류선택">
@@ -449,9 +463,9 @@
                         </div>
                         <!-- bbs-search END -->
 
-                        <div class="bbs-faq-contact">
+                        <!-- <div class="bbs-faq-contact">
                             <p><span class="contact-span1">문의</span><span class="contact-span2">서부산영상미디어센터 000-0000-0000</span></p>
-                        </div>
+                        </div> -->
 
                         <div class="bbs-faq-list">
                             
@@ -523,7 +537,17 @@
                             </div>
                         </div>
                         <!-- bbs-paging END -->
-
+                        <div class="bbs-tel">
+                            <div class="contact-banner">
+                                <div class="icon-wrapper">
+                                    <img src="../_assets/images/contact.png" alt="">
+                                </div>
+                                <div class="text-content">
+                                    <p class="main-text">담당자 문의</p>
+                                    <p class="sub-text">서부산영상미디어센터 000-0000-0000</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- bbs-wrap END -->
                 </div>
