@@ -78,6 +78,13 @@
     .b-col3-04{width:30%;}
     .b-col3-05{width:10%;}
 
+    .b-col4-01{width:10%;}
+    .b-col4-02{width:30%;}
+    .b-col4-03{width:15%;}
+    .b-col4-04{width:15%;}
+    .b-col4-05{width:10%;}    
+    .b-col4-06{width:20%;}    
+
     .board-file{display:inline-block;text-indent:-9999px;width:20px;height:20px;background-image:url("../images/att_file_grey.svg");background-repeat:no-repeat;background-size:contain;vertical-align:middle;}
     .board-link{display:inline-block;text-indent:-9999px;width:20px;height:20px;background-image:url("../images/ext-link.svg");background-repeat:no-repeat;background-size:contain;vertical-align:middle;}
 
@@ -200,56 +207,8 @@
     .bbs-tel .contact-banner{padding:20px;}
     .bbs-tel .contact-banner .icon-wrapper{width:40px;height:40px;}
 
-  @media (max-width: 1024px) {
-    .archive-list > li {width: calc(100% / 2 - 13px);}
-    .gall2 .archive-list > li {width: calc(100% / 3 - 17px);}
-  }
 
-/* ========== 모바일 전용 (max-width: 767px) ========== */
- @media (max-width: 767px) {
-    
-    .bbs-search form{padding:10px 20px;}
-    .bbs-search-text{float:none;margin-bottom:var(--spacing-sm);}
-    .bbs-search-group{float:none;display:table;width:100%;table-layout:fixed;margin-bottom:var(--spacing-sm);}
-    .bbs-search-select{display:table-cell;width:90px;padding-right:var(--spacing-sm)}
-    .bbs-search-group input[type=text]{width:100%;}
 
-    .b-col01{width:20%;}
-    .b-col03{width:80%;}
-    .board-col.bbs-mobile-hide{width:0;}
-    .board-table tbody td{padding:5px;}
-    .bbs-mobile-hide{display:none !important;}
-    .board-table thead th{line-height:46px;}
-    .board-table thead tr th:nth-child(3){border-radius:0 5px 5px 0;}
-    .board-table tbody td.board-num-box{vertical-align:middle;}
-
-    .board-moblie-content{font-size:0.9rem;}
-    .board-moblie-content span{margin-right:var(--spacing-sm);}
-    .board-moblie-content a{vertical-align:top;}
-
-    .board-view-section{display:block;}
-    .vs1 .board-view-subject{font-size:1.2rem;}
-    .board-view-info{justify-content:flex-start;margin-top:var(--spacing-md);}
-    .board-files .file-list{display:block;}
-    .board-files .file-list dt{padding:0;margin-bottom:var(--spacing-sm);}
-    .board-files .file-list dd{width:100%;}
-
-    .board-view-share{margin-top:var(--spacing-sm);}
-    .share-wrap{left:115px;}
-    
-    .board-company:before{content:"언론사";display:inline-block;background:#eee;box-sizing:border-box;padding:0 5px;border-radius:3px;margin-right:5px;font-size:0.8rem;}
-    .board-pdate:before{content:"보도일";display:inline-block;background:#eee;box-sizing:border-box;padding:0 5px;border-radius:3px;margin-right:5px;font-size:0.8rem;}
-
-    .archive-list{gap:15px;}
-    .archive-list > li {width:100%;}
-    .archive-list > li > a{padding:15px;}
-
-    .gall2 .archive-list > li {width:100%;}
-
-    .mypage-appl .board-status:before{content:"상태";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
-    .mypage-appl .board-dates:before{content:"신청일/취소일";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
-    .mypage-appl .board-price:before{content:"금액";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
- }
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
@@ -262,6 +221,7 @@
 /* ========== 데스크탑 (min-width: 1024px) ========== */
   @media (min-width: 1024px) {
       .dbdata{min-height:360px;}
+      .tool-mobile{display:none;}
   }
 /* ========== 일반 데스크탑 시작 (min-width: 1280px) ========== */
   @media (min-width: 1280px) {
@@ -310,6 +270,71 @@
     .mobile-hide{display:none;}
     
  }
+
+   @media (max-width: 1024px) {
+    .archive-list > li {width: calc(100% / 2 - 13px);}
+    .gall2 .archive-list > li {width: calc(100% / 3 - 17px);}
+
+    .bbs-mobile-hide-tool{display:none;}
+    .b-col4-01{width:20%;}
+    .b-col4-02{width:80%;}
+
+    .mypage-cart .board-sdate:before{content:"대여일";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
+    .mypage-cart .board-edate:before{content:"반납일";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
+    .mypage-cart .board-tdate:before{content:"등록일";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
+    .mypage-cart .board-price:before{content:"금액";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
+
+
+  }
+
+  /* ========== 모바일 전용 (max-width: 767px) ========== */
+ @media (max-width: 767px) {
+    
+    .bbs-search form{padding:10px 20px;}
+    .bbs-search-text{float:none;margin-bottom:var(--spacing-sm);}
+    .bbs-search-group{float:none;display:table;width:100%;table-layout:fixed;margin-bottom:var(--spacing-sm);}
+    .bbs-search-select{display:table-cell;width:90px;padding-right:var(--spacing-sm)}
+    .bbs-search-group input[type=text]{width:100%;}
+
+    .b-col01{width:20%;}
+    .b-col03{width:80%;}
+    .board-col.bbs-mobile-hide{width:0;}
+    .board-table tbody td{padding:5px;}
+    .bbs-mobile-hide{display:none !important;}
+    .board-table thead th{line-height:46px;}
+    .board-table thead tr th:nth-child(3){border-radius:0 5px 5px 0;}
+    .board-table tbody td.board-num-box{vertical-align:middle;}
+
+    .board-moblie-content{font-size:0.9rem;}
+    .board-moblie-content span{margin-right:var(--spacing-sm);}
+    .board-moblie-content a{vertical-align:top;}
+
+    .board-view-section{display:block;}
+    .vs1 .board-view-subject{font-size:1.2rem;}
+    .board-view-info{justify-content:flex-start;margin-top:var(--spacing-md);}
+    .board-files .file-list{display:block;}
+    .board-files .file-list dt{padding:0;margin-bottom:var(--spacing-sm);}
+    .board-files .file-list dd{width:100%;}
+
+    .board-view-share{margin-top:var(--spacing-sm);}
+    .share-wrap{left:115px;}
+    
+    .board-company:before{content:"언론사";display:inline-block;background:#eee;box-sizing:border-box;padding:0 5px;border-radius:3px;margin-right:5px;font-size:0.8rem;}
+    .board-pdate:before{content:"보도일";display:inline-block;background:#eee;box-sizing:border-box;padding:0 5px;border-radius:3px;margin-right:5px;font-size:0.8rem;}
+
+    .archive-list{gap:15px;}
+    .archive-list > li {width:100%;}
+    .archive-list > li > a{padding:15px;}
+
+    .gall2 .archive-list > li {width:100%;}
+
+    .mypage-appl .board-status:before{content:"상태";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
+    .mypage-appl .board-dates:before{content:"신청일/취소일";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
+    .mypage-appl .board-price:before{content:"금액";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:3px;}
+
+    .mypage-cart .board-sdate, .mypage-cart .board-edate, .mypage-cart .board-tdate, .mypage-cart .board-price{display:block;}
+ }
+
 
 @media print {
   /* 기본적으로 모든 요소 숨김 */
