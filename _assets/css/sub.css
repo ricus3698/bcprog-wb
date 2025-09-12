@@ -448,7 +448,11 @@
   background:#fff;
   border-radius:55px 55px 20px 20px;
 }
-.w-article-title p{background:var(--color-primary);color:#fff;box-sizing:border-box;padding:20px;border-radius:35px;box-shadow:0 4px 8px rgba(0,0,0,0.1);text-align:center;font-weight:600;font-size:1.2rem;}
+.w-article-title p{background:var(--color-primary);color:#fff;box-sizing:border-box;padding:20px;border-radius:35px;box-shadow:0 4px 8px rgba(0,0,0,0.1);font-weight:600;font-size:1.4rem;}
+.w-article-title p{display:flex;flex-flow:row;align-items: center;gap:20px;}
+.w-article-title p i{flex-shrink:0;width:40px;height:40px;display:inline-block;background:#fff;box-sizing:border-box;padding:5px;border-radius:50%;vertical-align:middle;}
+.w-article-title p i img{width:40px;vertical-align:middle;}
+.w-article-title p span{display:inline-block;flex:1;line-height:1.1;word-break:keep-all;}
 .w-article-list{box-sizing:border-box;padding:20px;padding-top:0;}
 .w-article-list ul li{position:relative;box-sizing:border-box;padding-left:20px;font-size:1.2rem;word-break:keep-all;}
 .w-article-list ul li:before{content:"•";position:absolute;left:0;}
@@ -496,6 +500,27 @@
 .timeline article:nth-child(odd) .his-art-flex{flex-flow: row-reverse;}
 .center-name{color:var(--color-primary);font-weight:600;}
 
+
+.lo-art2-flex{display:flex;flex-flow:row;gap:60px;align-items:flex-start;}
+.lo-art2-flex.f-align-start{align-items:start;}
+.lo-art2-icon{flex-shrink:0;width:140px;}
+.lo-art2-icon p{background:#fff;box-shadow:var(--shadow-card);border-radius:30px;box-sizing:border-box;padding:40px 0;}
+.lo-art2-icon p img{margin:0 auto;width:60px;}
+.lo-art2-text{flex:1;border-bottom:1px solid var(--color-border);padding-bottom:var(--spacing-xxl);}
+.lo-art2-tit p{color:var(--color-primary);font-size:1.6rem;}
+.art2-inner-a{display:flex;flex-flow:row;gap:40px;}
+.a2-inn-tit{flex-shrink:0;width:100px;font-size:1.2rem;}
+.a2-inn-con{flex:1;font-size:1.2rem;}
+.a2-inn-con .bus-info > li{display:block;}
+.a2-inn-con .bus-info > li + li{margin-top:var(--spacing-md);}
+.a2-inn-con .bus-info > li.bus-t2:before{content:"일반버스";font-size:1rem;}
+.a2-inn-con .bus-info > li.bus-t3:before{content:"마을버스";font-size:1rem;}
+
+.location-article2 + .location-article2{margin-top:var(--spacing-xxl);}
+
+.location-article2:last-child .lo-art2-text{border-bottom:0;}
+
+.art2-con-flex{display:flex;flex-flow:row;gap:120px;}
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
@@ -557,6 +582,7 @@
     .map-container .root_daum_roughmap{padding-bottom:0;height:400px;}
     .map-info-wrap{padding:40px;}
     .map-info-tit p strong{font-size: var(--font-size-lg);}
+    .map-info-tit p span{font-size: var(--font-size-lg);}
     .map-info-flex{gap:45px;}
     .map-info-cont{display:flex;flex-wrap:wrap;gap:30px;align-items: center;}
     .map-info-article:first-child{margin-bottom:0;}
@@ -663,6 +689,18 @@
     .vision-row2{margin:0;}
     .vision-container::before{display:none;}
     .circle-area{padding:45px 20px;}
+
+    .lo-art2-flex{box-sizing:border-box;padding:0 20px;gap:20px;}
+    .lo-art2-icon{width:60px;}
+    .lo-art2-icon p img{width:40px;}
+    .lo-art2-icon p{border-radius:15px;padding:10px 0;}
+    .lo-art2-con{display:block;}
+    .art2-inner-a{display:block;}
+    .lo-art2-text{padding-bottom:var(--spacing-md);}
+    .location-article2 + .location-article2{margin-top:var(--spacing-md);}
+    .lo-art2-tit p{font-size:1.2rem;}
+    .a2-inn-tit{font-size:1rem;}
+    .a2-inn-con{font-size:1rem;}
  }
 
 
