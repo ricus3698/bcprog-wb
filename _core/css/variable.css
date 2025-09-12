@@ -11,7 +11,9 @@
 :root {
   /* 색상 */
   --color-primary: #e4007e;
-  --color-secondary: #ff6600;
+  --color-secondary: #EB6D81;
+  --color-tertiary:#00A7EA;
+  /*--color-secondary: #ff6600;*/
   --color-text: #333;
   --color-bg: #fff;
   --color-border: #e0e0e0;
@@ -36,4 +38,6 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+
+
 }
