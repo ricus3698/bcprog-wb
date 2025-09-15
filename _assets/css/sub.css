@@ -553,6 +553,8 @@
 .down-btn a{background:var(--color-primary);color:#fff;display:block;text-align:center;box-sizing:border-box;padding:15px 0;border-radius:5px;min-width:120px;}
 .down-btn a i{vertical-align:middle;}
 
+.inst-a .a2-inn-tit{width:140px;}
+
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
     .notice-title-wrap{position: relative; top: 60px; height: 0;}
