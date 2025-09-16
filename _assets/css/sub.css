@@ -54,12 +54,14 @@
 .temp_step_box .step_list .step_item:last-child:before{display:none;}
 .temp_step_box .step_list .step_item:nth-child(n+3) {margin-top: 15px;}
 .temp_step_box .step_list .step_item .icon_box{display:block;position:relative;width:100%;height:108px;box-sizing:border-box;text-align:center;}
-.temp_step_box .step_list .step_item .icon_box .icon{max-width: 110px; display:inline-block;position:relative;top:50%;transform:translateY(-50%);vertical-align:top;box-sizing:border-box;width:100%;height:110px;}
-.temp_step_box .step_list .step_item .icon_box .icon1{background:url(../images/temp_step_icon1.png) no-repeat left top; background-size: contain;}
-.temp_step_box .step_list .step_item .icon_box .icon2{background:url(../images/temp_step_icon2.png) no-repeat left top; background-size: contain;}
-.temp_step_box .step_list .step_item .icon_box .icon3{background:url(../images/temp_step_icon3.png) no-repeat left top; background-size: contain;}
-.temp_step_box .step_list .step_item .icon_box .icon4{background:url(../images/temp_step_icon4.png) no-repeat left top; background-size: contain;}
-.temp_step_box .step_list .step_item .icon_box .icon5{background:url(../images/temp_step_icon5.png) no-repeat left top; background-size: contain;}
+.temp_step_box .step_list .step_item .icon_box .icon{max-width: 110px; display:inline-block;position:relative;top:50%;transform:translateY(-50%);vertical-align:top;box-sizing:border-box;width:100%;height:110px;background-size:contain;}
+.temp_step_box .step_list .step_item .icon_box .icon1{background:url(../images/temp_step_icon1.png) no-repeat left top;}
+.temp_step_box .step_list .step_item .icon_box .icon2{background:url(../images/temp_step_icon2.png) no-repeat left top;}
+.temp_step_box .step_list .step_item .icon_box .icon3{background:url(../images/temp_step_icon3.png) no-repeat left top;}
+.temp_step_box .step_list .step_item .icon_box .icon4{background:url(../images/temp_step_icon4.png) no-repeat left top;}
+.temp_step_box .step_list .step_item .icon_box .icon5{background:url(../images/temp_step_icon5.png) no-repeat left top;}
+.temp_step_box .step_list .step_item .icon_box .icon-n5{background:url(../images/temp_step_icon-n5.png) no-repeat left top;}
+.temp_step_box .step_list .step_item .icon_box .icon-n6{background:url(../images/temp_step_icon-n6.png) no-repeat left top;}
 .temp_step_box .step_list .step_item .text_box{display:block;position:relative;width:100%;height:42px;box-sizing:border-box;text-align:center;}
 .temp_step_box .step_list .step_item .text_box .text{display:inline-block;position:relative;top:50%;transform:translateY(-50%);color:#333;line-height:21px;letter-spacing:-0.03em;font-weight:400;word-break:keep-all;vertical-align:top;box-sizing:border-box;}
 
