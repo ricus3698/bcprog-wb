@@ -558,11 +558,17 @@
 .inst-a .a2-inn-tit{width:140px;}
 
 .space-list .space-list-ul > li{width: calc(100% / 4 - 19px);}
+.space-list .space-list-ul > li > a{padding:0;position:relative;}
 .space-list .space-list-ul .mov-prg-flex{display:block;}
-.space-list .space-list-ul .thumb-img{padding-top:60%;margin-bottom:var(--spacing-md);}
-.space-list .space-list-ul .mov-prg-info{padding-top:0;padding-right:0;}
+.space-list .space-list-ul .thumb-img{padding-top:60%;border-radius:15px 15px 0 0;margin-bottom:0;}
+.space-list .space-list-ul .mov-prg-info{padding:20px;}
 .spc-price{line-height:23px;}
 .spc-price:before{content:"대관료";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:5px;}
+/* .space-text-btn{position:absolute;left:50%;transform:translateX(-50%);width:90%;} */
+.space-text-btn p{display:inline-block;width:100%;background:var(--color-primary);color:#fff;text-align:center;box-sizing:border-box;padding:var(--spacing-sm) 0;border-radius:5px;margin-bottom:0;}
+
+.space-list .space-list-ul > li > a:hover .space-text-btn p{text-decoration:none;}
+.space-list .space-list-ul > li > a:hover 
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
@@ -722,6 +728,8 @@
     .work-flex{display:block;}
     .work-article + .work-article{margin-top:var(--spacing-lg);}
 
+    .space-list .space-list-ul > li{width: calc(100% / 3 - 19px);}
+
  }
 
  @media (max-width: 900px) {
@@ -745,6 +753,8 @@
     .lo-art2-tit p{font-size:1.2rem;}
     .a2-inn-tit{font-size:1rem;}
     .a2-inn-con{font-size:1rem;}
+
+    .space-list .space-list-ul > li{width: calc(100% / 2 - 19px);}
  }
 
 
@@ -781,20 +791,9 @@
   .c-btn-r{margin-top:10px;}
   .cart-btn-flex button,.cart-btn-flex a{display:block;flex:1;text-align:center;}
 
-  .timeline::before {
-    left: 10px;
-  }
+  .timeline::before {left: 10px;}
+  .timeline article {width: 100%;padding-left: 2.5rem;padding-right: 1rem;text-align: left !important;left: 0 !important;}
+  .year::before {left: -22px !important;right: auto !important;}
 
-  .timeline article {
-    width: 100%;
-    padding-left: 2.5rem;
-    padding-right: 1rem;
-    text-align: left !important;
-    left: 0 !important;
-  }
-
-  .year::before {
-    left: -22px !important;
-    right: auto !important;
-  }
+  .space-list .space-list-ul > li{width:100%;}
  }

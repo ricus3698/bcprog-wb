@@ -35,8 +35,7 @@
     <link rel="stylesheet" href="../_assets/css/common.css">  
     <link rel="stylesheet" href="../_assets/css/main.css">
     <link rel="stylesheet" href="../_assets/css/bbs.css">    
-    <link rel="stylesheet" href="../_assets/css/sub.css">
-    <link rel="stylesheet" href="../_assets/css/sub-common.css">    
+    <link rel="stylesheet" href="../_assets/css/sub.css">    
     
     <script src="../_core/js/jquery-3.6.0.min.js"></script>
     <script src="../_core/vendor/swiper/swiper-bundle.min.js"></script>
@@ -356,6 +355,7 @@
 
             </div>    
         </header>
+
         <div class="subtitle-area">
             <div class="subtitle-wrap">
                 <div class="container">
@@ -377,8 +377,8 @@
                     </button>
 
                     <ul class="sub-menu-list">
-                        <li><a href="#" class="active">공간대관</a></li>
-                        <li><a href="#" >장비대여</a></li>
+                        <li><a href="#"  class="active">공간대관</a></li>
+                        <li><a href="#">장비대여</a></li>
                     </ul>
                 </nav>
             </div>
@@ -387,247 +387,359 @@
         <main id="contents">
             <div class="main-wrap">
                 <div class="inner">
-                    <div class="sub-depth-menu">
-                        <ul class="depth4">
-                            <li><a href="#">공간대관 이용안내</a></li>
-                            <li class="active"><a href="#">공간대관 신청</a></li>
-                        </ul>
-                    </div>
-                    <div class="bbs-wrap bbs-list">
-                        
-                        <div class="movie-tab-program">
-                            <div class="movie-detail-tap">
-                                <ul class="movie-tap">
-                                    <li><a href="#" class="active">전체</a></li>
-                                    <li><a href="#">2F</a></li>
-                                    <li><a href="#">3F</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- bbs-category END -->
-                        
-                        <!-- <div class="bbs-search">
-                            <form method="get" action="?" id="searchForm">
-                                <fieldset class="bbs-search-wrap">
-                                    <legend class="blind">게시글 검색</legend>
-                                    <input type="hidden" name="mode" value="list">
-                                    <p class="bbs-search-text">
-                                        전체 <span class="bbs-total-number">3545</span>건
-                                    </p>
-                                    <div class="bbs-search-group">
-                                        <div class="bbs-search-select">
-                                            <label for="search-option" class="blind">검색분류선택</label>
-                                            <select id="search-option" class="search-option-select" name="searchOptionk" title="검색분류선택">
-                                                <option value="" selected="">전체</option>
-                                                <option value="article_title">제목</option>
-                                                <option value="article_text">내용</option>
-                                            </select>
-                                        </div>
-                                        <label for="bbs-search-var" class="bbs-search-varlabel blind">
-                                            <span>검색어</span>
-                                        </label>
-                                        <input type="text" id="bbs-search-var" name="searchVar" value="" placeholder="검색어를 입력해 주세요">
-                                        <button type="submit" class="bbs-search-btn">검색</button>
+                    <div class="sub-container">
+                         <div class="movie-info-top edu-detail edu-form">
+                            
+                            <div class="edu-form-title">
+                                <div class="movie-info-flex">
+                                    <div class="form-title-wrap">
+                                        <h2>대관신청</h2>
                                     </div>
-                                    < !-- bbs-search-group END -- >
-                                </fieldset>
-                            </form>                        
-                        </div> -->
-                        <!-- bbs-search END -->
-
-                        <div class="bbs-gallery-type gall2 space-list">
-                            <ul class="archive-list  space-list-ul">
-
-                                 <!-- empty -->
-                                <!-- <li class="empty-gall-li">
-                                    <p>등록된 교육이 없습니다.</p>
-                                </li> -->
-                                
-		                        <li>
-                                    <a href="#">
-                                        <div class="mov-prg-wrap">
-                                            <div class="mov-prg-flex">
-                                                
-                                                <div class="mov-prg-thmb">
-                                                    <!-- <div class="lec-labels">
-                                                        <span class="label-edu">교육</span>
-                                                        <span class="label-recruit">접수중</span>
-                                                    </div> -->
-                                                    <div class="thumb-img">
-                                                        <img src="../_assets/images/space-1.jpg" alt="로비 포스터">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="mov-prg-info">
-                                                    <div class="thumb-tit">
-                                                        <div class="movie-title">
-                                                            <p>
-                                                                <span class="title-text">다목적스튜디오</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="space-info">
-                                                        <div class="space-price">
-                                                            <p class="spc-price">20,000원 / 1시간</p>
-                                                        </div>
-                                                        <div class="space-text-btn">
-                                                            <p>대관신청</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        <div class="mov-prg-wrap">
-                                            <div class="mov-prg-flex">
-                                                
-                                                <div class="mov-prg-thmb">
-                                                    <!-- <div class="lec-labels">
-                                                        <span class="label-edu">교육</span>
-                                                        <span class="label-recruit">접수중</span>
-                                                    </div> -->
-                                                    <div class="thumb-img">
-                                                        <img src="../_assets/images/space-2.jpg" alt="로비 포스터">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="mov-prg-info">
-                                                    <div class="thumb-tit">
-                                                        <div class="movie-title">
-                                                            <p>
-                                                                <span class="title-text">일반강의실1</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="space-info">
-                                                        <div class="space-price">
-                                                            <p class="spc-price">20,000원 / 1시간</p>
-                                                        </div>
-                                                        <div class="space-text-btn">
-                                                            <p>대관신청</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        <div class="mov-prg-wrap">
-                                            <div class="mov-prg-flex">
-                                                
-                                                <div class="mov-prg-thmb">
-                                                    <!-- <div class="lec-labels">
-                                                        <span class="label-edu">교육</span>
-                                                        <span class="label-recruit">접수중</span>
-                                                    </div> -->
-                                                    <div class="thumb-img">
-                                                        <img src="../_assets/images/space-1.jpg" alt="로비 포스터">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="mov-prg-info">
-                                                    <div class="thumb-tit">
-                                                        <div class="movie-title">
-                                                            <p>
-                                                                <span class="title-text">다목적스튜디오</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="space-info">
-                                                        <div class="space-price">
-                                                            <p class="spc-price">20,000원 / 1시간</p>
-                                                        </div>
-                                                        <div class="space-text-btn">
-                                                            <p>대관신청</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        <div class="mov-prg-wrap">
-                                            <div class="mov-prg-flex">
-                                                
-                                                <div class="mov-prg-thmb">
-                                                    <!-- <div class="lec-labels">
-                                                        <span class="label-edu">교육</span>
-                                                        <span class="label-recruit">접수중</span>
-                                                    </div> -->
-                                                    <div class="thumb-img">
-                                                        <img src="../_assets/images/space-2.jpg" alt="로비 포스터">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="mov-prg-info">
-                                                    <div class="thumb-tit">
-                                                        <div class="movie-title">
-                                                            <p>
-                                                                <span class="title-text">일반강의실1</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="space-info">
-                                                        <div class="space-price">
-                                                            <p class="spc-price">20,000원 / 1시간</p>
-                                                        </div>
-                                                        <div class="space-text-btn">
-                                                            <p>대관신청</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                                               
-
-                            </ul>
-                        </div>
-                        <!-- bbs-list-table END -->
-
-                        <div class="bbs-paging">
-                            <div class="pagination">
-                                <div class="paging prev">
-                                    <a href="#" class="page first" title="첫 페이지로 가기">
-                                        <span class="blind">&lt;&lt;</span>
-                                    </a>
-                                    <a href="#" class="page prev" title="이전 페이지로 가기">
-                                        <span class="blind">&lt;</span>
-                                    </a>
-                                </div>
-                                <ul class="paging num">
-                                    <li><a href="#" class="active" title="현재 페이지">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                </ul>
-                                <div class="paging next">
-                                    <a href="#" class="page next" title="다음 페이지로 가기">
-                                        <span class="blind">3</span>
-                                    </a>
-                                    <a href="#" class="page last" title="마지막 페이지로 가기">
-                                        <span class="blind">&gt;&gt;</span>
-                                    </a>
                                 </div>
                             </div>
+                            
+                            <div class="movie-info-flex">
+                                <div class="m-info-photo">
+                                    <div class="poster-area">
+                                        <p><img src="../_assets/images/space-1.jpg" alt="로비 포스터"></p>
+                                    </div>
+                                </div>
+                                <div class="m-info-text">
+                                    <div class="m-info-title">
+                                        <h3>다목적스튜디오</h3>
+                                    </div>
+                                    <div class="m-info-list">
+                                        <dl>
+                                            <div class="dl-row">
+                                                <dt>대관료</dt>
+                                                <dd>20,000원 / 1시간</dd>
+                                            </div>
+                                            <div class="dl-row">
+                                                <dt>모집기간</dt>
+                                                <dd>25-08-20 ~ 25-09-04</dd>
+                                            </div>
+                                            <div class="dl-row">
+                                                <dt>모집정원</dt>
+                                                <dd>0/12명</dd>
+                                            </div>
+                                            <div class="dl-row">
+                                                <dt>대기정원</dt>
+                                                <dd>0/0명</dd>
+                                            </div>
+                                            <div class="dl-row">
+                                                <dt>수강료</dt>
+                                                <dd>15,000원</dd>
+                                            </div>
+                                            <div class="dl-row">
+                                                <dt>교육기간</dt>
+                                                <dd>25-09-06 ~ 25-09-27</dd>
+                                            </div>
+                                            <div class="dl-row">
+                                                <dt>교육시간</dt>
+                                                <dd>토, 10:00~12:00</dd>
+                                            </div>
+                                            <div class="dl-row">
+                                                <dt>교육장소</dt>
+                                                <dd>미디어교육실</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                    
+                                </div>
+                                <!-- m-info-text END -->
+                            </div>
+                            <!-- movie-info-flex END -->
                         </div>
-                        <!-- bbs-paging END -->
-
+                        <!-- movie-info-top END -->
                     </div>
-                    <!-- bbs-wrap END -->
-                    
+                    <!-- sub-container END -->
                 </div>
                 <!-- inner END -->
+                <div class="inner-movie-detail inner-edu-detail">
+                    <form action="">
+                        <div class="movie-inner">
+
+                            <div class="movie-detail-article">
+                                <div class="movie-article-title">
+                                    <h4>신청자 정보</h4>
+                                </div>
+                                <div class="movie-article-content">
+                                    <div class="bc-form-group">
+                                        
+                                        <div class="form-row">
+                                            <!-- <div class="form-head">
+                                                <span class="form-head-span">문자수신동의</span>
+                                                <span class="necessary">필수항목</span>
+                                            </div> -->
+                                            <div class="form-body">
+                                                <span class="form-control checkbox">
+                                                    <input type="checkbox" class="form-control" id="agree1" name="agree1"  >
+                                                    <label for="agree1">회원정보와 동일</label>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row-double">
+                                            <div class="form-row">
+                                                <div class="form-head">
+                                                    <label for="">성명</label>
+                                                    <span class="necessary">필수항목</span>
+                                                </div>
+                                                <div class="form-body">
+                                                    <input type="text" class="form-input f-w-mid">
+                                                </div>
+                                            </div>
+                                                                                        
+                                            <div class="form-row">
+                                                <div class="form-head">
+                                                    <label for="">연락처</label>
+                                                    <span class="necessary">필수항목</span>
+                                                </div>
+                                                <div class="form-body form-tel">
+                                                    <div class="f-tel-wrap f-w-mid">
+                                                        <input type="text" class="form-input">
+                                                        <span class="tel-mid">-</span>
+                                                        <input type="text" class="form-input">
+                                                        <span class="tel-mid">-</span>
+                                                        <input type="text" class="form-input">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <div class="form-row-double">
+                                            <div class="form-row">
+                                                <div class="form-head">
+                                                    <label for="">수강이유</label>
+                                                    <span class="necessary">필수항목</span>
+                                                </div>
+                                                <div class="form-body">
+                                                    <span class="form-control select">
+                                                        <select name="" id="" class="form-select f-w-mid">
+                                                            <option value="">수강이유</option>
+                                                            <option value="">수강이유 a</option>
+                                                            <option value="">수강이유 b</option>
+                                                        </select>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-head">
+                                                    <label for="">수강경로</label>
+                                                    <span class="necessary">필수항목</span>
+                                                </div>
+                                                <div class="form-body">
+                                                    <span class="form-control select">
+                                                        <select name="" id="" class="form-select f-w-mid">
+                                                            <option value="">수강이유</option>
+                                                            <option value="">수강이유 a</option>
+                                                            <option value="">수강이유 b</option>
+                                                        </select>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-head">
+                                                <span class="form-head-span">문자수신동의</span>
+                                                <span class="necessary">필수항목</span>
+                                            </div>
+                                            <div class="form-body">
+                                                <span class="form-control radio">
+                                                    <input type="radio" class="form-control" id="agree1" name="agree1" checked="" value="Y">
+                                                    <label for="agree1">수신동의</label>
+                                                </span>
+												<span class="form-control radio">
+                                                    <input type="radio" class="form-control" id="disagree1" name="agree1" value="N">
+                                                    <label for="disagree1">수신거부</label>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- movie-detail-article END -->
+
+                            <div class="movie-detail-article">
+                                <div class="movie-article-title">
+                                    <h4>개인정보 제공, 교육 기록 및 교육 결과물 활용 동의</h4>
+                                </div>
+                                <div class="movie-article-content">
+                                    <div class="bc-form-group">
+                                        
+                                        <div class="form-row form-sentent-box">
+                                            <div class="form-sentence">
+                                                <p class="total-agree">개인정보 제공, 교육 기록 및 교육 결과물 활용에 모두 동의합니다.</p>
+                                            </div>
+                                            <div class="form-body">
+                                                <span class="form-control checkbox">
+                                                    <input type="checkbox" class="form-control" id="agree1" name="agree1"  >
+                                                    <label for="agree1">전체 동의</label>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-head">
+                                                <span class="form-head-span">개인정보 제공 동의</span>
+                                                <span class="necessary">필수항목</span>
+                                            </div>
+                                            <div class="form-body">
+                                                <div class="agree-content">
+                                                    <div class="agree-scroll">
+                                                        <div class="agree-text">
+                                                            본 웹사이트에서는 온라인 신청에 필요한 정보만을 수집하고 있습니다. 수집한 정보는 목적 이외의 용도로는 이용하지 않으며, 이용 목적이 변경될 시에는 사전 동의를 구할 예정입니다.<br/><br/>
+                                                            가. 필수 수집항목<br/>
+                                                            - 성명, 연락처<br/><br/>
+                                                            나. 선택 수집항목<br/>
+                                                            - 수강료 면제를 위한 증빙서류<br/><br/>
+                                                            다. 수집방법<br/>
+                                                            - 온라인 신청시 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="agree-radio-text">개인정보 수집 및 이용에 동의하십니까?</span>
+                                                <span class="form-control radio">
+                                                    <input type="radio" class="form-control" id="agree1" name="agree1" checked="" value="Y">
+                                                    <label for="agree1">수신동의</label>
+                                                </span>
+												<span class="form-control radio">
+                                                    <input type="radio" class="form-control" id="disagree1" name="agree1" value="N">
+                                                    <label for="disagree1">수신거부</label>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-head">
+                                                <span class="form-head-span">교육 기록 및 교육 결과물 활용 동의</span>
+                                                <span class="necessary">필수항목</span>
+                                            </div>
+                                            <div class="form-body">
+                                                <div class="agree-content">
+                                                    <div class="agree-scroll">
+                                                        <div class="agree-text">
+                                                            본 웹사이트에서는 온라인 신청에 필요한 정보만을 수집하고 있습니다. 수집한 정보는 목적 이외의 용도로는 이용하지 않으며, 이용 목적이 변경될 시에는 사전 동의를 구할 예정입니다.<br/><br/>
+                                                            가. 필수 수집항목<br/>
+                                                            - 성명, 연락처<br/><br/>
+                                                            나. 선택 수집항목<br/>
+                                                            - 수강료 면제를 위한 증빙서류<br/><br/>
+                                                            다. 수집방법<br/>
+                                                            - 온라인 신청시 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="agree-radio-text">개인정보 수집 및 이용에 동의하십니까?</span>
+                                                <span class="form-control radio">
+                                                    <input type="radio" class="form-control" id="agree1" name="agree1" checked="" value="Y">
+                                                    <label for="agree1">수신동의</label>
+                                                </span>
+												<span class="form-control radio">
+                                                    <input type="radio" class="form-control" id="disagree1" name="agree1" value="N">
+                                                    <label for="disagree1">수신거부</label>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- movie-detail-article END -->
+
+                            <div class="movie-detail-article">
+                                <!-- <div class="movie-article-title">
+                                    <h4>이용안내</h4>
+                                </div> -->
+                                <div class="movie-article-content">
+                                    <div class="snps-text class-info">
+                                        
+                                        <div class="class-info-article">
+                                            <div class="class-info-a-tit">
+                                                <h5>수강료 환불안내</h5>
+                                            </div>
+                                            <div class="class-info-a-content">
+                                                <div class="notice-content">
+                                                    <div class="refund-table">
+                                                        <table class="info-table">
+                                                            <caption class="blind">수강료 환불안내 (수강료 환불기준, 반환사유 발생일, 반환금액</caption>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" class="table-head">구분</th>
+                                                                    <th scope="col" colspan="2" class="table-head">반환사유 발생일</th>
+                                                                    <th scope="col" class="table-head">반환금액</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row" rowspan="3">수강료 환불기준</th>
+                                                                    <td colspan="2">개강이전</td>
+                                                                    <td>수강료 전액 환불</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="2">개강이후</td>
+                                                                    <td>강좌기간 1/2 경과 전</td>
+                                                                    <td>취소일 기준 잔여 강좌 회차별 환불</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>강좌기간 1/2 경과 후</td>
+                                                                    <td>환불 불가</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <div class="etqlist-flex">
+                                                        <ul class="etiquette-list">
+                                                            <li>교육 신청인원이 모집 인원의 30% 미만일 시, 폐강 및 신청취소 처리가 될 수 있습니다. ※ 전액환불</li>
+                                                            <li>총 강좌기간은 강의 기간동안 진행되는 강의 시간의 합을 말합니다.<br/>반환금액의 산정은 반환사유가 발생한 날까지 경과된 수업시간을 기준으로 합니다.</li>
+                                                            <li>개강 후 취소의 경우 취소 시점을 기준으로 이전 미수강 회차도 수강한 것으로 간주합니다.</li>
+                                                            <li>강좌기간 1/2 경과 후에는 환불이 불가합니다.</li>
+                                                            <li>홀수 강좌의 경우 수업의 1/2경과 기준은 전체 강좌수의 절반보다 하나 적은 수를 기준으로 한다.<br/>예시) 총 7회차 강좌의 경우 3회차까지 1/2 경과 전으로 인정</li>
+                                                            <li>수강취소 시점은 홈페이지 취소신정 접수일 또는 유선연락 시간을 기준으로 한다.</li>
+                                                            <li>수강취소 및 폐강에 따른 환불 진행 시 취소 신청시점과 폐강 확정일 기준,환불까지 1~2주 소요됩니다.<br/>※ 카드 취소 문의는 해당 카드사에 문의하여 주시기 바랍니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- class-info-article END -->
+
+                                        <div class="class-info-article">
+                                            <div class="class-info-a-tit">
+                                                <h5>유의사항</h5>
+                                            </div>
+                                            <div class="class-info-a-content">
+                                                <div class="info-c-text">
+                                                    세부 교육 일정 및 커리큘럼은 내부사정에 따라 일부 변경될 수 있습니다. 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- class-info-article END -->
+
+                                    </div>
+                                    <!-- class-info END -->
+
+                                </div>
+                            </div>
+                            <!-- movie-detail-article END -->
+
+                            <div class="movie-reser-btn btns-mprg edu-bottom-btn">
+                                <button type="submit" class="ticket-link">신청하기</button>
+                                <a href="#" target="_self" class="back-mprg">취소하기</a>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <!-- inner-movie-detail END -->
             </div>
         </main>
         
@@ -716,7 +828,7 @@
         <div class="overlay"></div>
     </div>
 
-    <script src="../_assets/js/common.js"></script>
+    <script src="../_assets/js/main2.js"></script>
     <!-- <script src="../_assets/js/acc-swp.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
