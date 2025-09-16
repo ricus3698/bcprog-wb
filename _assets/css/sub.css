@@ -557,6 +557,13 @@
 
 .inst-a .a2-inn-tit{width:140px;}
 
+.space-list .space-list-ul > li{width: calc(100% / 4 - 19px);}
+.space-list .space-list-ul .mov-prg-flex{display:block;}
+.space-list .space-list-ul .thumb-img{padding-top:60%;margin-bottom:var(--spacing-md);}
+.space-list .space-list-ul .mov-prg-info{padding-top:0;padding-right:0;}
+.spc-price{line-height:23px;}
+.spc-price:before{content:"대관료";display:inline-block;background:#eee;font-size:0.8rem;box-sizing:border-box;padding:1px 5px;border-radius:3px;margin-right:5px;}
+
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
     .notice-title-wrap{position: relative; top: 60px; height: 0;}
@@ -643,6 +650,8 @@
     .join-step .step_item .text{font-size:1.2rem;}
 
     .like-btn{padding:5px 25px;}
+
+    .space-list .space-list-ul .mov-prg-info .thumb-tit{margin-bottom:var(--spacing-md);}
 
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
