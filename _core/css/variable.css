@@ -43,3 +43,41 @@
   --shadow-card:0 8px 25px #d0e1ec;
   --shadow-hover: 0 28px 60px rgba(34, 34, 34, 0.12);    
 }
+
+/* 다크 모드 (B안 최적화 팔레트) */
+[data-theme="dark"] {
+  --color-primary: #ff4fa2;
+  --color-secondary: #d85c6f;
+  --color-tertiary: #4cc3f7;
+  --color-text: #e0e0e0;
+  --color-bg: #121212;
+  --color-border: #333;
+  --color-table-thead: #1e1e1e;
+  --color-dark-gr: #a0a0a0;
+  --color-link: #8ab4f8;
+
+  /* 그림자: 밝은 glow 느낌 */
+  --shadow-sm: 0 1px 2px rgba(255, 255, 255, 0.05);
+  --shadow-md: 0 4px 6px rgba(255, 255, 255, 0.08);
+  --shadow-lg: 0 10px 15px rgba(255, 255, 255, 0.1);
+  --shadow-local: 15px 26px 30px 0px rgba(255, 255, 255, 0.08);
+  --shadow-card: 0 8px 25px rgba(255, 255, 255, 0.08);
+  --shadow-hover: 0 28px 60px rgba(255, 255, 255, 0.12);
+}
+
+/* 브라우저 기본 다크모드 감지 → 초기값 지정 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-primary: #ff4fa2;
+    --color-secondary: #d85c6f;
+    --color-tertiary: #4cc3f7;
+    --color-text: #e0e0e0;
+    --color-bg: #121212;
+    --color-border: #333;
+    --color-table-thead: #1e1e1e;
+    --color-dark-gr: #a0a0a0;
+    --color-link: #8ab4f8;
+  }
+  
+}
+

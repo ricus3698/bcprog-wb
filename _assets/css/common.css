@@ -6,6 +6,13 @@
 /*전체 공통*/
 *{box-sizing:border-box;}
 body {min-width: 320px; color: #333;}
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-base);
+    font-size: var(--font-size-base);
+    transition: background 0.3s, color 0.3s;
+  }
 input::placeholder, textarea::placeholder {font-size: inherit; color:#777; font-weight:400;} /*20250212*/
 input[type="text"] {height: 40px; padding: 0 15px; border: 1px solid #dcdcdc; background-color: #fff; border-radius: 5px;}
 input[type="password"] {height: 40px; padding: 0 15px; border: 1px solid #dcdcdc; background-color: #fff; border-radius: 5px;}
@@ -344,7 +351,9 @@ input[type="password"].form-input{height:50px;}
     .total-group .login-area{display:none}
     .total-group .total-area{display:none}
     .site-mgnb .site-modal{display:none;}
-    .quick-menu{display: none;}
+    /* .quick-menu{display: none;} */
+    .quick-menu .menu-list{display: none;}
+    .quick-menu{top:calc(100vh - 30px);transform:translateY(-100%);}
 
     .form-row-double{display:block;}
     .form-row-double .form-row + .form-row{margin-top:var(--spacing-lg);}

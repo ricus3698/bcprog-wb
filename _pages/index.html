@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+
     <title>서부산영상미디어센터</title>
 
     <meta property="og:type" content="website">
@@ -41,6 +44,7 @@
     <script src="../_core/vendor/aos/aos-master/dist/aos.js"></script>
 
     <script src="../_assets/js/common.js"></script>
+    
 
 </head>
 <body>
@@ -1155,6 +1159,7 @@
                     </a>
                 </li>
             </ul>
+            <button class="top-btn" id="darkMode">🌙</button>
             <button class="top-btn" id="top-btn">TOP<br>▲</button>            
         </div>
         <div class="overlay"></div>
@@ -1173,5 +1178,6 @@
             new AccessibleSwiper('.mv-swiper');
         });
     </script> -->
+    <script src="../_assets/js/dark.js"></script>
 </body>
 </html>

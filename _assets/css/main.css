@@ -317,6 +317,11 @@
 .rental_list ul li a:hover>div img{transform: translateY(-10px);}
 .rental_list ul li a:hover>div:after {transform: translateX(-50%) scale(0.8); }
 
+/* ========== 다크모드 대응 ========== */
+
+.dark .lec-txt{background: var(--color-bg);color: var(--color-text);}
+.dark .lec-txt h3,.dark .lec-date,.dark .lec-date p,.dark .lec-detail li{color: var(--color-text);}
+.dark .lec-detail li img{fill: currentColor;}
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
@@ -436,4 +441,5 @@
 
  }
 
- 
+
+    
