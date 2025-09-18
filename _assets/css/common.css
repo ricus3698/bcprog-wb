@@ -50,6 +50,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .df{display: flex; gap: 10px; align-items: center;}
 
 .btn-a{display:inline-block;min-width:80px;box-sizing:border-box;padding:0 20px;border-radius:3px;line-height:46px;}
+.link-a{color:var(--color-primary);}
+.bg-gra{background:var(--color-gra);}
 
 input[type="text"].form-input{height:50px;}
 input[type="password"].form-input{height:50px;}

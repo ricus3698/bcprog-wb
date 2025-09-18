@@ -20,6 +20,7 @@
   --color-table-thead:#f6f6f6;
   --color-dark-gr:#717A80;
   --color-link:#1A73E8;
+  --color-gra:linear-gradient(180deg, rgba(93, 155, 214, 0.06), rgba(99, 195, 176, 0.04));
 
   /* 폰트 */
   --font-base: 'Pretendard', sans-serif;
