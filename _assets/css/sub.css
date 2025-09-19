@@ -623,7 +623,7 @@
 /* .space-list .space-list-ul > li > a:hover{} */
 
 .contact-banner.card-shadow{background:#fff;box-shadow: var(--shadow-card);color:var(--color-text);padding:20px;}
-
+.subtitle-area .container{box-shadow: var(--shadow-card);}
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
