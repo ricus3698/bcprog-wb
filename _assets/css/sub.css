@@ -625,6 +625,13 @@
 .contact-banner.card-shadow{background:#fff;box-shadow: var(--shadow-card);color:var(--color-text);padding:20px;}
 .subtitle-area .container{box-shadow: var(--shadow-card);}
 
+.space-detail .poster-area{max-width:100%;}
+.space-detail .poster-area p{padding-bottom:62%;}
+.space-detail .poster-area p img{object-fit: cover;}
+
+.space-expl{box-sizing:border-box;padding:var(--spacing-md) 0;font-size:1.1rem;word-break:keep-all;}
+
+
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
     .notice-title-wrap{position: relative;top:60px;height:0;}
