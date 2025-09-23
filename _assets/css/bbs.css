@@ -1,10 +1,18 @@
 @charset "utf-8";
 
-    .subtitle-area {padding: 0 15px; }
-    .subtitle-wrap{max-width: 1600px; margin: 0 auto; text-align: center;}
-    .subtitle-area .container {background-color: #DEF4FF; background-image: url('../images/subbg.png'); background-repeat: no-repeat; background-size: contain; background-position: left; padding: 60px 0 40px; max-width: 1600px; margin: 0 auto; border-radius: 20px;}
+    .subtitle-area {padding: 0 15px; background:var(--color-sub-top);}
+    .subtitle-wrap{max-width: 1600px; margin: 0 auto; text-align: center;box-sizing:border-box;padding-top:15px;}
+    .subtitle-area .container {
+      /* background-color: #DEF4FF; 
+      background-image: url('../images/subbg.png');  */
+      background-repeat: no-repeat; background-size: contain; background-position: left; padding: 60px 0 40px; max-width: 1600px; margin: 0 auto; border-radius: 20px;}
     .subtitle-heading { font-size: 28px; margin-bottom: 14px; font-weight: bold;}
-    .sub-nav { position: relative; display: flex; align-items: center; background-color: white; border-radius: 99px; top: -30px; padding: 6px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); max-width: 300px; margin: 0 auto; }
+    .sub-nav { position: relative; display: flex; align-items: center; background-color: white; border-radius: 99px; top: -30px; padding: 6px;
+       /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);  */
+       box-shadow:var(--shadow-card);
+       max-width: 300px; 
+       margin: 0 auto; 
+      }
     .home-btn { display: flex; align-items: center; justify-content: center; padding: 10px; background-color: #fff; border-radius: 50%; margin-right: 8px; flex-shrink: 0; }
     .home-btn:hover { background-color: #f1f3f5; }
     .sub-menu-list { display: none; position: absolute; top: calc(100% + 8px); left: 0; right: 0; background-color: white; border-radius: 16px; padding: 8px; margin: 0; list-style: none; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); z-index: 9; }
@@ -237,10 +245,14 @@
 
     .bbs-wrap{padding:2rem 5rem;}
 
-    .sub-nav{max-width: 1000px; width: fit-content; padding: 8px 20px;}
+    .sub-nav{max-width: 1000px; width: fit-content; padding: 8px 20px;top:-35px;}
     .sub-nav.is-open .sub-menu-list{display: flex;}
     .home-btn{padding: 12px;}
-    .subtitle-area .container { padding: 110px 0 30px; border-radius: 30px;}
+    .subtitle-area .container {
+      /* padding: 110px 0 30px;  */
+      padding: 80px 0 30px; 
+      border-radius: 30px;
+    }
     .subtitle-heading{font-size: 48px;margin-bottom: 64px;}
     .mobile-dropdown-toggle { display: none;}
     .sub-menu-list { display: flex; gap: 10px;  position: static; background-color: transparent; box-shadow: none; padding: 0; margin: 0; list-style: none; width: 100%; justify-content: space-around; }
