@@ -399,6 +399,9 @@
     .notice_list li a .date{font-size: 16px; margin-top: 30px;}
     .main-rental:before{display: none;}
 
+    /* .lec-slide.lec-empty{transform:none;} */
+    .lec-slide.lec-empty:hover{transform:none;box-shadow:none;}
+    .lec-slide.lec-empty:nth-child(odd){transform: translateY(50px);}
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
   @media (min-width: 1400px) {
