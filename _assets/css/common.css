@@ -76,8 +76,13 @@ input[type="password"].form-input{height:50px;}
 .f-tel-wrap .form-input{width:calc(340px / 3)}
 
 .f-date-wrap{display:flex;align-items: center;}
-.f-date-wrap span{display:block;flex:0 0 10px;text-align:center;}
-.f-date-wrap .form-input{width:calc(360px / 2)}
+.f-date-wrap span{display:block;flex:0 0 30px;text-align:center;}
+.f-date-wrap .form-input{width:calc(320px / 2)}
+
+.form-date-time{display:flex;align-items: center;gap:10px;}
+.form-dt-date{width:calc((100% - 20px)/2)}
+.form-dt-time{width:calc((100% - 20px)/2)}
+.form-dt-time select{width:100%;height:50px;}
 
 .necessary{position:relative; color:#fff;font-size:1px;}
 .necessary::before{display:inline-block; content:'*'; color:red;font-size:1rem;}
