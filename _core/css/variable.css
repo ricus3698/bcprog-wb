@@ -23,6 +23,8 @@
   --color-gra:linear-gradient(180deg, rgba(93, 155, 214, 0.06), rgba(99, 195, 176, 0.04));
   --color-black:#000;
   --color-sub-top:linear-gradient(to bottom, #F3F8FB 0%, transparent 100%);
+  --color-sch-gr:#e7e7e7;
+  --color-disabled:#fafafa;
 
   /* 폰트 */
   --font-base: 'Pretendard', sans-serif;

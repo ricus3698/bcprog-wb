@@ -15,6 +15,7 @@ body {
   }
 input::placeholder, textarea::placeholder {font-size: inherit; color:#777; font-weight:400;} /*20250212*/
 input[type="text"] {height: 40px; padding: 0 15px; border: 1px solid #dcdcdc; background-color: #fff; border-radius: 5px;}
+input[type="number"] {height: 40px; padding: 0 15px; border: 1px solid #dcdcdc; background-color: #fff; border-radius: 5px;}
 input[type="password"] {height: 40px; padding: 0 15px; border: 1px solid #dcdcdc; background-color: #fff; border-radius: 5px;}
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -52,8 +53,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .btn-a{display:inline-block;min-width:80px;box-sizing:border-box;padding:0 20px;border-radius:3px;line-height:46px;}
 .link-a{color:var(--color-primary);}
 .bg-gra{background:var(--color-gra);}
+.disabled{background:var(--color-disabled) !important;background-color:var(--color-disabled) !important;cursor:default}
 
 input[type="text"].form-input{height:50px;}
+input[type="number"].form-input{height:50px;}
 input[type="password"].form-input{height:50px;}
 .form-select{height:50px;}
 .form-control.radio{line-height:50px;}
@@ -71,6 +74,10 @@ input[type="password"].form-input{height:50px;}
 .f-tel-wrap{display:flex;align-items: center;}
 .f-tel-wrap span{display:block;flex:0 0 10px;text-align:center;}
 .f-tel-wrap .form-input{width:calc(340px / 3)}
+
+.f-date-wrap{display:flex;align-items: center;}
+.f-date-wrap span{display:block;flex:0 0 10px;text-align:center;}
+.f-date-wrap .form-input{width:calc(360px / 2)}
 
 .necessary{position:relative; color:#fff;font-size:1px;}
 .necessary::before{display:inline-block; content:'*'; color:red;font-size:1rem;}
