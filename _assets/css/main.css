@@ -320,6 +320,14 @@
 /* ========== 다크모드 대응 ========== */
 
 .dark .header{background: var(--color-bg);color: var(--color-text);}
+.dark .header-wrap .logo img{content:url("../images/logo-w-dark.png");}
+.dark .header-wrap .gnb > li > a{color: var(--color-text);}
+.dark .site-mgnb .sm-btn .bar{background:var(--color-dark-gr);}
+
+.dark .footer .f-logo img{content:url("../images/logo-w-dark.png");}
+
+.dark .main-slide-wrap .mv-swiper{box-shadow:none;}
+
 .dark .main-movie:after{background-image:none;}
 .dark .main-movie .tab-list li.on{color:var(--color-white);}
 .dark .current-month{color: var(--color-text);}
