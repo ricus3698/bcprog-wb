@@ -56,11 +56,13 @@
   --color-secondary: #d85c6f;
   --color-tertiary: #4cc3f7;
   --color-text: #e0e0e0;
+  --color-white: #fff;
   --color-bg: #121212;
   --color-border: #333;
   --color-table-thead: #1e1e1e;
   --color-dark-gr: #a0a0a0;
   --color-link: #8ab4f8;
+  --color-bg-op1:rgba(255,255,255,0.1);
 
   /* 그림자: 밝은 glow 느낌 */
   --shadow-sm: 0 1px 2px rgba(255, 255, 255, 0.05);
@@ -78,6 +80,7 @@
     --color-secondary: #d85c6f;
     --color-tertiary: #4cc3f7;
     --color-text: #e0e0e0;
+    --color-white: #fff;
     --color-bg: #121212;
     --color-border: #333;
     --color-table-thead: #1e1e1e;

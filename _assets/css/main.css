@@ -319,9 +319,21 @@
 
 /* ========== 다크모드 대응 ========== */
 
+.dark .header{background: var(--color-bg);color: var(--color-text);}
+.dark .main-movie:after{background-image:none;}
+.dark .main-movie .tab-list li.on{color:var(--color-white);}
+.dark .current-month{color: var(--color-text);}
+.dark .current-more{color: var(--color-text);}
+.dark .schedule-container{box-shadow:none;background:var(--color-bg-op1);}
+.dark .movie-card .title{color:var(--color-white);}
+.dark .date-selector li button.active{box-shadow:none;}
+.dark .main-lecture .tab-list ul{background:var(--color-bg-op1);}
+.dark .main-lecture .tab-list a{color: var(--color-text);}
+
 .dark .lec-txt{background: var(--color-bg);color: var(--color-text);}
 .dark .lec-txt h3,.dark .lec-date,.dark .lec-date p,.dark .lec-detail li{color: var(--color-text);}
 .dark .lec-detail li img{fill: currentColor;}
+
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
