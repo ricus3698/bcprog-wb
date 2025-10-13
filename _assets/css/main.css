@@ -327,6 +327,7 @@
 .dark .footer .f-logo img{content:url("../images/logo-w-dark.png");}
 
 .dark .main-slide-wrap .mv-swiper{box-shadow:none;}
+..mobile-menu
 
 .dark .main-movie:after{background-image:none;}
 .dark .main-movie .tab-list li.on{color:var(--color-white);}
