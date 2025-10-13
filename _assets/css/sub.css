@@ -691,6 +691,9 @@
 
 .total-result-list + .bbs-paging{border-top:1px solid var(--color-border);margin-top:var(--spacing-md);}
 
+.agree-show-cont.mypage-appl{display:block;}
+.agree-show-cont.mypage-appl .notice-content{border-bottom:0;}
+
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
     .notice-title-wrap{position: relative;top:60px;height:0;}
