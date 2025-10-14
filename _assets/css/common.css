@@ -254,8 +254,8 @@ input[type="password"].form-input{height:50px;}
     .header-wrap nav{width:100%;height:100%;max-width:900px;}
     .header-wrap .gnb {height: 100%; display: flex; align-items: center;}
     .header-wrap .gnb > li {position: relative; width: calc(100% / 6); height: 100%;}
-    .header-wrap .gnb > li::before {position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 32px; border: 1px dashed #fff; opacity: 0.5; content: '';}
-    .header-wrap .gnb > li:last-child::after {position: absolute; right: 0; top: 50%; transform: translateY(-50%); height: 32px; border: 1px dashed #fff; opacity: 0.5; content: '';}
+    /*.header-wrap .gnb > li::before {position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 32px; border: 1px dashed #fff; opacity: 0.5; content: '';}
+    .header-wrap .gnb > li:last-child::after {position: absolute; right: 0; top: 50%; transform: translateY(-50%); height: 32px; border: 1px dashed #fff; opacity: 0.5; content: '';}*/
     .header-wrap .gnb > li > a {display: inline-flex; width: 100%; height: 100%; font-size: 1.2rem; font-weight: 500; align-items: center; justify-content: center; color: #333; text-decoration: none;}
     .header-wrap .gnb > li > a::after {opacity: 0; position: absolute; left: 50%; bottom: -2px; width: 0; height: 4px; transform: translateX(-50%); border-radius: 5px; background-color:var(--color-primary); content: ''; z-index: 11; transition: .3s;}
     .header-wrap .gnb > li.active > a {color: var(--main-color);}
@@ -309,7 +309,7 @@ input[type="password"].form-input{height:50px;}
     .header-wrap .site-mgnb .sm-btn{margin-top:0;}
 
     /*사이트맵 팝업*/
-    .site-modal {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; padding: 10% 0; background-color: rgba(0, 0, 0, 0.6); overflow-y: auto; z-index: 99;}
+    .site-modal {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; padding: 15vh 0 0; background-color: rgba(0, 0, 0, 0.6); overflow-y: auto; z-index: 99;}
     .site-modal .modal-inner {position: relative;max-width: 1600px; margin: 0 auto; padding: 0 10px; box-sizing: border-box;}
     .site-modal .map-title {margin-bottom: 20px; color: #fff; font-size: 2rem; font-family: 'Jalnan'; text-align: center;}
     .site-modal .menu-wrap {position: relative; padding: 65px 60px 50px; background-color: #fff; border-radius: 30px;}
