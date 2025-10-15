@@ -1,4 +1,4 @@
-(function () {
+document.addEventListener("DOMContentLoaded", () => {
   const root = document.documentElement;
   const body = document.body;
   const toggleBtn = document.getElementById("darkMode");
@@ -32,8 +32,10 @@
   }
 
   // 운영체제 다크모드 변경 감지 (단, 사용자가 직접 선택하지 않은 경우만 반영)
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-    if (!localStorage.getItem("theme")) {
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  mediaQuery.addEventListener("change", (e) => {
+    const manuallySet = localStorage.getItem("theme");
+    if (!manuallySet || manuallySet === "auto") {
       applyTheme(e.matches ? "dark" : "light", false);
     }
   });
@@ -44,4 +46,4 @@
     const newTheme = currentTheme === "dark" ? "light" : "dark";
     applyTheme(newTheme, true);
   });
-})();
+});
