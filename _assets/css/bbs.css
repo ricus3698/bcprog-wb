@@ -215,7 +215,26 @@
     .bbs-tel .contact-banner{padding:20px;}
     .bbs-tel .contact-banner .icon-wrapper{width:40px;height:40px;}
 
-
+    /* ========== 다크모드 ========== */
+    .dark .home-btn{background-color: var(--color-bg);}
+    .dark .home-btn:hover { background-color: var(--color-bg-op1); }
+    .dark .home-btn svg path{stroke: var(--color-text)}
+    .dark .sub-nav{background-color: var(--color-bg);}
+    .dark .sub-menu-list li a{color: var(--color-text);}
+    .dark .sub-menu-list li a:not(.active):hover{background-color: var(--color-bg-op1);}
+    .dark .bbs-search form{background-color: #181818;}
+    .dark .bbs-search-btn{background-image: url(../images/glass_icon-d.svg);}
+    .dark .pagination .paging .page{background-color: var(--color-bg-op1);}
+    .dark .pagination .page {background-image:url("../images/bbs-arr-doub-d.svg");}
+    .dark .pagination .page.first {background-image:url("../images/bbs-arr-d.svg");}
+    .dark .pagination .page.last {background-image:url("../images/bbs-arr-d.svg");}
+    .dark .board-view-info dt{color: var(--color-text);}
+    .dark .board-view-nav dl dd a{color: var(--color-text);}
+    .dark .board-view-nav dl dt{background-color: #181818;}
+    .dark .board-view-nav dl dt:after{border-bottom-color: #e0e0e0;}
+    .dark .board-view-share button.share-toggle:before{background-image: url(../images/bbs-share-d.svg);}
+    .dark .board-view-share button.page-print:before{background-image: url(../images/bbs-print-d.svg);}
+    
 
 
 /* ========== 태블릿 (min-width: 768px) ========== */

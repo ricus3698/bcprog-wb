@@ -408,6 +408,7 @@
 
 .dark .main-slide-wrap .mv-swiper{box-shadow:none;}
 .dark .main-info:after{background: linear-gradient(to bottom, #222023, #483e4d);}
+.dark .main-rental:before{background-image: url(../images/bottom-bg-dot-d.png);}
 .dark .notice_list li a{background-color: var(--color-bg); color: var(--color-text);}
 .dark .notice_list li:nth-child(even) a::after{background-image:url('../images/tail-l-d.png');}
 .dark .notice_list li:nth-child(odd) a::after{background-image:url('../images/tail-r-d.png');}

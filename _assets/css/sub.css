@@ -432,7 +432,7 @@
 
 .visition-body{display: flex;justify-content: center;align-items: center;margin: 0 auto;}
 .vision-container {position: relative;margin:0 auto;}
-.vision-container::before{content:"";display:block;height: 550px;width: 550px;border-radius:50%;border: 4px dotted #fff;position: absolute;left: 50%;transform: translate(-50%,-50%);top: 50%;/*background-color: rgba(255,255,255,0.75);background-color:rgba(75,80,248,0.07);*/z-index:5;}
+.vision-container::before{content:"";display:block;height: 550px;width: 550px;border-radius:50%;position: absolute;left: 50%;transform: translate(-50%,-50%);top: 50%;/*background-color: rgba(255,255,255,0.75);background-color:rgba(75,80,248,0.07);*/z-index:5;}
 .vision-core {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);
   /* background: #0066ff; */
   background:var(--color-primary);
@@ -693,6 +693,33 @@
 
 .agree-show-cont.mypage-appl{display:block;}
 .agree-show-cont.mypage-appl .notice-content{border-bottom:0;}
+
+
+/* ========== 다크모드 대응 ========== */
+.dark .subtitle-area .container{background-color: var(--color-bg);}
+.dark .table-notice{color: var(--color-text);}
+.dark .sub-container > div > h4:after{background-image: url(../images/edu-bg-dot-d.png);}
+.dark .lo-art2-icon p {background-color: var(--color-bg-op1);}
+.dark .notice-content{border-color: var(--color-border);}
+.dark .notice-content .etiquette-list{color: var(--color-text);}
+.dark .contact-banner.card-shadow{background-color: var(--color-bg);}
+.dark .mid-height .h-line{background-color: var(--color-white);}
+.dark .circle-area{background-color: var(--color-bg);}
+.dark .temp_step_box .step_list .step_item{background: var(--color-bg-op1);}
+.dark .inner-movie-detail{background: var(--color-gra);}
+.dark .w-article-title p{background-color: var(--color-bg);}
+.dark .w-article-title p i{background-color: var(--color-bg);}
+.dark .movie-detail-article{background-color: var(--color-bg);}
+.dark .info-card{background-color: var(--color-bg);}
+.dark .card-text h5{color: var(--color-text);}
+.dark .card-text p{color: var(--color-text);}
+.dark .temp_step_box .step_list .step_item .text_box .text{color: var(--color-text);}
+.dark .info-table{color: var(--color-text); border-top-color: #666;}
+.dark .info-table .table-head{background-color: var(--color-table-thead); color: var(--color-text);}
+.dark .info-table th[scope="row"]{background-color: var(--color-table-thead); color: var(--color-text);}
+.dark .info-table th, .info-table td{border-color: var(--color-border);}
+.dark .info-card{box-shadow: var(--shadow-card);}
+
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
