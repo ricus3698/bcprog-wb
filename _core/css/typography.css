@@ -27,3 +27,5 @@ small {
   font-size: var(--font-size-sm);
   color: #666;
 }
+
+.dark small{color: var(--color-dark-gr);}
