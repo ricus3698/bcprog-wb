@@ -693,6 +693,20 @@
 
 .agree-show-cont.mypage-appl{display:block;}
 .agree-show-cont.mypage-appl .notice-content{border-bottom:0;}
+.daterangepicker .calendar-table thead tr:nth-child(1) th{font-weight:600;}
+.daterangepicker .calendar-table thead tr:nth-child(2) th:nth-child(1){color:red;}
+.daterangepicker .calendar-table thead tr:nth-child(2) th:nth-child(7){color:blue;}
+/* 일요일 (Sunday) */
+.daterangepicker td.weekend:first-child {
+  color: red; /* 글자색 빨강 */
+}
+
+/* 토요일 (Saturday) */
+.daterangepicker td.weekend:last-child {
+  color: blue; /* 글자색 파랑 */
+}
+
+.daterangepicker td.disabled, .daterangepicker option.disabled{color:#999 !important;}
 
 /* ========== 태블릿 (min-width: 768px) ========== */
   @media (min-width: 768px) {
@@ -784,6 +798,11 @@
     .space-list .space-list-ul .mov-prg-info .thumb-tit{margin-bottom:var(--spacing-md);}
 
     .equip-detail .m-info-photo{width:520px;}
+
+    .daterangepicker .calendar-table th, .daterangepicker .calendar-table td{font-size:0.9rem !important;}
+    .daterangepicker .calendar-table thead th{background:#F5F8FD;}
+    
+
 
   }
 /* ========== 넓은 데스크탑 (min-width: 1400px) ========== */
