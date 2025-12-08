@@ -111,6 +111,11 @@ input[type="password"].form-input{height:50px;}
 
 .f-baseline{align-items:baseline;}
 
+.form-text p{margin-bottom:0;}
+
+.form-row-in .form-row + .form-row{margin-top:var(--spacing-md);}
+.form-row-in .form-row .form-head{width:200px;}
+
 .address-wrap .addr-t2{box-sizing:border-box;padding-right:10px;margin-top:10px;}
 .address-wrap .addr-t2 input{margin-bottom:10px;}
 
